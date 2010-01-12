@@ -1,0 +1,2 @@
+class OperatorController < NSViewController
+end

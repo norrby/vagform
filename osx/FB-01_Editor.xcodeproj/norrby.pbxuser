@@ -3,6 +3,13 @@
 	172754BD107597F200D0347B /* Unit Tests */ = {
 		activeExec = 0;
 	};
+	2045345710FCECBF002C4F41 /* editor.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 416}}";
+			sepNavSelRange = "{581, 0}";
+			sepNavVisRange = "{392, 377}";
+		};
+	};
 	20E5546610FCEB7A00CF1400 /* PBXBookmarkGroup */ = {
 		isa = PBXBookmarkGroup;
 		children = (
