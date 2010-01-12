@@ -3,7 +3,14 @@
 	172754BD107597F200D0347B /* Unit Tests */ = {
 		activeExec = 0;
 	};
-	20E2952310F630C6006C4D41 /* osx */ = {
+	20E5546610FCEB7A00CF1400 /* PBXBookmarkGroup */ = {
+		isa = PBXBookmarkGroup;
+		children = (
+			20E5548910FCEB8600CF1400 /* PBXBookmark */,
+		);
+		name = Root;
+	};
+	20E5546910FCEB7A00CF1400 /* FB-01_Editor */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -26,14 +33,14 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = osx;
+		name = "FB-01_Editor";
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	20E2952E10F630D6006C4D41 /* Source Control */ = {
+	20E5548710FCEB8400CF1400 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
@@ -43,17 +50,24 @@
 			};
 		};
 	};
-	20E2952F10F630D6006C4D41 /* Code sense */ = {
+	20E5548810FCEB8400CF1400 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	20E5548910FCEB8600CF1400 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D1107320486CEB800E47090 /* FB-01_Editor.app */;
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = 20E2952310F630C6006C4D41 /* osx */;
-		activeTarget = 8D1107260486CEB800E47090 /* osx */;
-		codeSenseManager = 20E2952F10F630D6006C4D41 /* Code sense */;
+		activeExecutable = 20E5546910FCEB7A00CF1400 /* FB-01_Editor */;
+		activeTarget = 8D1107260486CEB800E47090 /* FB-01_Editor */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* FB-01_Editor */,
+		);
+		codeSenseManager = 20E5548810FCEB8400CF1400 /* Code sense */;
 		executables = (
-			20E2952310F630C6006C4D41 /* osx */,
+			20E5546910FCEB7A00CF1400 /* FB-01_Editor */,
 		);
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -78,10 +92,11 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 284569911;
-			PBXWorkspaceStateSaveDate = 284569911;
+			PBXPerProjectTemplateStateSaveDate = 285010876;
+			PBXWorkspaceStateSaveDate = 285010876;
 		};
-		sourceControlManager = 20E2952E10F630D6006C4D41 /* Source Control */;
+		sourceControlManager = 20E5548710FCEB8400CF1400 /* Source Control */;
+		userBookmarkGroup = 20E5546610FCEB7A00CF1400 /* PBXBookmarkGroup */;
 		userBuildSettings = {
 		};
 	};
@@ -91,10 +106,17 @@
 	4D1A51A510A4FF640046A98A /* Embed */ = {
 		activeExec = 0;
 	};
-	8D1107260486CEB800E47090 /* osx */ = {
+	4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {537, 325}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 577}";
+		};
+	};
+	8D1107260486CEB800E47090 /* FB-01_Editor */ = {
 		activeExec = 0;
 		executables = (
-			20E2952310F630C6006C4D41 /* osx */,
+			20E5546910FCEB7A00CF1400 /* FB-01_Editor */,
 		);
 	};
 }

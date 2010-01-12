@@ -1,14 +1,17 @@
 #
 # rb_main.rb
-# osx
+# FB-01_Editor
 #
-# Created by M Norrby on 1/7/10.
+# Created by M Norrby on 1/12/10.
 # Copyright __MyCompanyName__ 2010. All rights reserved.
 #
 
 # Loading the Cocoa framework. If you need to load more frameworks, you can
 # do that here too.
 framework 'Cocoa'
+
+$LOAD_PATH << File.join(File.dirname(__FILE__), 'midi-lex/lib')
+$LOAD_PATH << File.join(File.dirname(__FILE__), 'Yamaha_FB-01')
 
 # Loading all the Ruby project files.
 dir_path = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
