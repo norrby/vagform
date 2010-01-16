@@ -276,7 +276,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -301,7 +300,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>327 148 1060 754 0 0 1920 1058 </string>
+						<string>434 166 1060 754 0 0 1920 1058 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -329,14 +328,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20884C9B11025D160021E5DB</string>
+										<string>20884CCC1102762D0021E5DB</string>
 										<key>history</key>
 										<array>
 											<string>204535C710FD9C39002C4F41</string>
 											<string>2045360C1100ECE1002C4F41</string>
 											<string>204536601102033D002C4F41</string>
 											<string>20884C0D110254180021E5DB</string>
-											<string>20884C0E110254180021E5DB</string>
+											<string>20884CC3110270260021E5DB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -350,7 +349,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {852, 507}}</string>
 								<key>RubberWindowFrame</key>
-								<string>327 148 1060 754 0 0 1920 1058 </string>
+								<string>434 166 1060 754 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -370,7 +369,7 @@
 								<key>Frame</key>
 								<string>{{0, 512}, {852, 201}}</string>
 								<key>RubberWindowFrame</key>
-								<string>327 148 1060 754 0 0 1920 1058 </string>
+								<string>434 166 1060 754 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -534,7 +533,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20884C9C11025D160021E5DB</string>
+		<string>20884CCD1102762D0021E5DB</string>
 		<string>20884B1D11020DDD0021E5DB</string>
 		<string>20884B1E11020DDD0021E5DB</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -543,7 +542,7 @@
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>327 148 1060 754 0 0 1920 1058 </string>
+	<string>434 166 1060 754 0 0 1920 1058 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

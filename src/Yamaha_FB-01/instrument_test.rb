@@ -13,4 +13,8 @@ class InstrumentTest < Test::Unit::TestCase
     @dump[0] = notes
     assert_equal notes, @inst.notes
   end
+
+  def test_notes_span
+    assert_raise(RuntimeError) { @inst.notes = 9 }
+  end
 end

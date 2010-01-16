@@ -39,9 +39,9 @@
 	};
 	2045365D11020331002C4F41 /* instrument_controller.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {791, 475}}";
-			sepNavSelRange = "{552, 0}";
-			sepNavVisRange = "{0, 552}";
+			sepNavIntBoundsRect = "{{0, 0}, {791, 507}}";
+			sepNavSelRange = "{694, 0}";
+			sepNavVisRange = "{0, 682}";
 		};
 	};
 	204536601102033D002C4F41 /* PBXTextBookmark */ = {
@@ -734,6 +734,36 @@
 		vrLen = 598;
 		vrLoc = 0;
 	};
+	20884CC3110270260021E5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2045365D11020331002C4F41 /* instrument_controller.rb */;
+		name = "instrument_controller.rb: 34";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 552;
+		vrLoc = 0;
+	};
+	20884CC4110270260021E5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2045365D11020331002C4F41 /* instrument_controller.rb */;
+		name = "instrument_controller.rb: 39";
+		rLen = 0;
+		rLoc = 694;
+		rType = 0;
+		vrLen = 682;
+		vrLoc = 0;
+	};
+	20884CCC1102762D0021E5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2045365D11020331002C4F41 /* instrument_controller.rb */;
+		name = "instrument_controller.rb: 39";
+		rLen = 0;
+		rLoc = 694;
+		rType = 0;
+		vrLen = 682;
+		vrLoc = 0;
+	};
 	20E5546610FCEB7A00CF1400 /* PBXBookmarkGroup */ = {
 		isa = PBXBookmarkGroup;
 		children = (
@@ -920,6 +950,9 @@
 			20884C9311025CBE0021E5DB /* PBXTextBookmark */ = 20884C9311025CBE0021E5DB /* PBXTextBookmark */;
 			20884C9711025CFD0021E5DB /* PBXTextBookmark */ = 20884C9711025CFD0021E5DB /* PBXTextBookmark */;
 			20884C9B11025D160021E5DB /* PBXTextBookmark */ = 20884C9B11025D160021E5DB /* PBXTextBookmark */;
+			20884CC3110270260021E5DB /* PBXTextBookmark */ = 20884CC3110270260021E5DB /* PBXTextBookmark */;
+			20884CC4110270260021E5DB /* PBXTextBookmark */ = 20884CC4110270260021E5DB /* PBXTextBookmark */;
+			20884CCC1102762D0021E5DB /* PBXTextBookmark */ = 20884CCC1102762D0021E5DB /* PBXTextBookmark */;
 		};
 		sourceControlManager = 20E5548710FCEB8400CF1400 /* Source Control */;
 		userBookmarkGroup = 20E5546610FCEB7A00CF1400 /* PBXBookmarkGroup */;
