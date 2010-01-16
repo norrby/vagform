@@ -49,6 +49,7 @@
 		2045346510FCEFB9002C4F41 /* OperatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2045346410FCEFB9002C4F41 /* OperatorView.xib */; };
 		2045346E10FCF06E002C4F41 /* operator_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045346D10FCF06E002C4F41 /* operator_controller.rb */; };
 		204536571101BBE6002C4F41 /* Instrument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204536561101BBE6002C4F41 /* Instrument.xib */; };
+		2045365E11020331002C4F41 /* instrument_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045365D11020331002C4F41 /* instrument_controller.rb */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -81,6 +82,7 @@
 		2045346410FCEFB9002C4F41 /* OperatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperatorView.xib; sourceTree = "<group>"; };
 		2045346D10FCF06E002C4F41 /* operator_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = operator_controller.rb; sourceTree = "<group>"; };
 		204536561101BBE6002C4F41 /* Instrument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Instrument.xib; sourceTree = "<group>"; };
+		2045365D11020331002C4F41 /* instrument_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = instrument_controller.rb; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -107,6 +109,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2045365D11020331002C4F41 /* instrument_controller.rb */,
 				2045345710FCECBF002C4F41 /* editor.rb */,
 				2045333410FCEBE0002C4F41 /* midi-lex */,
 				2045344410FCEBE0002C4F41 /* Yamaha_FB-01 */,
@@ -250,6 +253,7 @@
 				2045346510FCEFB9002C4F41 /* OperatorView.xib in Resources */,
 				2045346E10FCF06E002C4F41 /* operator_controller.rb in Resources */,
 				204536571101BBE6002C4F41 /* Instrument.xib in Resources */,
+				2045365E11020331002C4F41 /* instrument_controller.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

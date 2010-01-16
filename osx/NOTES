@@ -1,0 +1,5 @@
+Internal Development Notes
+==========================
+GUI sometimes blank. Sometimes crashes:
+
+-top view accidentally of the NSCustomView class instead of NSView

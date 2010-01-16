@@ -5,6 +5,7 @@ require 'midi_communicator'
 
 class Editor < NSWindowController
   attr_writer :midi_device_selector, :midi_channel_selector, :op1, :split
+  attr_writer :inst1, :inst2, :inst3, :inst4, :inst5, :inst6, :inst7, :inst8
 
   @@midi = MidiCommunicator.new(MidiLex::Sender.new(:mac_ruby),
                                 MidiLex::Receiver.new(:mac_ruby))
@@ -29,11 +30,21 @@ class Editor < NSWindowController
   end
   
   def awakeFromNib
-	puts @op1.view
-	puts @split
-	@split.addSubview(@op1.view)
-	#@op1.view.setFrame(@op1.where.bounds)
-	#.setFrame(@op1.where.bounds)
-    puts "haha"
+	#puts @op1.view
+	#puts @split
+	@split.addSubview(@inst1.view)
+	@split.addSubview(@inst2.view)
+	@split.addSubview(@inst3.view)
+	@split.addSubview(@inst4.view)
+	@split.addSubview(@inst5.view)
+	@split.addSubview(@inst6.view)
+	@split.addSubview(@inst7.view)
+	@split.addSubview(@inst8.view)
+	#@inst1.view.setFrame(@split.bounds)
+	#puts @inst1.view.bounds
+	#puts @inst1.where
+	
+	#puts @inst1.where.setFrame(@op1.where.bounds)
+    #puts "haha"
   end
 end
