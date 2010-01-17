@@ -12,9 +12,17 @@ class InstrumentController < NSViewController
     super(args)
   end
 
-  def midi_channel_changed(sender)
-    @model.midi_channel = sender.selectedSegment + 1
-    invalidate
+  def communicator=(midi_communicator)
+    puts "Cummunicator set to #{midi_communicator}"
+    @model.comm= midi_communicator
+  end
+
+  def midi_channel=(ch)
+    @model.midi_channel = ch.to_i + 1
+  end
+
+  def midi_channel
+    @model.midi_channel - 1
   end
 
   def lowest_key_number

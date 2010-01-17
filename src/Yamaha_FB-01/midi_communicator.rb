@@ -3,9 +3,10 @@ class MidiCommunicator
   attr_accessor :system_channel
 
   def initialize(sender, receiver)
-    @channels = (2..16).to_a
+    @channels = (1..16).to_a
     @sender = sender
     @receiver = receiver
+    @system_channel = 2
   end
 
   def devices

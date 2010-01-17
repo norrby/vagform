@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,8 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
-									<integer>2</integer>
+									<integer>17</integer>
+									<integer>11</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -310,8 +312,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20884DC7110349360021E5DB</string>
+										<string>20884EB0110390380021E5DB</string>
 										<key>history</key>
 										<array>
 											<string>204535C710FD9C39002C4F41</string>
@@ -534,13 +534,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20884DC4110348F30021E5DB</string>
+		<string>20884EB1110390380021E5DB</string>
 		<string>20884B1D11020DDD0021E5DB</string>
 		<string>20884B1E11020DDD0021E5DB</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>20E5547B10FCEB8400CF1400</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/norrby/Documents/src/yfb01/osx/FB-01_Editor.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>318 281 1060 754 0 0 1920 1058 </string>
@@ -889,7 +889,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1105 787 650 250 0 0 1920 1058 </string>
+								<string>1177 493 650 250 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -918,7 +918,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>1105 787 650 250 0 0 1920 1058 </string>
+			<string>1177 493 650 250 0 0 1920 1058 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
