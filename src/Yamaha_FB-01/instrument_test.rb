@@ -22,4 +22,19 @@ class InstrumentTest < Test::Unit::TestCase
     @dump[0x03] = 126
     assert_equal "F#8", @inst.lower_key_limit_name
   end
+
+  def test_set_lower_key_name
+    @inst.lower_key_limit_name = "D#-2"
+    assert_equal 3, @inst.lower_key_limit, "index of D#-2"
+  end
+
+  def test_set_upper_key
+    @dump[0x02] = 125
+    assert_equal "F8", @inst.upper_key_limit_name
+  end
+
+  def test_set_upper_key_name
+    @inst.upper_key_limit_name = "E-2"
+    assert_equal 4, @inst.upper_key_limit, "index of E-2"
+  end
 end

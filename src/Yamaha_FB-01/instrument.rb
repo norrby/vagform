@@ -1,7 +1,7 @@
 class Instrument
 
-  @@Keys = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "H"]
-  @@AllKeys = (-2..8).to_a.collect do |num| @@Keys.collect {|tone| "#{tone}#{num}" } end.flatten[0..127]
+  @@Tones = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "H"]
+  @@Keys = (-2..8).to_a.collect do |num| @@Tones.collect {|tone| "#{tone}#{num}" } end.flatten[0..127]
 
   def self.define(min, max, pos, mask)
     {:min => min, :max => max, :pos => pos, :mask => mask}
@@ -10,8 +10,8 @@ class Instrument
   @@defs = {
     :notes => define(0, 8, 0x00, 0x0F),
     :midi_channel_internal => define(0, 15, 0x01, 0x0F),
-    :upper_key_limit => define(0, 127, 0x02, 0x7F),
-    :lower_key_limit => define(0, 127, 0x03, 0x7F),
+    :upper_key_limit => define(0, @@Keys.length - 1, 0x02, 0x7F),
+    :lower_key_limit => define(0, @@Keys.length - 1, 0x03, 0x7F),
     :voice_bank_no => define(0, 6, 0x04, 0x07),
     :voice_no => define(0, 47, 0x05, 0x7F),
     :detune => define(0, 127, 0x06, 0x7F),
@@ -38,7 +38,7 @@ class Instrument
       if value < lower_bound or value > upper_bound
         raise "#{key} must be in the interval [#{lower_bound}..#{upper_bound}]"
       end
-      @data[pos(key)] = (@data[pos(key)] & mask(key)) & value
+      @data[pos(key)] = (@data[pos(key)] & ~mask(key)) | value
     end
 
     define_method "min_#{key}".to_sym do
@@ -110,6 +110,30 @@ class Instrument
   end
 
   def lower_key_limit_name
-    @@AllKeys[lower_key_limit]
+    @@Keys[lower_key_limit]
+  end
+
+  def lower_key_limit_name=(name)
+    index = @@Keys.index(name)
+    raise "There is no \"#{name}\" key. Only #{@@Keys.values}" if not index
+    self.lower_key_limit = index
+  end
+
+  def key_to_number(key)
+    @@Keys.index(key)
+  end
+
+  def upper_key_limit_name
+    @@Keys[upper_key_limit]
+  end
+
+  def upper_key_limit_name=(name)
+    index = @@Keys.index(name)
+    raise "There is no \"#{name}\" key. Only #{@@Keys.values}" if not index
+    self.upper_key_limit = index
+  end
+
+  def keys
+    @@Keys
   end
 end
