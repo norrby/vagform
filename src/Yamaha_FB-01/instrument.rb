@@ -1,5 +1,8 @@
 class Instrument
 
+  @@Keys = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "H"]
+  @@AllKeys = (-2..8).to_a.collect do |num| @@Keys.collect {|tone| "#{tone}#{num}" } end.flatten[0..127]
+
   def self.define(min, max, pos, mask)
     {:min => min, :max => max, :pos => pos, :mask => mask}
   end
@@ -7,8 +10,8 @@ class Instrument
   @@defs = {
     :notes => define(0, 8, 0x00, 0x0F),
     :midi_channel_internal => define(0, 15, 0x01, 0x0F),
-    :lower_key_limit => define(0, 127, 0x02, 0x7F),
-    :upper_key_limit => define(0, 127, 0x03, 0x7F),
+    :upper_key_limit => define(0, 127, 0x02, 0x7F),
+    :lower_key_limit => define(0, 127, 0x03, 0x7F),
     :voice_bank_no => define(0, 6, 0x04, 0x07),
     :voice_no => define(0, 47, 0x05, 0x7F),
     :detune => define(0, 127, 0x06, 0x7F),
@@ -105,5 +108,8 @@ class Instrument
     end
     controller_num = @@PmdControllers.key(controller_name)
   end
-end
 
+  def lower_key_limit_name
+    @@AllKeys[lower_key_limit]
+  end
+end

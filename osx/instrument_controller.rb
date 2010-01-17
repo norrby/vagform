@@ -9,29 +9,42 @@ class InstrumentController < NSViewController
     super(args)
   end
 
+  def midi_channels
+    (@model.min_midi_channel .. @model.max_midi_channel).to_a
+  end
+
+  def lower_key_limits
+    (@model.min_lower_key_limit .. @model.max_lower_key_limit).to_a
+  end
+
+  def lower_key_limits
+    (@model.min_upper_key_limit .. @model.max_upper_key_limit).to_a
+  end
+
   def min_output_level
-    @model.min_output_level.to_i
+    @model.min_output_level
   end
 
   def max_output_level
-    @model.max_output_level.to_i
+    @model.max_output_level
   end
 
   def output_level
-    return @model.output_level.to_i
+    return @model.output_level
   end
 
   def setValue(val, forKey:key)
-    send "set_#{key}", val 
+    puts "trying #{key}="
+    @model.send "#{key}=".to_sym, val.to_i
+    2
+  end
+
+  def detune
+    @model.detune
   end
 
   def set_output_level(sender)
     @model.output_level = sender.intValue
   end
-
-  #def method_missing(sym, *args, &block)
-  #  puts "Called: #{sym}"
-  #  @model.send sym, *args, &block
-  #end
 
 end

@@ -17,4 +17,9 @@ class InstrumentTest < Test::Unit::TestCase
   def test_notes_span
     assert_raise(RuntimeError) { @inst.notes = 9 }
   end
+
+  def test_set_lower_key
+    @dump[0x03] = 126
+    assert_equal "F#8", @inst.lower_key_limit_name
+  end
 end

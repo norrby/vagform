@@ -30,21 +30,14 @@ class Editor < NSWindowController
   end
   
   def awakeFromNib
-	#puts @op1.view
-	#puts @split
-	@split.addSubview(@inst1.view)
-	@split.addSubview(@inst2.view)
-	@split.addSubview(@inst3.view)
-	@split.addSubview(@inst4.view)
-	@split.addSubview(@inst5.view)
-	@split.addSubview(@inst6.view)
-	@split.addSubview(@inst7.view)
-	@split.addSubview(@inst8.view)
-	#@inst1.view.setFrame(@split.bounds)
-	#puts @inst1.view.bounds
-	#puts @inst1.where
-	
-	#puts @inst1.where.setFrame(@op1.where.bounds)
-    #puts "haha"
+    @instruments = [@inst1, @inst2, @inst3, @inst4, @inst5, @inst6, @inst7, @inst8]
+    pos = 142.0 * @instruments.length
+    @split.setFrameSize(NSSize.new(951.0, 142.0 * @instruments.length))
+    @instruments.each do |instr|
+      pos -= 142.0 #could not be calculated on my 32 bit machine. Crash on f32UNREACHABLE
+      view = instr.view
+      @split.addSubview(view)
+      view.setFrameOrigin(NSPoint.new(0.0, pos))
+    end
   end
 end
