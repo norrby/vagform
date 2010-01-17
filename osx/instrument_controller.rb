@@ -4,6 +4,7 @@ require 'instrument'
 class InstrumentController < NSViewController
   attr_writer :upper_key_limit_slider, :upper_key_limit_field
   attr_writer :lower_key_limit_slider, :lower_key_limit_field
+  attr_writer :midi_channel_selector
   attr_accessor :where
 
   def initWithCoder(args)
@@ -11,8 +12,9 @@ class InstrumentController < NSViewController
     super(args)
   end
 
-  def midi_channels
-    (@model.min_midi_channel .. @model.max_midi_channel).to_a
+  def midi_channel_changed(sender)
+    @model.midi_channel = sender.selectedSegment + 1
+    invalidate
   end
 
   def lowest_key_number
@@ -88,6 +90,7 @@ class InstrumentController < NSViewController
     @upper_key_limit_field.setStringValue(@model.upper_key_limit_name)
     @lower_key_limit_slider.setIntValue(@model.lower_key_limit)
     @lower_key_limit_field.setStringValue(@model.lower_key_limit_name)
+    @midi_channel_selector.setSelectedSegment(@model.midi_channel - 1)
   end
 
   def claviature

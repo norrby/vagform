@@ -71,31 +71,31 @@ class Instrument
   end
 
   def midi_channel
-    midi_channel_internal + 1
+    self.midi_channel_internal + 1
   end
 
   def midi_channel=(ch)
-    midi_channel_internal = ch - 1
+    self.midi_channel_internal = ch - 1
   end
 
   def min_midi_channel
-    min_midi_channel_internal + 1
+    self.min_midi_channel_internal + 1
   end
 
   def max_midi_channel
-    max_midi_channel_internal + 1
+    self.max_midi_channel_internal + 1
   end
 
   def octave_transpose
-    octave_transpose_internal - 2
+    self.octave_transpose_internal - 2
   end
 
   def min_octave_transpose
-    min_octave_transpose_internal + 1
+    self.min_octave_transpose_internal + 1
   end
 
   def max_octave_transpose
-    max_octave_transpose_internal + 1
+    self.max_octave_transpose_internal + 1
   end
 
   def pmd_controller
