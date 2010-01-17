@@ -1,7 +1,7 @@
 # -*- coding: iso-8859-1 -*-
 class Instrument
 
-  attr_writer :comm
+  attr_writer :comm, :instrument_no
 
   @@Tones = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "H"]
   @@Keys = (-2..8).to_a.collect do |num| @@Tones.collect {|tone| "#{tone}#{num}" } end.flatten[0..127]
@@ -55,12 +55,15 @@ class Instrument
   end
 
   def initialize(backing_store = Array.new(0x10, 0))
-    @instrument_no = 2
     @data = backing_store
     @min_notes = 0
     @max_notes = 8
     @min_output_level = 0
     @max_output_level = 127
+  end
+
+  def no
+    @instrument_no
   end
 
   def send_to_fb01(pos, data)
@@ -82,7 +85,6 @@ class Instrument
   end
 
   def midi_channel
-    puts "binmgo"
     self.midi_channel_internal + 1
   end
 

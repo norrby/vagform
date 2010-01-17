@@ -5,6 +5,7 @@ class InstrumentController < NSViewController
   attr_writer :upper_key_limit_slider, :upper_key_limit_field
   attr_writer :lower_key_limit_slider, :lower_key_limit_field
   attr_writer :midi_channel_selector
+  attr_writer :box
   attr_accessor :where
 
   def initWithCoder(args)
@@ -13,8 +14,15 @@ class InstrumentController < NSViewController
   end
 
   def communicator=(midi_communicator)
-    puts "Cummunicator set to #{midi_communicator}"
-    @model.comm= midi_communicator
+    @model.comm = midi_communicator
+  end
+
+  def instrument_no=(no)
+    @model.instrument_no = no
+  end
+
+  def awakeFromNib
+    @box.setTitle("Instrument #{@model.no}") if @box
   end
 
   def midi_channel=(ch)
@@ -88,7 +96,7 @@ class InstrumentController < NSViewController
   end
 
   def setValue(val, forKey:key)
-    puts "trying #{key}="
+    #puts "trying #{key}="
     send "#{key}=".to_sym, val
     invalidate
   end

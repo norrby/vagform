@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20884EB0110390380021E5DB</string>
+										<string>20884EFE11039A9C0021E5DB</string>
 										<key>history</key>
 										<array>
 											<string>204535C710FD9C39002C4F41</string>
@@ -534,13 +534,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20884EB1110390380021E5DB</string>
 		<string>20884B1D11020DDD0021E5DB</string>
 		<string>20884B1E11020DDD0021E5DB</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>20E5547B10FCEB8400CF1400</string>
-		<string>/Users/norrby/Documents/src/yfb01/osx/FB-01_Editor.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/norrby/Documents/src/yfb01/osx/FB-01_Editor.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>318 281 1060 754 0 0 1920 1058 </string>
