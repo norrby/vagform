@@ -9,7 +9,6 @@
 # Loading the Cocoa framework. If you need to load more frameworks, you can
 # do that here too.
 framework 'Cocoa'
-framework 'PYMIDI'
 
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'midi-lex/lib')
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'Yamaha_FB-01')

@@ -266,31 +266,22 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>29B97323FDCFA39411CA2CEA</string>
-								<string>1058C7A0FEA54F0111CA2CBB</string>
-								<string>1058C7A2FEA54F0111CA2CBB</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>20F88F5E1108F6C800FD15E7</string>
-								<string>2068FB2A110900F800E62A4D</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>2068F98C1108F7F600E62A4D</string>
 								<string>2068FC00110A2D7700E62A4D</string>
-								<string>2068FC63110A335A00E62A4D</string>
 								<string>2068FB161109003E00E62A4D</string>
 								<string>2068FAE11108FB7100E62A4D</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>54</integer>
-									<integer>53</integer>
-									<integer>29</integer>
-									<integer>28</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 485}, {306, 580}}</string>
+							<string>{{0, 121}, {306, 580}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,16 +328,16 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2068FC66110A335A00E62A4D</string>
+										<string>2068FCD1110A465200E62A4D</string>
 										<key>history</key>
 										<array>
 											<string>2045360C1100ECE1002C4F41</string>
-											<string>207426B21108E33C00B667FB</string>
-											<string>207426B31108E33C00B667FB</string>
 											<string>2074273F1108E91300B667FB</string>
-											<string>2068FC01110A2D7700E62A4D</string>
 											<string>2068FC64110A335A00E62A4D</string>
-											<string>2068FC65110A335A00E62A4D</string>
+											<string>2068FCB9110A45C900E62A4D</string>
+											<string>2068FCBA110A45C900E62A4D</string>
+											<string>2068FCBB110A45C900E62A4D</string>
+											<string>2068FCBC110A45C900E62A4D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,12 +535,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2068FCD2110A465200E62A4D</string>
 		<string>2068FB201109003E00E62A4D</string>
 		<string>2068FB211109003E00E62A4D</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>20E5547B10FCEB8400CF1400</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/norrby/Documents/src/yfb01/osx/FB-01_Editor.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>130 419 897 639 0 0 1920 1058 </string>
