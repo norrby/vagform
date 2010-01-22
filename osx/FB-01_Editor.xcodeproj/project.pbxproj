@@ -46,17 +46,55 @@
 		2045345310FCEBE0002C4F41 /* midi-lex in Resources */ = {isa = PBXBuildFile; fileRef = 2045333410FCEBE0002C4F41 /* midi-lex */; };
 		2045345410FCEBE0002C4F41 /* Yamaha_FB-01 in Resources */ = {isa = PBXBuildFile; fileRef = 2045344410FCEBE0002C4F41 /* Yamaha_FB-01 */; };
 		2045345910FCECBF002C4F41 /* editor.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045345710FCECBF002C4F41 /* editor.rb */; };
-		2045346510FCEFB9002C4F41 /* OperatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2045346410FCEFB9002C4F41 /* OperatorView.xib */; };
 		2045346E10FCF06E002C4F41 /* operator_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045346D10FCF06E002C4F41 /* operator_controller.rb */; };
 		204536571101BBE6002C4F41 /* Instrument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204536561101BBE6002C4F41 /* Instrument.xib */; };
 		2045365E11020331002C4F41 /* instrument_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045365D11020331002C4F41 /* instrument_controller.rb */; };
+		2068FAD81108FB5C00E62A4D /* pymidi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20F88F661108F6C800FD15E7 /* pymidi.framework */; };
+		2068FB331109010900E62A4D /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2068FB32110900F800E62A4D /* macruby-midi.framework */; };
+		207425A611078CB300B667FB /* Operator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425A511078CB300B667FB /* Operator.xib */; };
+		207425C21108BC0D00B667FB /* Voice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425C11108BC0D00B667FB /* Voice.xib */; };
+		207425C71108BC8500B667FB /* Algorithm1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425C61108BC8500B667FB /* Algorithm1.xib */; };
+		207425CA1108BCB600B667FB /* Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425C91108BCB600B667FB /* Algorithm4.xib */; };
+		207426301108C6E700B667FB /* waveform_view.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2074262F1108C6E700B667FB /* waveform_view.rb */; };
+		207426FD1108E5EF00B667FB /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207426FC1108E5EF00B667FB /* CoreMIDI.framework */; };
+		2074276C1108EDCB00B667FB /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2074276B1108EDCB00B667FB /* MacRuby.framework */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
-		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2068FAE91108FC4000E62A4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* PYMIDI */;
+			remoteInfo = PYMIDI;
+		};
+		2068FB31110900F800E62A4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* macruby-midi.framework */;
+			remoteInfo = "macruby-midi";
+		};
+		2068FC0F110A2E7600E62A4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* macruby-midi */;
+			remoteInfo = "macruby-midi";
+		};
+		20F88F651108F6C800FD15E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = PYMIDI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		172754B4107597CF00D0347B /* CopyFiles */ = {
@@ -65,6 +103,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2068FB331109010900E62A4D /* macruby-midi.framework in CopyFiles */,
+				2068FAD81108FB5C00E62A4D /* pymidi.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,16 +119,23 @@
 		2045333410FCEBE0002C4F41 /* midi-lex */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "midi-lex"; path = "../src/midi-lex"; sourceTree = SOURCE_ROOT; };
 		2045344410FCEBE0002C4F41 /* Yamaha_FB-01 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Yamaha_FB-01"; path = "../src/Yamaha_FB-01"; sourceTree = SOURCE_ROOT; };
 		2045345710FCECBF002C4F41 /* editor.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = editor.rb; sourceTree = SOURCE_ROOT; };
-		2045346410FCEFB9002C4F41 /* OperatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperatorView.xib; sourceTree = "<group>"; };
 		2045346D10FCF06E002C4F41 /* operator_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = operator_controller.rb; sourceTree = "<group>"; };
 		204536561101BBE6002C4F41 /* Instrument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Instrument.xib; sourceTree = "<group>"; };
 		2045365D11020331002C4F41 /* instrument_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = instrument_controller.rb; sourceTree = SOURCE_ROOT; };
+		2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		207425A511078CB300B667FB /* Operator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Operator.xib; sourceTree = "<group>"; };
+		207425C11108BC0D00B667FB /* Voice.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Voice.xib; sourceTree = "<group>"; };
+		207425C61108BC8500B667FB /* Algorithm1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Algorithm1.xib; sourceTree = "<group>"; };
+		207425C91108BCB600B667FB /* Algorithm4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Algorithm4.xib; sourceTree = "<group>"; };
+		2074262F1108C6E700B667FB /* waveform_view.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = waveform_view.rb; sourceTree = "<group>"; };
+		207426FC1108E5EF00B667FB /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		2074276B1108EDCB00B667FB /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
+		20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pymidi.xcodeproj; path = "../src/midi-lex/ext/pymidi/pymidi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
-		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FB-01_Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FB-01_Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,8 +145,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207426FD1108E5EF00B667FB /* CoreMIDI.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */,
+				2074276C1108EDCB00B667FB /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +157,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2074262F1108C6E700B667FB /* waveform_view.rb */,
 				2045365D11020331002C4F41 /* instrument_controller.rb */,
 				2045345710FCECBF002C4F41 /* editor.rb */,
-				2045333410FCEBE0002C4F41 /* midi-lex */,
-				2045344410FCEBE0002C4F41 /* Yamaha_FB-01 */,
 				2045346D10FCF06E002C4F41 /* operator_controller.rb */,
 			);
 			name = Classes;
@@ -121,7 +168,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DE3BE130D8651D900ECA448 /* MacRuby.framework */,
+				207426FC1108E5EF00B667FB /* CoreMIDI.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -130,6 +177,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2074276B1108EDCB00B667FB /* MacRuby.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -149,7 +197,25 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */,
+				2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */,
 				8D1107320486CEB800E47090 /* FB-01_Editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2068FB2B110900F800E62A4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2068FB32110900F800E62A4D /* macruby-midi.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20F88F5F1108F6C800FD15E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20F88F661108F6C800FD15E7 /* pymidi.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +236,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2045333410FCEBE0002C4F41 /* midi-lex */,
+				2045344410FCEBE0002C4F41 /* Yamaha_FB-01 */,
 				4DE339F60D74FCDD00ADB6EE /* rb_main.rb */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -182,8 +250,11 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				2045346410FCEFB9002C4F41 /* OperatorView.xib */,
 				204536561101BBE6002C4F41 /* Instrument.xib */,
+				207425A511078CB300B667FB /* Operator.xib */,
+				207425C11108BC0D00B667FB /* Voice.xib */,
+				207425C61108BC8500B667FB /* Algorithm1.xib */,
+				207425C91108BCB600B667FB /* Algorithm4.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -212,6 +283,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				2068FAEA1108FC4000E62A4D /* PBXTargetDependency */,
+				2068FC10110A2E7600E62A4D /* PBXTargetDependency */,
 			);
 			name = "FB-01_Editor";
 			productInstallPath = "$(HOME)/Applications";
@@ -229,6 +302,16 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* FB-01_Editor */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2068FB2B110900F800E62A4D /* Products */;
+					ProjectRef = 2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */;
+				},
+				{
+					ProductGroup = 20F88F5F1108F6C800FD15E7 /* Products */;
+					ProjectRef = 20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* FB-01_Editor */,
@@ -238,6 +321,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2068FB32110900F800E62A4D /* macruby-midi.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "macruby-midi.framework";
+			remoteRef = 2068FB31110900F800E62A4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20F88F661108F6C800FD15E7 /* pymidi.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = pymidi.framework;
+			remoteRef = 20F88F651108F6C800FD15E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -250,10 +350,14 @@
 				2045345310FCEBE0002C4F41 /* midi-lex in Resources */,
 				2045345410FCEBE0002C4F41 /* Yamaha_FB-01 in Resources */,
 				2045345910FCECBF002C4F41 /* editor.rb in Resources */,
-				2045346510FCEFB9002C4F41 /* OperatorView.xib in Resources */,
 				2045346E10FCF06E002C4F41 /* operator_controller.rb in Resources */,
 				204536571101BBE6002C4F41 /* Instrument.xib in Resources */,
 				2045365E11020331002C4F41 /* instrument_controller.rb in Resources */,
+				207425A611078CB300B667FB /* Operator.xib in Resources */,
+				207425C21108BC0D00B667FB /* Voice.xib in Resources */,
+				207425C71108BC8500B667FB /* Algorithm1.xib in Resources */,
+				207425CA1108BCB600B667FB /* Algorithm4.xib in Resources */,
+				207426301108C6E700B667FB /* waveform_view.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +415,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2068FAEA1108FC4000E62A4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PYMIDI;
+			targetProxy = 2068FAE91108FC4000E62A4D /* PBXContainerItemProxy */;
+		};
+		2068FC10110A2E7600E62A4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "macruby-midi";
+			targetProxy = 2068FC0F110A2E7600E62A4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
