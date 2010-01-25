@@ -13,6 +13,12 @@ framework 'Cocoa'
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'midi-lex/lib')
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'Yamaha_FB-01')
 
+#if rubygems are required somewhere, all this is needed
+#libs = NSBundle.mainBundle.resourcePath.fileSystemRepresentation + "/../Frameworks/MacRuby.framework/Versions/Current/usr/lib/ruby/1.9.0"
+#rbconfig_dir = NSBundle.mainBundle.resourcePath.fileSystemRepresentation + "/../Frameworks/MacRuby.framework/Versions/Current/usr/lib/ruby/1.9.0/universal-darwin10.0"
+#$LOAD_PATH << libs
+#$LOAD_PATH << rbconfig_dir
+
 # Loading all the Ruby project files.
 dir_path = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
 Dir.entries(dir_path).each do |path|

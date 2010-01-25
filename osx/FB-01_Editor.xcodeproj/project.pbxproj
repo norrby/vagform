@@ -50,9 +50,9 @@
 		2045346E10FCF06E002C4F41 /* operator_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045346D10FCF06E002C4F41 /* operator_controller.rb */; };
 		204536571101BBE6002C4F41 /* Instrument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204536561101BBE6002C4F41 /* Instrument.xib */; };
 		2045365E11020331002C4F41 /* instrument_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2045365D11020331002C4F41 /* instrument_controller.rb */; };
-		2068FAD81108FB5C00E62A4D /* pymidi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20F88F661108F6C800FD15E7 /* pymidi.framework */; };
+		2068FAD81108FB5C00E62A4D /* PYMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20F88F661108F6C800FD15E7 /* PYMIDI.framework */; };
 		2068FB331109010900E62A4D /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2068FB32110900F800E62A4D /* macruby-midi.framework */; };
-		2068FCCB110A463400E62A4D /* pymidi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F88F661108F6C800FD15E7 /* pymidi.framework */; };
+		2068FCCB110A463400E62A4D /* PYMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F88F661108F6C800FD15E7 /* PYMIDI.framework */; };
 		207425A611078CB300B667FB /* Operator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425A511078CB300B667FB /* Operator.xib */; };
 		207425C21108BC0D00B667FB /* Voice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425C11108BC0D00B667FB /* Voice.xib */; };
 		207425C71108BC8500B667FB /* Algorithm1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207425C61108BC8500B667FB /* Algorithm1.xib */; };
@@ -72,28 +72,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 20F88F5E1108F6C800FD15E7 /* pymidi.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* PYMIDI */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = PYMIDI;
 		};
 		2068FB31110900F800E62A4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* macruby-midi.framework */;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = "macruby-midi";
 		};
 		2068FC0F110A2E7600E62A4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2068FB2A110900F800E62A4D /* macruby-midi.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* macruby-midi */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = "macruby-midi";
 		};
 		2068FC93110A3D8900E62A4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* FB-01_Editor */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = "FB-01_Editor";
 		};
 		20F88F651108F6C800FD15E7 /* PBXContainerItemProxy */ = {
@@ -113,7 +113,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2068FB331109010900E62A4D /* macruby-midi.framework in CopyFiles */,
-				2068FAD81108FB5C00E62A4D /* pymidi.framework in CopyFiles */,
+				2068FAD81108FB5C00E62A4D /* PYMIDI.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2068FCCB110A463400E62A4D /* pymidi.framework in Frameworks */,
+				2068FCCB110A463400E62A4D /* PYMIDI.framework in Frameworks */,
 				207426FD1108E5EF00B667FB /* CoreMIDI.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				2074276C1108EDCB00B667FB /* MacRuby.framework in Frameworks */,
@@ -225,7 +225,7 @@
 		20F88F5F1108F6C800FD15E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20F88F661108F6C800FD15E7 /* pymidi.framework */,
+				20F88F661108F6C800FD15E7 /* PYMIDI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,10 +340,10 @@
 			remoteRef = 2068FB31110900F800E62A4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		20F88F661108F6C800FD15E7 /* pymidi.framework */ = {
+		20F88F661108F6C800FD15E7 /* PYMIDI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = pymidi.framework;
+			path = PYMIDI.framework;
 			remoteRef = 20F88F651108F6C800FD15E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -402,7 +402,7 @@
 		};
 		4D1A51A410A4FF640046A98A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -411,7 +411,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\n#PATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed --compile \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\n \n#install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/#MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/MacOS/$PROJECT_NAME\"\n \n#for F in $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/Resources/*.rbo; do\n#  install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/#MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$F\"\n#done\n\nLIB=MacRuby.framework/Versions/Current/usr/lib/libmacruby.dylib\nfind $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents -name \"*.bundle\" -exec install_name_tool -change /Library/Frameworks/$LIB  @executable_path/../Frameworks/$LIB {} \\;";
+			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\n#PATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed --compile \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\n \n#install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/#MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/MacOS/$PROJECT_NAME\"\n \n#for F in $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/Resources/*.rbo; do\n#  install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/#MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$F\"\n#done\n\n\nLIB=MacRuby.framework/Versions/Current/usr/lib/libmacruby.dylib\nfind $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents -name \"*.bundle\" -exec install_name_tool -change /Library/Frameworks/$LIB  @executable_path/../Frameworks/$LIB {} \\;\nLIB05=MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\nfind $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents -name macruby-midi -type f -exec install_name_tool -change /Library/Frameworks/$LIB05 @executable_path/../Frameworks/$LIB05 {} \\;\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
