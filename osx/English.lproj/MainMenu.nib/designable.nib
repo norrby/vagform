@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1050</int>
+		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10C540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">740</string>
 		<string key="IBDocument.AppKitVersion">1038.25</string>
@@ -11,8 +11,8 @@
 			<string key="NS.object.0">740</string>
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
+			<integer value="372"/>
 			<integer value="29"/>
-			<integer value="371"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -995,15 +995,6 @@
 								<object class="NSView" id="378722642">
 									<reference key="NSNextResponder" ref="973029164"/>
 									<int key="NSvFlags">256</int>
-									<array class="NSMutableArray" key="NSSubviews">
-										<object class="NSCustomView" id="149699442">
-											<reference key="NSNextResponder" ref="378722642"/>
-											<int key="NSvFlags">268</int>
-											<string key="NSFrame">{{11, 3}, {151, 80}}</string>
-											<reference key="NSSuperview" ref="378722642"/>
-											<string key="NSClassName">NSCustomView</string>
-										</object>
-									</array>
 									<string key="NSFrame">{{1, 1}, {173, 87}}</string>
 									<reference key="NSSuperview" ref="973029164"/>
 								</object>
@@ -1533,9 +1524,9 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">where</string>
 						<reference key="source" ref="868295754"/>
-						<reference key="destination" ref="149699442"/>
+						<reference key="destination" ref="973029164"/>
 					</object>
-					<int key="connectionID">1023</int>
+					<int key="connectionID">1024</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2311,20 +2302,13 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">1017</int>
 						<reference key="object" ref="973029164"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="149699442"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1021</int>
 						<reference key="object" ref="868295754"/>
 						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1022</int>
-						<reference key="object" ref="149699442"/>
-						<reference key="parent" ref="973029164"/>
 					</object>
 				</array>
 			</object>
@@ -2339,7 +2323,6 @@
 				<string key="1017.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1021.CustomClassName">OperatorController</string>
 				<string key="1021.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1022.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="103.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="103.ImportedFromIB2"/>
 				<string key="106.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2474,9 +2457,9 @@
 				<integer value="1" key="351.ImportedFromIB2"/>
 				<string key="354.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="354.ImportedFromIB2"/>
-				<string key="371.IBEditorWindowLastContentRect">{{53, 617}, {1113, 406}}</string>
+				<string key="371.IBEditorWindowLastContentRect">{{405, 254}, {1113, 406}}</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBWindowTemplateEditedContentRect">{{53, 617}, {1113, 406}}</string>
+				<string key="371.IBWindowTemplateEditedContentRect">{{405, 254}, {1113, 406}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="371.editorWindowContentRectSynchronizationRect">{{33, 99}, {480, 360}}</string>
 				<boolean value="NO" key="371.windowTemplate.hasMinSize"/>
@@ -2564,7 +2547,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1023</int>
+			<int key="maxID">1024</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2614,10 +2597,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">OperatorController</string>
 					<string key="superclassName">NSViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">tl_changed:</string>
-						<string key="NS.object.0">id</string>
-					</object>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="moved:">id</string>
+						<string key="tl_changed:">id</string>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="button1">id</string>
 						<string key="button2">id</string>
@@ -3208,7 +3191,7 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
-			<integer value="1050" key="NS.object.0"/>
+			<integer value="1060" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../FB-01_Editor.xcodeproj</string>

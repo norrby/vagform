@@ -206,9 +206,9 @@
 		path = "/Users/norrby/Documents/src/yfb01/src/midi-lex/ext/midi_lex/macruby-midi/MidiSender.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {773, 871}}";
+			sepNavIntBoundsRect = "{{0, 0}, {773, 767}}";
 			sepNavSelRange = "{144, 0}";
-			sepNavVisRange = "{0, 531}";
+			sepNavVisRange = "{561, 825}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
