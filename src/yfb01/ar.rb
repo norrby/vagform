@@ -7,7 +7,6 @@ class Ar
     @size = size
     @value = 0
     @y = size.height
-    puts "ysize: #{@y}"
   end
 
   def calculate_x(a_value)
@@ -20,6 +19,9 @@ class Ar
   
   def x
     calculate_x(@value)
+  end
+
+  def y=(y)
   end
 
   def x=(x)

@@ -2,7 +2,7 @@
 //  main.m
 //  FB-01_Editor
 //
-//  Created by M Norrby on 1/12/10.
+//  Created by M Norrby on 1/31/10.
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
@@ -10,5 +10,5 @@
 
 int main(int argc, char *argv[])
 {
-    return macruby_main("rb_main.rb", argc, argv);
+	return macruby_main("rb_main.rb", argc, argv);
 }
