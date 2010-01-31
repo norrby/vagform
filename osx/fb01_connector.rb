@@ -29,18 +29,13 @@ class FB01Connector < NSViewController
   end
 
   def awakeFromNib
-    puts "view = #{self.view}"
-    puts "view2 = #{@view_parent}"
+    @view_parent.addSubview(view)
+    #puts "populating channels"
     @channel_selector.setSegmentCount(channels.size)
     channels.each_with_index do |ch, idx|
       @channel_selector.setLabel(ch.to_s, forSegment:idx)
       @channel_selector.setWidth(ch.to_s.length == 2 ? 22 : 13, forSegment:idx)
     end
-    @view_parent.addSubview(view)
-    
-#    available_devices = @midi.devices
-#    @midi.open(available_devices[0]) if available_devices.length > 0
-#    available_devices
   rescue => e
     puts "Error " + e.message
   end

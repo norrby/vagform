@@ -5,6 +5,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {783, 303}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 100}";
+			sepNavWindowFrame = "{{15, 495}, {750, 558}}";
 		};
 	};
 	1A55BB891026466A0069E1DF /* fb01_config.rb */ = {
@@ -23,9 +24,9 @@
 	};
 	201C59F31115935000EDA7BA /* fb01_connector.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {783, 520}}";
-			sepNavSelRange = "{73, 0}";
-			sepNavVisRange = "{0, 438}";
+			sepNavIntBoundsRect = "{{0, 0}, {783, 650}}";
+			sepNavSelRange = "{1077, 0}";
+			sepNavVisRange = "{275, 577}";
 		};
 	};
 	201C5B711115968700EDA7BA /* PBXTextBookmark */ = {
