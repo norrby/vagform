@@ -53,14 +53,14 @@
 					<int key="NSvFlags">274</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSCustomView" id="1053609246">
+						<object class="NSCustomView" id="218806103">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{20, 429}, {436, 136}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
-						<object class="NSCustomView" id="10289729">
+						<object class="NSCustomView" id="291036821">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 20}, {436, 401}}</string>
@@ -75,14 +75,17 @@
 				<string key="NSMinSize">{476, 378}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
 			</object>
-			<object class="NSViewController" id="868468199">
+			<object class="NSViewController" id="1072352872">
 				<string key="NSNibName">FB01Connector</string>
 			</object>
-			<object class="NSCustomObject" id="442275530">
+			<object class="NSCustomObject" id="604855338">
 				<string key="NSClassName">Editor</string>
 			</object>
-			<object class="NSViewController" id="844887684">
+			<object class="NSViewController" id="585154111">
 				<string key="NSNibName">FB01Configuration</string>
+			</object>
+			<object class="NSCustomObject" id="157087893">
+				<string key="NSClassName">IntToString</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -107,32 +110,32 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">view_parent</string>
-						<reference key="source" ref="868468199"/>
-						<reference key="destination" ref="1053609246"/>
+						<reference key="source" ref="1072352872"/>
+						<reference key="destination" ref="218806103"/>
 					</object>
 					<int key="connectionID">16</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">editor</string>
-						<reference key="source" ref="868468199"/>
-						<reference key="destination" ref="442275530"/>
+						<reference key="source" ref="1072352872"/>
+						<reference key="destination" ref="604855338"/>
 					</object>
 					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">view_parent</string>
-						<reference key="source" ref="844887684"/>
-						<reference key="destination" ref="10289729"/>
+						<reference key="source" ref="585154111"/>
+						<reference key="destination" ref="291036821"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">editor</string>
-						<reference key="source" ref="844887684"/>
-						<reference key="destination" ref="442275530"/>
+						<reference key="source" ref="585154111"/>
+						<reference key="destination" ref="604855338"/>
 					</object>
 					<int key="connectionID">21</int>
 				</object>
@@ -178,29 +181,29 @@
 						<reference key="object" ref="1006"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="10289729"/>
-							<reference ref="1053609246"/>
+							<reference ref="291036821"/>
+							<reference ref="218806103"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="868468199"/>
+						<reference key="object" ref="1072352872"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="442275530"/>
+						<reference key="object" ref="604855338"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">18</int>
-						<reference key="object" ref="844887684"/>
+						<reference key="object" ref="585154111"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="10289729"/>
+						<reference key="object" ref="291036821"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
@@ -208,8 +211,13 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="1053609246"/>
+						<reference key="object" ref="218806103"/>
 						<reference key="parent" ref="1006"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="157087893"/>
+						<reference key="parent" ref="0"/>
 					</object>
 				</object>
 			</object>
@@ -235,6 +243,7 @@
 					<string>18.IBPluginDependency</string>
 					<string>19.IBPluginDependency</string>
 					<string>2.IBPluginDependency</string>
+					<string>23.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
@@ -258,6 +267,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -276,7 +286,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -300,14 +310,24 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>amd_dial</string>
+							<string>amd_slider</string>
 							<string>editor</string>
+							<string>int_converter</string>
 							<string>kc_responder_selector</string>
 							<string>lfo_waveform_selector</string>
 							<string>name_field</string>
+							<string>pmd_dial</string>
+							<string>pmd_slider</string>
 							<string>view_parent</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -362,6 +382,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">fb01_config.rb</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">IntToString</string>
+					<string key="superclassName">NSValueTransformer</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">int_to_string.rb</string>
 					</object>
 				</object>
 			</object>
@@ -714,6 +742,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSResponder.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSValueTransformer</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSValueTransformer.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

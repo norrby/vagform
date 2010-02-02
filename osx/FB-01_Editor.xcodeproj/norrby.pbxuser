@@ -198,6 +198,13 @@
 		vrLen = 659;
 		vrLoc = 0;
 	};
+	20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {783, 1105}}";
+			sepNavSelRange = "{1545, 0}";
+			sepNavVisRange = "{0, 571}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 20A745D411158D37001BD66E /* FB-01_Editor */;

@@ -16,6 +16,7 @@
 		201C5B681115951400EDA7BA /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 201C5B671115951400EDA7BA /* lib */; };
 		20BC9BB21115B81F009D5E09 /* FB01Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BC9BB11115B81F009D5E09 /* FB01Configuration.xib */; };
 		20BC9BBB1115B877009D5E09 /* fb01_configuration.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */; };
+		20BC9CE6111613AF009D5E09 /* int_to_string.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BC9CE5111613AF009D5E09 /* int_to_string.rb */; };
 		20E9475C11158E3800BA1A1E /* PYMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9475511158E0700BA1A1E /* PYMIDI.framework */; };
 		20E9475D11158E3800BA1A1E /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9474D11158DE200BA1A1E /* macruby-midi.framework */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
@@ -84,6 +85,7 @@
 		201C5B671115951400EDA7BA /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = "../src/midi-lex/lib"; sourceTree = SOURCE_ROOT; };
 		20BC9BB11115B81F009D5E09 /* FB01Configuration.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FB01Configuration.xib; sourceTree = "<group>"; };
 		20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fb01_configuration.rb; sourceTree = "<group>"; };
+		20BC9CE5111613AF009D5E09 /* int_to_string.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = int_to_string.rb; sourceTree = "<group>"; };
 		20E9474111158DE200BA1A1E /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		20E9475011158E0700BA1A1E /* pymidi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pymidi.xcodeproj; path = "../src/midi-lex/ext/pymidi/pymidi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				20BC9CE5111613AF009D5E09 /* int_to_string.rb */,
 				201C5B671115951400EDA7BA /* lib */,
 				201C59F21115935000EDA7BA /* editor.rb */,
 				201C59F31115935000EDA7BA /* fb01_connector.rb */,
@@ -295,6 +298,7 @@
 				201C5B681115951400EDA7BA /* lib in Resources */,
 				20BC9BB21115B81F009D5E09 /* FB01Configuration.xib in Resources */,
 				20BC9BBB1115B877009D5E09 /* fb01_configuration.rb in Resources */,
+				20BC9CE6111613AF009D5E09 /* int_to_string.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

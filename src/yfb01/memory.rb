@@ -17,6 +17,11 @@ module Memory
     @data[pos] = (@data[pos] & ~mask) | (value << shift)
   end
 
+  def set(pos, mask, value)
+    store(pos, mask, value)
+    send_to_fb01(pos, @data[pos]) if @comm
+  end
+
   def self.[](*args)
     self.define(*args)
   end
@@ -47,8 +52,7 @@ module Memory
         if value < lower_bound or value > upper_bound
           raise "#{key} must be in the interval [#{lower_bound}..#{upper_bound}]"
         end
-        store(pos(key), mask(key), value)
-        send_to_fb01(pos(key), @data[pos(key)]) if @comm
+        set(pos(key), mask(key), value)
       end
       
       define_method "min_#{key}".to_sym do
@@ -57,6 +61,12 @@ module Memory
       
       define_method "max_#{key}".to_sym do
         @parameters[key][:max]
+      end
+
+      define_method "#{key}_to_s".to_sym do
+        puts "asking about string"
+        (send key).to_s
+        "banjo"
       end
     end
   end

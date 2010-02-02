@@ -1,3 +1,4 @@
+# -*- coding: undecided -*-
 require 'memory'
 
 require 'instrument'
@@ -19,7 +20,7 @@ class Configuration
   Memory.accessors(@@MemoryLayout)
 
   def initialize(midi, backing_store = Array.new(0xA0, 0))
-    @midi = midi
+    @comm = midi
     @parameters = @@MemoryLayout
     @data = backing_store
     @instruments = (1..8).to_a.collect {|n| Instrument.new(backing_store[n * 0x20, 0x20])}
@@ -29,9 +30,29 @@ class Configuration
     @data[0..6].inject("") { |result, char| result << char }
   end
 
+  def bulk_fetch
+    dump = []
+    @comm.sysex([0x43, 0x75, @comm.system_channel - 1, 0x20, 0x01, 0x00])
+    catch :done do
+      @comm.capture(:format => :Raw) do |data|
+        dump.concat(data)
+        next if dump.length < 9
+        stated_packet_size = ((dump[0x07] & 0x01) << 7) + dump[0x08]
+        printf "size = 0x%02X\n", stated_packet_size if dump.length < 20
+        throw :done if dump.length >= (stated_packet_size + 11)
+      end
+    end
+    puts "received #{dump.size} ending with #{dump[-1]}"
+    @data = dump[0x09..-3]
+  end
+
   def name=(name)
-    @data.fill(0, 0..6)
-    name.each_char.each_with_index {|ch, idx| @data[idx] = ch.to_s}
+    (0..6).to_a.each {|idx| set(idx, 0x7F, (name[idx] || " ").ord)}
+  end
+
+  def send_to_fb01(pos, data)
+    puts "sending #{data} on pos #{pos} to FB-01"
+    @comm.sysex([0x43, 0x75, @comm.system_channel - 1, 0x10, pos, data])
   end
 
   def lfo_waveforms
@@ -48,7 +69,4 @@ class Configuration
     @@LfoWaveforms[lfo_waveform_internal]
   end
 
-  def key_code_receive_mode
-    
-  end
 end

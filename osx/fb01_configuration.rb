@@ -1,25 +1,8 @@
-# -*- coding: iso-8859-1 -*-
-class LfoWaveform < NSArrayController
-  attr_writer :configuration_controller
-
-  def config
-    @configuration_controller.config
-  end  
-
-  def setValue(value, forKey:key)
-    puts "sending #{value} for #{key}"
-    config.lfo_waveform = value
-    setSelectedObjects([config.lfo_waveform])
-  end
-
-  def awakeFromNib
-    addObjects(config.lfo_waveforms)
-  end
-end
-
 class FB01Configuration < NSViewController
   attr_writer :editor, :view_parent
   attr_writer :lfo_waveform_selector, :name_field, :kc_responder_selector
+  attr_writer :amd_dial, :amd_slider, :pmd_dial, :pmd_slider, :lfo_speed_slider
+  attr_writer :int_converter
 
   def midi
     @editor.communicator
@@ -29,11 +12,15 @@ class FB01Configuration < NSViewController
     @editor.configuration
   end
 
+  def bulk_fetch(sender)
+    config.bulk_fetch
+    invalidate
+  end
+
   def kc_respond(sender)
     even = sender.isSelectedForSegment(0) ? 1 : 0
     odd = sender.isSelectedForSegment(1) ? 2 : 0
     kc = (odd + even)
-    puts "even: #{even}, odd: #{odd}"
     if kc == 0
       invalidate 
     else
@@ -56,9 +43,13 @@ class FB01Configuration < NSViewController
   def invalidate
     @name_field.setStringValue(config.name)
     @lfo_waveform_selector.selectCellAtRow(config.lfo_waveform_internal, column:0)
-    puts "even: #{self.kc_even}, odd: #{self.kc_odd} (invalidate, kc=#{config.kc_reception_mode})"
     @kc_responder_selector.setSelected(self.kc_even, forSegment:0)
     @kc_responder_selector.setSelected(self.kc_odd, forSegment:1)
+    @amd_slider.setFloatValue(config.amd)
+    @pmd_slider.setFloatValue(config.pmd)
+    @amd_dial.setFloatValue(config.amd)
+    @pmd_dial.setFloatValue(config.pmd)
+    @lfo_speed_slider.setFloatValue(config.lfo_speed)
   end
 
   def valueForKey(key)
@@ -66,6 +57,11 @@ class FB01Configuration < NSViewController
   end
 
   def setValue(value, forKey:key)
+    value = value.to_i if value.class == Float
+    value = 1 if value.class == TrueClass
+    value = 0 if value.class == FalseClass
+#    puts "setting key=#{key} of type #{value.class}"
+
     config.send key + "=", value
     invalidate
   end
