@@ -30,13 +30,18 @@ class Instrument
 
   Memory.accessors(@@MemoryLayout)
 
-  def initialize(backing_store = Array.new(0x10, 0))
+  def initialize(midi, backing_store = Array.new(0x10, 0))
     @parameters = @@MemoryLayout
+    @comm = midi
     @data = backing_store
     @min_notes = 0
     @max_notes = 8
     @min_output_level = 0
     @max_output_level = 127
+  end
+
+  def replace_memory(new_bulk)
+    @data = new_bulk
   end
 
   def no

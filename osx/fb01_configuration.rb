@@ -2,7 +2,7 @@ class FB01Configuration < NSViewController
   attr_writer :editor, :view_parent
   attr_writer :lfo_waveform_selector, :name_field, :kc_responder_selector
   attr_writer :amd_dial, :amd_slider, :pmd_dial, :pmd_slider, :lfo_speed_slider
-  attr_writer :int_converter
+  attr_writer :inst1, :inst2, :progress
 
   def midi
     @editor.communicator
@@ -12,9 +12,21 @@ class FB01Configuration < NSViewController
     @editor.configuration
   end
 
+  def instruments
+    config.instruments
+  end
+
   def bulk_fetch(sender)
-    config.bulk_fetch
+    @progress.startAnimation(self)
+    config.bulk_fetch do |max, min, current|
+      @progress.setMaxValue max
+      @progress.setMinValue min
+      @progress.setDoubleValue current
+    end
+    @progress.stopAnimation(self)
     invalidate
+    @inst1.invalidate
+    @inst2.invalidate
   end
 
   def kc_respond(sender)
@@ -60,8 +72,6 @@ class FB01Configuration < NSViewController
     value = value.to_i if value.class == Float
     value = 1 if value.class == TrueClass
     value = 0 if value.class == FalseClass
-#    puts "setting key=#{key} of type #{value.class}"
-
     config.send key + "=", value
     invalidate
   end

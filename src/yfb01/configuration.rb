@@ -23,14 +23,15 @@ class Configuration
     @comm = midi
     @parameters = @@MemoryLayout
     @data = backing_store
-    @instruments = (1..8).to_a.collect {|n| Instrument.new(backing_store[n * 0x20, 0x20])}
+    @instruments = (1..8).to_a.collect {|n| Instrument.new(midi, backing_store[0x10 + n * 0x10, 0x10])}
+    @instruments.each_with_index {|inst, id| inst.instrument_no = id + 1}
   end
 
   def name
     @data[0..6].inject("") { |result, char| result << char }
   end
 
-  def bulk_fetch
+  def bulk_fetch(&block)
     dump = []
     @comm.sysex([0x43, 0x75, @comm.system_channel - 1, 0x20, 0x01, 0x00])
     catch :done do
@@ -38,12 +39,12 @@ class Configuration
         dump.concat(data)
         next if dump.length < 9
         stated_packet_size = ((dump[0x07] & 0x01) << 7) + dump[0x08]
-        printf "size = 0x%02X\n", stated_packet_size if dump.length < 20
+        block.call(stated_packet_size, 7, dump.length) if block
         throw :done if dump.length >= (stated_packet_size + 11)
       end
     end
-    puts "received #{dump.size} ending with #{dump[-1]}"
     @data = dump[0x09..-3]
+    @instruments.each_with_index {|inst, n| inst.replace_memory(@data[0x20 + n * 0x10, 0x10])}
   end
 
   def name=(name)
@@ -51,7 +52,6 @@ class Configuration
   end
 
   def send_to_fb01(pos, data)
-    puts "sending #{data} on pos #{pos} to FB-01"
     @comm.sysex([0x43, 0x75, @comm.system_channel - 1, 0x10, pos, data])
   end
 

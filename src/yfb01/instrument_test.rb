@@ -5,7 +5,7 @@ require 'instrument'
 class InstrumentTest < Test::Unit::TestCase
   def setup
     @dump = Array.new(0x10, 0)
-    @inst = Instrument.new(@dump)
+    @inst = Instrument.new(nil, @dump)
   end
 
   def test_notes
