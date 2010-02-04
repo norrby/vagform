@@ -200,9 +200,9 @@
 	};
 	20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {783, 1118}}";
-			sepNavSelRange = "{2052, 0}";
-			sepNavVisRange = "{0, 580}";
+			sepNavIntBoundsRect = "{{0, 0}, {783, 1248}}";
+			sepNavSelRange = "{2363, 0}";
+			sepNavVisRange = "{0, 707}";
 			sepNavWindowFrame = "{{61, 453}, {750, 558}}";
 		};
 	};
@@ -487,6 +487,66 @@
 		vrLen = 580;
 		vrLoc = 0;
 	};
+	20BC9E7F111B4C03009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 86";
+		rLen = 0;
+		rLoc = 2216;
+		rType = 0;
+		vrLen = 609;
+		vrLoc = 0;
+	};
+	20BC9E83111B4DD1009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 92";
+		rLen = 0;
+		rLoc = 2367;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	20BC9E8B111B4E8E009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 93";
+		rLen = 0;
+		rLoc = 2428;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 0;
+	};
+	20BC9E8F111B4EAE009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 94";
+		rLen = 0;
+		rLoc = 2489;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 0;
+	};
+	20BC9E95111B4F0B009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 92";
+		rLen = 0;
+		rLoc = 2367;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	20BC9E9F111B50F2009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BC9BBA1115B877009D5E09 /* fb01_configuration.rb */;
+		name = "fb01_configuration.rb: 92";
+		rLen = 0;
+		rLoc = 2363;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 20A745D411158D37001BD66E /* FB-01_Editor */;
@@ -642,6 +702,12 @@
 			20BC9E551118D46B009D5E09 /* PBXTextBookmark */ = 20BC9E551118D46B009D5E09 /* PBXTextBookmark */;
 			20BC9E591118D4AE009D5E09 /* PBXTextBookmark */ = 20BC9E591118D4AE009D5E09 /* PBXTextBookmark */;
 			20BC9E631118D77B009D5E09 /* PBXTextBookmark */ = 20BC9E631118D77B009D5E09 /* PBXTextBookmark */;
+			20BC9E7F111B4C03009D5E09 /* PBXTextBookmark */ = 20BC9E7F111B4C03009D5E09 /* PBXTextBookmark */;
+			20BC9E83111B4DD1009D5E09 /* PBXTextBookmark */ = 20BC9E83111B4DD1009D5E09 /* PBXTextBookmark */;
+			20BC9E8B111B4E8E009D5E09 /* PBXTextBookmark */ = 20BC9E8B111B4E8E009D5E09 /* PBXTextBookmark */;
+			20BC9E8F111B4EAE009D5E09 /* PBXTextBookmark */ = 20BC9E8F111B4EAE009D5E09 /* PBXTextBookmark */;
+			20BC9E95111B4F0B009D5E09 /* PBXTextBookmark */ = 20BC9E95111B4F0B009D5E09 /* PBXTextBookmark */;
+			20BC9E9F111B50F2009D5E09 /* PBXTextBookmark */ = 20BC9E9F111B50F2009D5E09 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 20A745E611158D3B001BD66E /* Source Control */;
 		userBuildSettings = {

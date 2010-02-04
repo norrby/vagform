@@ -302,7 +302,7 @@
 							<real>273</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>163 382 1139 585 0 0 1920 1058 </string>
+						<string>214 258 1139 585 0 0 1920 1058 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20BC9E631118D77B009D5E09</string>
+										<string>20BC9E9F111B50F2009D5E09</string>
 										<key>history</key>
 										<array>
 											<string>201C5B711115968700EDA7BA</string>
@@ -355,7 +355,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {844, 335}}</string>
 								<key>RubberWindowFrame</key>
-								<string>163 382 1139 585 0 0 1920 1058 </string>
+								<string>214 258 1139 585 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -375,7 +375,7 @@
 								<key>Frame</key>
 								<string>{{0, 340}, {844, 204}}</string>
 								<key>RubberWindowFrame</key>
-								<string>163 382 1139 585 0 0 1920 1058 </string>
+								<string>214 258 1139 585 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -539,7 +539,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20BC9E641118D77B009D5E09</string>
+		<string>20BC9EA0111B50F2009D5E09</string>
 		<string>20BC9B18111599A4009D5E09</string>
 		<string>20BC9B19111599A4009D5E09</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -548,7 +548,7 @@
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>163 382 1139 585 0 0 1920 1058 </string>
+	<string>214 258 1139 585 0 0 1920 1058 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

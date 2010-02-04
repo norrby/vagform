@@ -4,13 +4,12 @@
 # Created by M Norrby on 2/2/10.
 # Copyright 2010 __MyCompanyName__. All rights reserved.
 
-
 class FB01Instrument < NSViewController
   attr_writer :configuration, :view_parent
   attr_writer :notes_selector, :channel_selector, :output_level_indicator
 
   def instrument
-    @configuration.config.instruments[0]
+    @configuration.instrument(self)
   end
 
   def valueForKey(key)
@@ -20,6 +19,7 @@ class FB01Instrument < NSViewController
   def invalidate
     @notes_selector.setFloatValue(instrument.notes)
     @output_level_indicator.setFloatValue(instrument.output_level)
+    @channel_selector.setSelected(true, forSegment:(instrument.midi_channel - 1))
   end
 
   def setValue(value, forKey:key)
@@ -27,6 +27,11 @@ class FB01Instrument < NSViewController
     value = 1 if value.class == TrueClass
     value = 0 if value.class == FalseClass
     instrument.send key + "=", value
+    invalidate
+  end
+
+  def midi_channel_selected(sender)
+    instrument.midi_channel = sender.indexOfSelectedItem.to_i + 1
     invalidate
   end
 
