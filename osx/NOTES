@@ -1,0 +1,21 @@
+Internal Development Notes
+==========================
+GUI sometimes blank. Sometimes crashes:
+
+-top view accidentally of the NSCustomView class instead of NSView
+
+
+Spawning error "no such file to load -- libyaml (LoadError)" on
+deploy of embedded app
+
+- rubygems are probaby required somewhere. They shouldn't(?) in
+  an embedded app
+
+
+
+Continuous error messages on spawn. Just added a new controller
+to the top level.
+
+- forgotten to select nib file in the object
+
+
