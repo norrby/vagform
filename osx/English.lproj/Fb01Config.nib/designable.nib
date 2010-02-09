@@ -41,13 +41,13 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{428, 132}, {873, 861}}</string>
+				<string key="NSWindowRect">{{235, 153}, {1015, 905}}</string>
 				<int key="NSWTFlags">536870912</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
-				<string key="NSWindowContentMinSize">{476, 356}</string>
+				<string key="NSWindowContentMinSize">{873, 861}</string>
 				<object class="NSView" key="NSWindowView" id="1006">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">274</int>
@@ -55,80 +55,38 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSCustomView" id="25364214">
 							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{20, 705}, {389, 136}}</string>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{20, 772}, {422, 113}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 						<object class="NSCustomView" id="662309889">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{417, 573}, {436, 268}}</string>
+							<string key="NSFrame">{{450, 621}, {549, 264}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
-						<object class="NSCustomView" id="733712090">
+						<object class="NSCustomView" id="1072103605">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 619}, {389, 78}}</string>
+							<string key="NSFrame">{{450, 8}, {549, 604}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
-						<object class="NSCustomView" id="343217614">
+						<object class="NSCustomView" id="114802723">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 536}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="135570804">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 450}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="150165810">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 364}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="988814210">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 278}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="22295946">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 192}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="638683900">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 106}, {389, 78}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<string key="NSClassName">NSCustomView</string>
-						</object>
-						<object class="NSCustomView" id="588543075">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 20}, {389, 78}}</string>
+							<string key="NSFrame">{{20, 8}, {422, 755}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 					</object>
-					<string key="NSFrameSize">{873, 861}</string>
+					<string key="NSFrameSize">{1015, 905}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1058}}</string>
-				<string key="NSMinSize">{476, 378}</string>
+				<string key="NSMinSize">{873, 883}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
 			</object>
 			<object class="NSViewController" id="307811489">
@@ -140,29 +98,11 @@
 			<object class="NSViewController" id="419259993">
 				<string key="NSNibName">FB01Configuration</string>
 			</object>
-			<object class="NSViewController" id="412732141">
-				<string key="NSNibName">FB01Instrument</string>
+			<object class="NSViewController" id="488479300">
+				<string key="NSNibName">FB01InstrumentVoice</string>
 			</object>
-			<object class="NSViewController" id="946450706">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="509135709">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="694787526">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="262590700">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="435728147">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="704739517">
-				<string key="NSNibName">FB01Instrument</string>
-			</object>
-			<object class="NSViewController" id="217304523">
-				<string key="NSNibName">FB01Instrument</string>
+			<object class="NSViewController" id="561293018">
+				<string key="NSNibName">FB01Instruments</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -218,195 +158,51 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="412732141"/>
-						<reference key="destination" ref="733712090"/>
+						<string key="label">parent_view</string>
+						<reference key="source" ref="488479300"/>
+						<reference key="destination" ref="1072103605"/>
 					</object>
-					<int key="connectionID">28</int>
+					<int key="connectionID">89</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="412732141"/>
-						<reference key="destination" ref="419259993"/>
+						<string key="label">parent_view</string>
+						<reference key="source" ref="561293018"/>
+						<reference key="destination" ref="114802723"/>
 					</object>
-					<int key="connectionID">29</int>
+					<int key="connectionID">93</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst1</string>
+						<string key="label">editor</string>
+						<reference key="source" ref="561293018"/>
+						<reference key="destination" ref="170552563"/>
+					</object>
+					<int key="connectionID">94</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">instruments</string>
 						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="412732141"/>
+						<reference key="destination" ref="561293018"/>
 					</object>
-					<int key="connectionID">30</int>
+					<int key="connectionID">95</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="946450706"/>
-						<reference key="destination" ref="419259993"/>
+						<string key="label">voice_editor</string>
+						<reference key="source" ref="561293018"/>
+						<reference key="destination" ref="488479300"/>
 					</object>
-					<int key="connectionID">33</int>
+					<int key="connectionID">96</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst2</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="946450706"/>
+						<string key="label">instruments</string>
+						<reference key="source" ref="488479300"/>
+						<reference key="destination" ref="561293018"/>
 					</object>
-					<int key="connectionID">34</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="946450706"/>
-						<reference key="destination" ref="343217614"/>
-					</object>
-					<int key="connectionID">36</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="509135709"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">44</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="694787526"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">47</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="262590700"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">50</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="435728147"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">53</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="704739517"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">56</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">configuration</string>
-						<reference key="source" ref="217304523"/>
-						<reference key="destination" ref="419259993"/>
-					</object>
-					<int key="connectionID">60</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="509135709"/>
-						<reference key="destination" ref="135570804"/>
-					</object>
-					<int key="connectionID">61</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="694787526"/>
-						<reference key="destination" ref="150165810"/>
-					</object>
-					<int key="connectionID">62</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="262590700"/>
-						<reference key="destination" ref="988814210"/>
-					</object>
-					<int key="connectionID">63</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="435728147"/>
-						<reference key="destination" ref="22295946"/>
-					</object>
-					<int key="connectionID">65</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="704739517"/>
-						<reference key="destination" ref="638683900"/>
-					</object>
-					<int key="connectionID">66</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">view_parent</string>
-						<reference key="source" ref="217304523"/>
-						<reference key="destination" ref="588543075"/>
-					</object>
-					<int key="connectionID">67</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst3</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="509135709"/>
-					</object>
-					<int key="connectionID">68</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst4</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="694787526"/>
-					</object>
-					<int key="connectionID">69</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst5</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="262590700"/>
-					</object>
-					<int key="connectionID">70</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst6</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="435728147"/>
-					</object>
-					<int key="connectionID">71</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst7</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="704739517"/>
-					</object>
-					<int key="connectionID">72</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inst8</string>
-						<reference key="source" ref="419259993"/>
-						<reference key="destination" ref="217304523"/>
-					</object>
-					<int key="connectionID">73</int>
+					<int key="connectionID">97</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -451,15 +247,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="25364214"/>
-							<reference ref="733712090"/>
-							<reference ref="343217614"/>
-							<reference ref="135570804"/>
-							<reference ref="150165810"/>
-							<reference ref="988814210"/>
-							<reference ref="22295946"/>
-							<reference ref="638683900"/>
-							<reference ref="588543075"/>
+							<reference ref="1072103605"/>
 							<reference ref="662309889"/>
+							<reference ref="114802723"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -492,83 +282,23 @@
 						<reference key="parent" ref="1006"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="733712090"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">27</int>
-						<reference key="object" ref="412732141"/>
+						<int key="objectID">85</int>
+						<reference key="object" ref="488479300"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">31</int>
-						<reference key="object" ref="946450706"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">35</int>
-						<reference key="object" ref="343217614"/>
+						<int key="objectID">86</int>
+						<reference key="object" ref="1072103605"/>
 						<reference key="parent" ref="1006"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">37</int>
-						<reference key="object" ref="135570804"/>
+						<int key="objectID">91</int>
+						<reference key="object" ref="114802723"/>
 						<reference key="parent" ref="1006"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">38</int>
-						<reference key="object" ref="150165810"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">39</int>
-						<reference key="object" ref="988814210"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">40</int>
-						<reference key="object" ref="22295946"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">41</int>
-						<reference key="object" ref="638683900"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">42</int>
-						<reference key="object" ref="588543075"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">43</int>
-						<reference key="object" ref="509135709"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">46</int>
-						<reference key="object" ref="694787526"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">49</int>
-						<reference key="object" ref="262590700"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">52</int>
-						<reference key="object" ref="435728147"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">55</int>
-						<reference key="object" ref="704739517"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">58</int>
-						<reference key="object" ref="217304523"/>
+						<int key="objectID">92</int>
+						<reference key="object" ref="561293018"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -595,46 +325,27 @@
 					<string>18.IBPluginDependency</string>
 					<string>19.IBPluginDependency</string>
 					<string>2.IBPluginDependency</string>
-					<string>26.IBPluginDependency</string>
-					<string>27.CustomClassName</string>
-					<string>27.IBAttributePlaceholdersKey</string>
-					<string>27.IBPluginDependency</string>
-					<string>31.CustomClassName</string>
-					<string>31.IBPluginDependency</string>
-					<string>35.IBPluginDependency</string>
-					<string>37.IBPluginDependency</string>
-					<string>38.IBPluginDependency</string>
-					<string>39.IBPluginDependency</string>
-					<string>40.IBPluginDependency</string>
-					<string>41.IBPluginDependency</string>
-					<string>42.IBPluginDependency</string>
-					<string>43.CustomClassName</string>
-					<string>43.IBPluginDependency</string>
-					<string>46.CustomClassName</string>
-					<string>46.IBPluginDependency</string>
-					<string>49.CustomClassName</string>
-					<string>49.IBPluginDependency</string>
-					<string>52.CustomClassName</string>
-					<string>52.IBPluginDependency</string>
-					<string>55.CustomClassName</string>
-					<string>55.IBPluginDependency</string>
-					<string>58.CustomClassName</string>
-					<string>58.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
+					<string>85.CustomClassName</string>
+					<string>85.IBPluginDependency</string>
+					<string>86.IBPluginDependency</string>
+					<string>91.IBPluginDependency</string>
+					<string>92.CustomClassName</string>
+					<string>92.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{1142, 175}, {873, 861}}</string>
+					<string>{{556, 131}, {1015, 905}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{1142, 175}, {873, 861}}</string>
+					<string>{{556, 131}, {1015, 905}}</string>
 					<integer value="0"/>
 					<string>{196, 240}</string>
 					<string>{{357, 418}, {480, 270}}</string>
 					<boolean value="YES"/>
-					<string>{476, 356}</string>
+					<string>{873, 861}</string>
 					<string>FB01Connector</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -643,36 +354,11 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<object class="NSMutableDictionary">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<reference key="dict.sortedKeys" ref="0"/>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-					</object>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
+					<string>FB01InstrumentVoice</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FB01Instrument</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>FB01Instruments</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
@@ -692,7 +378,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">73</int>
+			<int key="maxID">97</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -728,14 +414,7 @@
 							<string>amd_dial</string>
 							<string>amd_slider</string>
 							<string>editor</string>
-							<string>inst1</string>
-							<string>inst2</string>
-							<string>inst3</string>
-							<string>inst4</string>
-							<string>inst5</string>
-							<string>inst6</string>
-							<string>inst7</string>
-							<string>inst8</string>
+							<string>instruments</string>
 							<string>kc_responder_selector</string>
 							<string>lfo_speed_slider</string>
 							<string>lfo_waveform_selector</string>
@@ -747,13 +426,6 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -810,17 +482,17 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">FB01Instrument</string>
+					<string key="className">FB01InstrumentVoice</string>
 					<string key="superclassName">NSViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>channel_selector</string>
-							<string>configuration</string>
-							<string>notes_selector</string>
-							<string>output_level_indicator</string>
-							<string>view_parent</string>
+							<string>instrument</string>
+							<string>instrument_controller</string>
+							<string>instruments</string>
+							<string>parent_view</string>
+							<string>voice_controller</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -833,7 +505,50 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">fb01_instrument.rb</string>
+						<string key="minorKey">fb01_instrument_voice.rb</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">FB01Instruments</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">chose_instrument:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>editor</string>
+							<string>i1</string>
+							<string>i2</string>
+							<string>i3</string>
+							<string>i4</string>
+							<string>i5</string>
+							<string>i6</string>
+							<string>i7</string>
+							<string>i8</string>
+							<string>parent_view</string>
+							<string>voice_editor</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">fb01_instruments.rb</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

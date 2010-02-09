@@ -7,13 +7,30 @@
 class FB01Instrument < NSViewController
   attr_writer :configuration, :view_parent
   attr_writer :notes_selector, :channel_selector, :output_level_indicator
+  attr_writer :instrument_pointer, :title
 
   def instrument
     @configuration.instrument(self)
   end
 
+  def instrument_no
+    instrument.no
+  end
+
   def valueForKey(key)
     instrument.send key
+  end
+
+  def select_instrument(sender)
+    if sender.state == 1
+       sender.setState(0)
+      return
+    end
+    @configuration.chose_instrument(self)
+  end
+
+  def deselect_instrument
+    @instrument_pointer.setState(1)
   end
 
   def invalidate
@@ -43,7 +60,7 @@ class FB01Instrument < NSViewController
       @channel_selector.setLabel(ch.to_s, forSegment:idx)
       @channel_selector.setWidth(ch.to_s.length == 2 ? 22 : 13, forSegment:idx)
     end
-
+    @title.setTitle("Instrument #{instrument_no}")
   rescue => e
     puts "Error " + e.message
   end

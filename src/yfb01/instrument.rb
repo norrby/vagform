@@ -1,8 +1,12 @@
 require 'memory'
+require 'timeout'
+require 'voice'
 
 class Instrument
   include Memory
-  attr_writer :comm, :instrument_no
+  include Timeout
+  attr_writer :instrument_no
+  attr_reader :comm, :voice
 
   @@Tones = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "H"]
   @@Keys = (-2..8).to_a.collect do |num| @@Tones.collect {|tone| "#{tone}#{num}" } end.flatten[0..127]
@@ -34,14 +38,21 @@ class Instrument
     @parameters = @@MemoryLayout
     @comm = midi
     @data = backing_store
-    @min_notes = 0
-    @max_notes = 8
-    @min_output_level = 0
-    @max_output_level = 127
+    @voice = Voice.new(midi, self)
   end
 
   def replace_memory(new_bulk)
     @data = new_bulk
+  end
+
+  def read_voice_data_from_fb01(&block)
+    puts "reading voice for instrument #{no}"
+    request = [0x43, 0x75, 0x00 + @comm.system_channel - 1, 0x28 + no - 1, 0x00, 0x00]
+    raw_response = [0xF0, 0x43, 0x75, 0x00 + @comm.system_channel - 1, 0x08 + no - 1, 0x00, 0x00]
+    data = @comm.receive_interleaved_dump(request, raw_response)
+    @voice.replace_memory(data) if data
+  rescue =>e
+    puts "timeout? #{e}"
   end
 
   def no
@@ -50,7 +61,7 @@ class Instrument
 
   def send_to_fb01(pos, data)
     channel_index = @comm.system_channel - 1
-    instrument_index = @instrument_no - 1
+    instrument_index = no - 1
     @comm.sysex([0x43, 0x75, channel_index, 0x18 + instrument_index, pos, data])
   end
 

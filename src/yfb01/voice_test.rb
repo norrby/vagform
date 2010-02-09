@@ -5,7 +5,7 @@ require 'voice'
 class VoiceTest < Test::Unit::TestCase
   def setup
     @dump = Array.new(0x40, 0)
-    @voice = Voice.new(@dump)
+    @voice = Voice.new(nil, 0, @dump)
   end
 
   def test_name

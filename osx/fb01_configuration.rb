@@ -2,8 +2,7 @@ class FB01Configuration < NSViewController
   attr_writer :editor, :view_parent
   attr_writer :lfo_waveform_selector, :name_field, :kc_responder_selector
   attr_writer :amd_dial, :amd_slider, :pmd_dial, :pmd_slider, :lfo_speed_slider
-  attr_writer :inst1, :inst2, :inst3, :inst4, :inst5, :inst6, :inst7, :inst8
-  attr_writer :progress
+  attr_writer :progress, :instruments
 
   def midi
     @editor.communicator
@@ -13,27 +12,21 @@ class FB01Configuration < NSViewController
     @editor.configuration
   end
 
-  def instruments
-    config.instruments
-  end
-
-  def instrument(controller)
-    if not @instrument_controllers
-      @instrument_controllers = [@inst1, @inst2, @inst3, @inst4, @inst5, @inst6, @inst7, @inst8]
-    end
-    return instruments[@instrument_controllers.index(controller)]
-  end
-
   def bulk_fetch(sender)
     @progress.startAnimation(self)
+    @progress.setUsesThreadedAnimation(true)
+    @progress.setMaxValue 10.0
+    @progress.setMinValue 0.0
+    @progress.setDoubleValue 0.0
     config.bulk_fetch do |max, min, current|
       @progress.setMaxValue max
       @progress.setMinValue min
       @progress.setDoubleValue current
+      
     end
     @progress.stopAnimation(self)
     invalidate
-    @instrument_controllers.each {|c| c.invalidate}
+    @instruments.invalidate
   end
 
   def kc_respond(sender)

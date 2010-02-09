@@ -1,6 +1,5 @@
 # -*- coding: undecided -*-
 require 'memory'
-
 require 'instrument'
 
 class Configuration
@@ -32,19 +31,15 @@ class Configuration
   end
 
   def bulk_fetch(&block)
-    dump = []
-    @comm.sysex([0x43, 0x75, @comm.system_channel - 1, 0x20, 0x01, 0x00])
-    catch :done do
-      @comm.capture(:format => :Raw) do |data|
-        dump.concat(data)
-        next if dump.length < 9
-        stated_packet_size = ((dump[0x07] & 0x01) << 7) + dump[0x08]
-        block.call(stated_packet_size, 7, dump.length) if block
-        throw :done if dump.length >= (stated_packet_size + 11)
-      end
-    end
-    @data = dump[0x09..-3]
+    request = [0x43, 0x75, @comm.system_channel - 1, 0x20, 0x01, 0x00]
+    raw_response = [0xF0, 0x43, 0x75, @comm.system_channel - 1, 0x00, 0x01, 0x00]
+    @data = @comm.receive_dump(request, raw_response) || @data
     @instruments.each_with_index {|inst, n| inst.replace_memory(@data[0x20 + n * 0x10, 0x10])}
+    @instruments.each_with_index do |inst, i|
+      block.call(10, 1, 3 + i) if block
+      inst.read_voice_data_from_fb01
+    end
+    block.call(10, 1, 10) if block
   end
 
   def name=(name)
