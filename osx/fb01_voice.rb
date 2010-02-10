@@ -18,7 +18,6 @@ class FB01Voice < NSViewController
   end
 
   def valueForKey(key)
-    #voice.instrument_no = 1
     voice.send key
   end
 

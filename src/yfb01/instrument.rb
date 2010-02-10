@@ -119,6 +119,24 @@ class Instrument
     @@Keys.index(key)
   end
 
+  def upper_key_limit_checked
+    self.upper_key_limit
+  end
+
+  def upper_key_limit_checked=(upper_limit)
+    self.upper_key_limit = upper_limit
+    self.lower_key_limit = upper_limit if self.lower_key_limit > upper_key_limit
+  end
+
+  def lower_key_limit_checked
+    self.lower_key_limit
+  end
+
+  def lower_key_limit_checked=(lower_limit)
+    self.lower_key_limit = lower_limit
+    self.upper_key_limit = lower_limit if self.upper_key_limit < lower_key_limit
+  end
+
   def upper_key_limit_name
     @@Keys[upper_key_limit]
   end

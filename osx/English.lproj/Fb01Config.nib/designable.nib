@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="2"/>
+			<integer value="86"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -41,7 +41,7 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{235, 153}, {1015, 905}}</string>
+				<string key="NSWindowRect">{{235, 153}, {1019, 905}}</string>
 				<int key="NSWTFlags">536870912</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -56,33 +56,33 @@
 						<object class="NSCustomView" id="25364214">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 772}, {422, 113}}</string>
+							<string key="NSFrame">{{577, 787}, {422, 113}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 						<object class="NSCustomView" id="662309889">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{450, 621}, {549, 264}}</string>
+							<string key="NSFrame">{{20, 694}, {520, 206}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 						<object class="NSCustomView" id="1072103605">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{450, 8}, {549, 604}}</string>
+							<string key="NSFrame">{{450, 8}, {549, 678}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 						<object class="NSCustomView" id="114802723">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 8}, {422, 755}}</string>
+							<string key="NSFrame">{{20, 8}, {422, 678}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">NSCustomView</string>
 						</object>
 					</object>
-					<string key="NSFrameSize">{1015, 905}</string>
+					<string key="NSFrameSize">{1019, 905}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1058}}</string>
@@ -246,10 +246,10 @@
 						<reference key="object" ref="1006"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="25364214"/>
 							<reference ref="1072103605"/>
-							<reference ref="662309889"/>
 							<reference ref="114802723"/>
+							<reference ref="662309889"/>
+							<reference ref="25364214"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -277,11 +277,6 @@
 						<reference key="parent" ref="1006"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">8</int>
-						<reference key="object" ref="25364214"/>
-						<reference key="parent" ref="1006"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">85</int>
 						<reference key="object" ref="488479300"/>
 						<reference key="parent" ref="0"/>
@@ -300,6 +295,11 @@
 						<int key="objectID">92</int>
 						<reference key="object" ref="561293018"/>
 						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">8</int>
+						<reference key="object" ref="25364214"/>
+						<reference key="parent" ref="1006"/>
 					</object>
 				</object>
 			</object>
@@ -338,9 +338,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{556, 131}, {1015, 905}}</string>
+					<string>{{528, 131}, {1019, 905}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{556, 131}, {1015, 905}}</string>
+					<string>{{528, 131}, {1019, 905}}</string>
 					<integer value="0"/>
 					<string>{196, 240}</string>
 					<string>{{357, 418}, {480, 270}}</string>
