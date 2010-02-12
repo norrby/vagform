@@ -26,7 +26,7 @@ class Instrument
     :portamento_time => Memory.define(0, 127, 0x0B, 0x7F),
     :pitchbender_range => Memory.define(0, 12, 0x0C, 0x0F),
     :mono => Memory.define(0, 1, 0x0D, 0x01),
-    :pmd_controller_internal => Memory.define(0, 4, 0x0E, 0x07)
+    :pmd_controller_no => Memory.define(0, 4, 0x0E, 0x07)
   }
 
   @@PmdControllers = ["Not assigned", "After touch", "Modulation
@@ -81,20 +81,40 @@ class Instrument
     self.max_midi_channel_internal + 1
   end
 
+  def pan
+    self.pan_internal - 64
+  end
+
+  def pan=(pan)
+    self.pan_internal = pan + 64
+  end
+
+  def min_pan
+    self.min_pan_internal - 64
+  end
+
+  def max_pan
+    self.max_pan_internal - 64
+  end
+
   def octave_transpose
     self.octave_transpose_internal - 2
   end
 
+  def octave_transpose=(transpose)
+    self.octave_transpose_internal = transpose + 2
+  end
+
   def min_octave_transpose
-    self.min_octave_transpose_internal + 1
+    self.min_octave_transpose_internal - 2
   end
 
   def max_octave_transpose
-    self.max_octave_transpose_internal + 1
+    self.max_octave_transpose_internal - 2
   end
 
   def pmd_controller
-    @@PmdControllers[pmd_controller_internal]
+    @@PmdControllers[pmd_controller_no]
   end
 
   def pmd_controller=(controller_name)
@@ -103,6 +123,10 @@ class Instrument
         "Only #{@@PmdControllers.values}"
     end
     controller_num = @@PmdControllers.key(controller_name)
+  end
+
+  def pmd_controllers
+    @@PmdControllers
   end
 
   def lower_key_limit_name

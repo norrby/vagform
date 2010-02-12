@@ -9,6 +9,11 @@ class FB01InstrumentLarge < NSViewController
   attr_writer :bank_selector, :voice_selector
   attr_writer :upper_key_limit_slider, :lower_key_limit_slider
   attr_writer :upper_key_limit_label, :lower_key_limit_label
+  attr_writer :pan_slider, :transpose_slider, :bender_slider
+  attr_writer :detune_slider, :detune_label
+  attr_writer :portamento_slider, :portamento_label
+  attr_writer :pmd_controller_selector
+  attr_writer :lfo_checkbox, :mono_checkbox
 
   def invalidate
     puts "invalidating"
@@ -20,6 +25,14 @@ class FB01InstrumentLarge < NSViewController
     @lower_key_limit_slider.setFloatValue(instrument.lower_key_limit)
     @upper_key_limit_label.setStringValue(instrument.upper_key_limit_name)
     @lower_key_limit_label.setStringValue(instrument.lower_key_limit_name)
+    @detune_slider.setFloatValue(instrument.detune)
+    @detune_label.setFloatValue(instrument.detune)
+    @portamento_slider.setFloatValue(instrument.portamento_time)
+    @portamento_label.setFloatValue(instrument.portamento_time)
+    @pmd_controller_selector.selectItemAtIndex(instrument.pmd_controller_no)
+    @transpose_slider.setFloatValue(instrument.octave_transpose)
+    @pan_slider.setFloatValue(instrument.pan)
+    @bender_slider.setFloatValue(instrument.pitchbender_range)
   end
 
   def instrument
