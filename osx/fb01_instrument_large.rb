@@ -16,9 +16,6 @@ class FB01InstrumentLarge < NSViewController
   attr_writer :lfo_checkbox, :mono_checkbox
 
   def invalidate
-    puts "invalidating"
-    puts "bank:  #{instrument.voice_bank_no}"
-    puts "voice: #{instrument.voice_no}"
     @bank_selector.selectItemAtIndex(instrument.voice_bank_no)
     @voice_selector.selectItemAtIndex(instrument.voice_no)
     @upper_key_limit_slider.setFloatValue(instrument.upper_key_limit)
@@ -33,6 +30,8 @@ class FB01InstrumentLarge < NSViewController
     @transpose_slider.setFloatValue(instrument.octave_transpose)
     @pan_slider.setFloatValue(instrument.pan)
     @bender_slider.setFloatValue(instrument.pitchbender_range)
+    @lfo_checkbox.setState(instrument.lfo_enable)
+    @mono_checkbox.setState(instrument.mono)
   end
 
   def instrument

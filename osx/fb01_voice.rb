@@ -1,8 +1,13 @@
 class FB01Voice < NSViewController
   attr_writer :parent_view
   attr_writer :editor
-  attr_writer :lfo_speed_selector
+  attr_writer :lfo_speed_selector, :lfo_speed_label
   attr_writer :name_field
+  attr_writer :portamento_slider, :portamento_label
+  attr_writer :pmd_controller_selector, :transpose_slider
+  attr_writer :bender_slider, :ams_slider, :pms_slider
+  attr_writer :load_lfo_checkbox, :sync_lfo_checkbox
+  attr_writer :algorithm
 
   def voice
     @editor.voice
@@ -23,7 +28,18 @@ class FB01Voice < NSViewController
 
   def invalidate
     @lfo_speed_selector.setFloatValue(voice.lfo_speed)
+    @lfo_speed_label.setFloatValue(voice.lfo_speed)
     @name_field.setStringValue(voice.name)
+    @portamento_slider.setFloatValue(voice.portamento_time)
+    @portamento_label.setFloatValue(voice.portamento_time)
+    @pmd_controller_selector.selectItemAtIndex(voice.pmd_controller_no)
+    @bender_slider.setFloatValue(voice.pitchbender_range)
+    @ams_slider.setFloatValue(voice.ams)
+    @pms_slider.setFloatValue(voice.pms)
+    @sync_lfo_checkbox.setState(voice.sync_lfo)
+    @load_lfo_checkbox.setState(voice.load_lfo)
+    @transpose_slider.setFloatValue(voice.transpose)
+    @algorithm.selectTabViewItemAtIndex(voice.algorithm)
   end
 
   def setValue(value, forKey:key)
