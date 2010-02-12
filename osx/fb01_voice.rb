@@ -13,6 +13,10 @@ class FB01Voice < NSViewController
     @editor.voice
   end
 
+  def operators
+    voice.operators
+  end
+
   def voice_from_fb01(sender)
     @editor.reread_voice
     invalidate

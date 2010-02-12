@@ -1,8 +1,11 @@
 require 'memory'
+require 'operator'
+require 'array_part'
 
 class Voice
   include Memory
   attr_writer :comm
+  attr_reader :operators
 
   @@MemoryLayout = {
     :lfo_speed => Memory.define(0, 255, 0x07, 0xFF),
@@ -37,10 +40,14 @@ class Voice
     @comm = midi
     @instrument = instrument
     @data = backing_store
+    @operators = [Operator.new(ArrayPart.new(backing_store, 0x10, 0x17)),
+                  Operator.new(ArrayPart.new(backing_store, 0x18, 0x1F)),
+                  Operator.new(ArrayPart.new(backing_store, 0x20, 0x27)),
+                  Operator.new(ArrayPart.new(backing_store, 0x28, 0x2F))]
   end
 
   def replace_memory(new_bulk)
-    @data = new_bulk
+    new_bulk.each_with_index {|value, idx| @data[idx] = value}
   end
     
   def send_to_fb01(pos, data)
@@ -75,7 +82,6 @@ class Voice
   end
 
   def transpose
-    puts transpose_internal
     self.transpose_internal - 128
   end
 

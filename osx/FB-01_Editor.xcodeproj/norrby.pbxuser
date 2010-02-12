@@ -159,7 +159,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {783, 1001}}";
 			sepNavSelRange = "{1564, 0}";
-			sepNavVisRange = "{0, 539}";
+			sepNavVisRange = "{0, 579}";
 		};
 	};
 	20BC9EAF111B5749009D5E09 /* PBXTextBookmark */ = {
@@ -312,6 +312,20 @@
 		rType = 0;
 		vrLen = 539;
 		vrLoc = 0;
+	};
+	20BCA2CD1125A18E009D5E09 /* fb01_operator_button.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {783, 287}}";
+			sepNavSelRange = "{315, 0}";
+			sepNavVisRange = "{0, 315}";
+		};
+	};
+	20BCA34B1125C7CA009D5E09 /* fb01_algorithm.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {460, 377}}";
+			sepNavSelRange = "{612, 0}";
+			sepNavVisRange = "{0, 457}";
+		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;

@@ -22,12 +22,20 @@ class Configuration
     @comm = midi
     @parameters = @@MemoryLayout
     @data = backing_store
-    @instruments = (1..8).to_a.collect {|n| Instrument.new(midi, backing_store[0x10 + n * 0x10, 0x10])}
+    @instruments = (0..7).to_a.collect do |n|
+      Instrument.new(midi, instrument_memory(backing_store, n))
+    end
     @instruments.each_with_index {|inst, id| inst.instrument_no = id + 1}
   end
 
   def name
     @data[0..6].inject("") { |result, char| result << char }
+  end
+
+  def instrument_memory(backing_store, zero_based_number)
+    n = zero_based_number
+    base_addr = 0x20 + (n * 0x10)
+    ArrayPart.new(backing_store, base_addr, base_addr + 0x0F)
   end
 
   def bulk_fetch(&block)

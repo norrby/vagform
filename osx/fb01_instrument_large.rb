@@ -68,7 +68,6 @@ class FB01InstrumentLarge < NSViewController
   end
 
   def setValue(value, forKey:key)
-    puts "setValue #{key}=#{value}"
     value = value.to_i if value.class == Float
     value = 1 if value.class == TrueClass
     value = 0 if value.class == FalseClass

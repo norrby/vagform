@@ -46,7 +46,6 @@ class Instrument
   end
 
   def read_voice_data_from_fb01(&block)
-    puts "reading voice for instrument #{no}"
     request = [0x43, 0x75, 0x00 + @comm.system_channel - 1, 0x28 + no - 1, 0x00, 0x00]
     raw_response = [0xF0, 0x43, 0x75, 0x00 + @comm.system_channel - 1, 0x08 + no - 1, 0x00, 0x00]
     data = @comm.receive_interleaved_dump(request, raw_response)
