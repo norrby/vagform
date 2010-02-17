@@ -15,27 +15,36 @@ class FB01InstrumentLarge < NSViewController
   attr_writer :pmd_controller_selector
   attr_writer :lfo_checkbox, :mono_checkbox
 
-  def invalidate
-    @bank_selector.selectItemAtIndex(instrument.voice_bank_no)
-    @voice_selector.selectItemAtIndex(instrument.voice_no)
-    @upper_key_limit_slider.setFloatValue(instrument.upper_key_limit)
-    @lower_key_limit_slider.setFloatValue(instrument.lower_key_limit)
-    @upper_key_limit_label.setStringValue(instrument.upper_key_limit_name)
-    @lower_key_limit_label.setStringValue(instrument.lower_key_limit_name)
-    @detune_slider.setFloatValue(instrument.detune)
-    @detune_label.setFloatValue(instrument.detune)
-    @portamento_slider.setFloatValue(instrument.portamento_time)
-    @portamento_label.setFloatValue(instrument.portamento_time)
-    @pmd_controller_selector.selectItemAtIndex(instrument.pmd_controller_no)
-    @transpose_slider.setFloatValue(instrument.octave_transpose)
-    @pan_slider.setFloatValue(instrument.pan)
-    @bender_slider.setFloatValue(instrument.pitchbender_range)
-    @lfo_checkbox.setState(instrument.lfo_enable)
-    @mono_checkbox.setState(instrument.mono)
+  def invalidate(current)
+    @bank_selector.selectItemAtIndex(current.voice_bank_no)
+    @voice_selector.selectItemAtIndex(current.voice_no)
+    @upper_key_limit_slider.setFloatValue(current.upper_key_limit)
+    @lower_key_limit_slider.setFloatValue(current.lower_key_limit)
+    @upper_key_limit_label.setStringValue(current.upper_key_limit_name)
+    @lower_key_limit_label.setStringValue(current.lower_key_limit_name)
+    @detune_slider.setFloatValue(current.detune)
+    @detune_label.setFloatValue(current.detune)
+    @portamento_slider.setFloatValue(current.portamento_time)
+    @portamento_label.setFloatValue(current.portamento_time)
+    @pmd_controller_selector.selectItemAtIndex(current.pmd_controller_no)
+    @transpose_slider.setFloatValue(current.octave_transpose)
+    @pan_slider.setFloatValue(current.pan)
+    @bender_slider.setFloatValue(current.pitchbender_range)
+    @lfo_checkbox.setState(current.lfo_enable)
+    @mono_checkbox.setState(current.mono)
+  end
+
+  def new_instrument(new_instr)
+    @instrument.unsubscribe(self) if @instrument
+    new_instr.subscribe(self, :invalidate)
+    @instrument = new_instr
+    self.invalidate(new_instr)
+    return @instrument
   end
 
   def instrument
-    @editor.instrument
+    return @instrument if @instrument
+    new_instrument(Instrument.null)
   end
 
   def awakeFromNib
@@ -74,7 +83,6 @@ class FB01InstrumentLarge < NSViewController
     value = 1 if value.class == TrueClass
     value = 0 if value.class == FalseClass
     instrument.send key + "=", value
-    invalidate
   end
 
 end

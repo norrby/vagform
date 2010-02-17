@@ -22,9 +22,13 @@ class FB01InstrumentVoice < NSViewController
     instrument.read_voice_data_from_fb01
   end
 
+  def new_instrument_selected
+    invalidate
+  end
+
   def invalidate
-    @instrument_controller.invalidate
-    @voice_controller.invalidate
+    @instrument_controller.new_instrument(instrument)
+   # @voice_controller.new_voice(voice)
   end
 
   def awakeFromNib

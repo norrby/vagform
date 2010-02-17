@@ -21,6 +21,16 @@ class ConfigurationTest < Test::Unit::TestCase
     assert_equal pmd, @observed_subject.pmd
   end
 
+  def test_observer_unsubscribe
+    orig = 4
+    @conf.pmd = orig
+    assert_nil @observed_subject, "no callback before registration"
+    @conf.subscribe(self, :action_method)
+    @conf.unsubscribe(self)
+    @conf.pmd = 7
+    assert_nil @observed_subject
+  end
+
   def test_lfo_speed
     lfo_speed = 125
     @dump[0x09] = lfo_speed
