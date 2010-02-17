@@ -8,6 +8,7 @@ class FB01Instrument < NSViewController
   attr_writer :configuration, :view_parent
   attr_writer :notes_selector, :channel_selector, :output_level_indicator
   attr_writer :instrument_pointer, :title
+  attr_reader :chosen
 
   def instrument
     @configuration.instrument(self)
@@ -23,14 +24,18 @@ class FB01Instrument < NSViewController
 
   def select_instrument(sender)
     if sender.state == 1
-       sender.setState(0)
+      sender.setState(0)
       return
-    end
-    @configuration.chose_instrument(self)
+    end 
+    @chosen = true
+    @configuration.select_instrument(self)
+    invalidate
   end
 
-  def deselect_instrument
+  def deselect_me
     @instrument_pointer.setState(1)
+    @chosen = false
+    invalidate
   end
 
   def invalidate
@@ -53,7 +58,8 @@ class FB01Instrument < NSViewController
   end
 
   def awakeFromNib
-    @view_parent.addSubview(view)
+    puts "instrument awakefromnib #{instrument_no if instrument}"
+    @view_parent.addSubview(view) unless @view_parent.subviews.include? view
     no_channels = instrument.max_midi_channel - instrument.min_midi_channel + 1
     @channel_selector.setSegmentCount(no_channels)
     (instrument.min_midi_channel..instrument.max_midi_channel).to_a.each_with_index do |ch, idx|
@@ -62,7 +68,7 @@ class FB01Instrument < NSViewController
     end
     @title.setTitle("Instrument #{instrument_no}")
   rescue => e
-    puts "Error " + e.message
+    puts "Errors " + e.message
   end
 
 end

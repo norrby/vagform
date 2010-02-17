@@ -327,6 +327,13 @@
 			sepNavVisRange = "{0, 457}";
 		};
 	};
+	20BCA43611272D02009D5E09 /* fb01_operator_details.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {558, 663}}";
+			sepNavSelRange = "{1426, 0}";
+			sepNavVisRange = "{0, 1115}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 20A745D411158D37001BD66E /* FB-01_Editor */;

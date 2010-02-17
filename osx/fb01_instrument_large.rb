@@ -39,10 +39,12 @@ class FB01InstrumentLarge < NSViewController
   end
 
   def awakeFromNib
+    puts "instrument editor large"
     @parent_view.addSubview(view)
   end
 
   def valueForKey(key)
+#    puts "value fr key in instrument_large. instrument=#{instrument}"
     return send key if respond_to? key
     instrument.send key
   end

@@ -1,10 +1,15 @@
 require 'memory'
 require 'timeout'
+require 'observable'
+require 'pmd_controllers'
 require 'voice'
 
 class Instrument
   include Memory
   include Timeout
+  include Observable
+  include PmdControllers
+
   attr_writer :instrument_no
   attr_reader :comm, :voice
 
@@ -29,10 +34,13 @@ class Instrument
     :pmd_controller_no => Memory.define(0, 4, 0x0E, 0x07)
   }
 
-  @@PmdControllers = ["Not assigned", "After touch", "Modulation
-  wheel", "Breath controller", "Foot controller"]
-
   Memory.accessors(@@MemoryLayout)
+
+  def self.null
+    return @null if @null
+    puts "creating new null object"
+    @null = Instrument.new(nil)
+  end
 
   def initialize(midi, backing_store = Array.new(0x10, 0))
     @parameters = @@MemoryLayout
@@ -43,6 +51,7 @@ class Instrument
 
   def replace_memory(new_bulk)
     @data = new_bulk
+    notify_observers
   end
 
   def read_voice_data_from_fb01(&block)
@@ -110,22 +119,6 @@ class Instrument
 
   def max_octave_transpose
     self.max_octave_transpose_internal - 2
-  end
-
-  def pmd_controller
-    @@PmdControllers[pmd_controller_no]
-  end
-
-  def pmd_controller=(controller_name)
-    if not @@PmdControllers.index(controller_name)
-      raise "There is no \"#{controller_name}\" controller." +
-        "Only #{@@PmdControllers.values}"
-    end
-    controller_num = @@PmdControllers.key(controller_name)
-  end
-
-  def pmd_controllers
-    @@PmdControllers
   end
 
   def lower_key_limit_name

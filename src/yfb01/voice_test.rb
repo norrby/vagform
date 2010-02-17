@@ -18,7 +18,7 @@ class VoiceTest < Test::Unit::TestCase
     name = "NamSet"
     @voice.name = name
     stored_name = @dump[0..6].inject("") { |result, ch| result << (ch != 0 ? ch.chr : "") }
-    assert_equal name, stored_name
+    assert_equal name, stored_name[0..name.length-1]
   end
 
   def test_lfo_speed
@@ -41,17 +41,6 @@ class VoiceTest < Test::Unit::TestCase
     assert_equal amd, @voice.amd
   end
 
-  def test_amd=
-    amd = 111
-    @voice.amd = 111
-    assert_equal amd | 0x80, @dump[0x09], "should set load lfo data"
-    amd2 = 74
-    @voice.amd = amd2
-    assert_equal amd2 | 0x80, @dump[0x09], "should set load lfo data"
-    assert_raise(RuntimeError) { @voice.amd = -1 }
-    assert_raise(RuntimeError) { @voice.amd = 128 }
-  end
-
   def test_pmd
     pmd = 126
     @dump[0x0A] = pmd
@@ -67,53 +56,27 @@ class VoiceTest < Test::Unit::TestCase
     assert_raise(RuntimeError) { @voice.pmd = 128 }
   end
 
-  def test_sync_lfo_at_note_on?
+  def test_sync_lfo
     @dump[0x0A] = 0x80
-    assert @voice.sync_lfo_at_note_on?
+    assert @voice.sync_lfo
   end
 
-  def test_sync_lfo_at_note_on=
-    @voice.sync_lfo_at_note_on = true
-    assert @voice.sync_lfo_at_note_on?
-    @voice.sync_lfo_at_note_on = false
-    assert (not @voice.sync_lfo_at_note_on?)
-  end
-
-  def test_operator_enabled?
-    @dump[0x0B] = 0x58
-    assert @voice.operator_enabled?(3, 1, 0)
-    assert (not @voice.operator_enabled?(2))
-  end
-
-  def test_enable_operator
-    @voice.enable_operator(1, 2, 3)
-    assert @voice.operator_enabled?(3, 2, 1)
-    assert (not @voice.operator_enabled?(4))
-    @voice.enable_operator(1, 3)
-    assert @voice.operator_enabled?(1, 3)
-    assert_raise(RuntimeError) { @voice.enable_operator(-1) }
-    assert_raise(RuntimeError) { @voice.enable_operator(4) }
-    assert_raise(RuntimeError) { @voice.enable_operator(2.9) }
-    assert_raise(RuntimeError) { @voice.enable_operator("1") }
-  end
-
-  def test_disable_operator
-    @voice.enable_operator(1, 2, 3, 4)
-    @voice.disable_operator(1, 4)
-    assert (not @voice.operator_enabled?(1, 4))
+  def test_sync_lfo=
+    @voice.sync_lfo = 1
+    assert_equal 1, @voice.sync_lfo
   end
 
   def test_feedback_level
     @dump[0x0C] = 0x28
-    assert_equal 5, @voice.feedback_level
+    assert_equal 5, @voice.feedback
   end
 
-  def test_feedback_level=
-    expected_feedback = 7
-    @voice.feedback_level = expected_feedback
-    assert_equal expected_feedback, @voice.feedback_level
-    assert_raise(RuntimeError) { @voice.feedback_level = -1 }
-    assert_raise(RuntimeError) { @voice.feedback_level = 8 }
+  def test_feedback=
+    expected_feedback = 6
+    @voice.feedback = expected_feedback
+    assert_equal expected_feedback, @voice.feedback
+    assert_raise(RuntimeError) { @voice.feedback = -1 }
+    assert_raise(RuntimeError) { @voice.feedback = 8 }
   end
 
   def test_algorithm
@@ -135,11 +98,11 @@ class VoiceTest < Test::Unit::TestCase
 
   def test_feedback_and_algorithm_does_not_destroy_each_other
     algorithm = 5
-    feedback = 7
+    feedback = 6
     @voice.algorithm = algorithm
-    @voice.feedback_level = feedback
+    @voice.feedback = feedback
     assert_equal algorithm, @voice.algorithm
-    assert_equal feedback, @voice.feedback_level
+    assert_equal feedback, @voice.feedback
   end
 
   def test_pms
@@ -186,7 +149,7 @@ class VoiceTest < Test::Unit::TestCase
 
   def test_lfo_waveform
     @dump[0x0E] = 0x60
-    assert_equal "Noise", @voice.lfo_waveform
+    assert_equal "Sample and Hold", @voice.lfo_waveform
     @dump[0x0E] = 0x00
     assert_equal "Sawtooth", @voice.lfo_waveform
     @dump[0x0E] = 0x20
@@ -202,77 +165,61 @@ class VoiceTest < Test::Unit::TestCase
     sawtooth = "Sawtooth"
     @voice.lfo_waveform=(sawtooth)
     assert_equal sawtooth, @voice.lfo_waveform
-    assert_raise(RuntimeError) { @voice.lfo_waveform = 1 }
-    assert_raise(RuntimeError) { @voice.lfo_waveform = "Basuntuta" }
+    assert_raise(TypeError) { @voice.lfo_waveform = 1 }
+    assert_raise(ArgumentError) { @voice.lfo_waveform = "Basuntuta" }
   end
 
-  def test_transpose
-    transpose = 242
+  def test_transpose_positive
+    transpose = 114
     @dump[0x0F] = transpose
     assert_equal transpose, @voice.transpose
   end
 
-  def test_transpose=
-    transpose = 243
-    @voice.transpose = transpose
-    assert_equal transpose, @voice.transpose
-    assert_raise(RuntimeError) { @voice.transpose = -1 }
-    assert_raise(RuntimeError) { @voice.transpose = 256 }
-  end
-
-  def test_poly
-    @dump[0x3A] = 0x80
-    assert @voice.poly?
-    assert (not @voice.mono?)
+  def test_transpose_negative
+    transpose = 255
+    @dump[0x0F] = transpose
+    assert_equal -1, @voice.transpose
   end
 
   def test_mono
     @dump[0x3A] = 0x00
-    assert @voice.mono?
-    assert (not @voice.poly?)
-  end
-
-  def test_poly=
-    @voice.poly = true
-    assert @voice.poly?
-    assert (not @voice.mono?)
+    assert @voice.mono
   end
 
   def test_mono=
-    @voice.mono = true
-    assert @voice.mono?
-    assert (not @voice.poly?)
+    @voice.mono = 1
+    assert @voice.mono
   end
 
   def test_portamento
     portamento = 126
     @dump[0x3A] = portamento
-    assert_equal portamento, @voice.portamento
+    assert_equal portamento, @voice.portamento_time
   end
 
   def test_portamento=
     portamento = 113
-    @voice.portamento = portamento
-    assert_equal portamento, @voice.portamento
+    @voice.portamento_time = portamento
+    assert_equal portamento, @voice.portamento_time
     portamento2 = 1
-    @voice.portamento = portamento2
-    assert_equal portamento2, @voice.portamento
-    assert_raise(RuntimeError) { @voice.portamento = -1 }
-    assert_raise(RuntimeError) { @voice.portamento = 128 }
+    @voice.portamento_time = portamento2
+    assert_equal portamento2, @voice.portamento_time
+    assert_raise(RuntimeError) { @voice.portamento_time = -1 }
+    assert_raise(RuntimeError) { @voice.portamento_time = 128 }
   end
 
-  def test_poly_and_portamento_dont_destroy_each_other
+  def test_mono_and_portamento_dont_destroy_each_other
     portamento = 113
-    @voice.poly = true
-    @voice.portamento = portamento
-    assert_equal portamento, @voice.portamento
-    assert @voice.poly?
+    @voice.mono = 1
+    @voice.portamento_time = portamento
+    assert_equal portamento, @voice.portamento_time
+    assert_equal 1, @voice.mono
   end
 
   def test_pmd_input_controller
-    @dump[0x3B] = 0x10
-    assert_equal "Modulation wheel", @voice.pmd_controller
     @dump[0x3B] = 0x20
+    assert_equal "Modulation wheel", @voice.pmd_controller
+    @dump[0x3B] = 0x30
     assert_equal "Breath controller", @voice.pmd_controller
     @dump[0x3B] = 0x40
     assert_equal "Foot controller", @voice.pmd_controller
@@ -289,29 +236,29 @@ class VoiceTest < Test::Unit::TestCase
     assert_raise(RuntimeError) { @voice.pmd_controller = "Limknekt" }
   end
 
-  def test_pitchbend_range
-    range = 0x0F
+  def test_pitchbender_range
+    range = 0x07
     @dump[0x3B] = range
-    assert_equal range, @voice.pitchbend_range 
+    assert_equal range, @voice.pitchbender_range 
   end
 
-  def test_pitchbend_range=
+  def test_pitchbender_range=
     range = 0x07
-    @voice.pitchbend_range = range
-    assert_equal range, @voice.pitchbend_range
+    @voice.pitchbender_range = range
+    assert_equal range, @voice.pitchbender_range
     range2 = 0x05
-    @voice.pitchbend_range = range2
-    assert_equal range2, @voice.pitchbend_range
-    assert_raise(RuntimeError) { @voice.pitchbend_range = -1 }
-    assert_raise(RuntimeError) { @voice.pitchbend_range = 16 }
+    @voice.pitchbender_range = range2
+    assert_equal range2, @voice.pitchbender_range
+    assert_raise(RuntimeError) { @voice.pitchbender_range = -1 }
+    assert_raise(RuntimeError) { @voice.pitchbender_range = 13 }
   end
 
   def test_pmd_controller_and_pitchbend_dont_destroy_each_other
     controller = "Foot controller"
     range = 11
     @voice.pmd_controller = controller
-    @voice.pitchbend_range = range
+    @voice.pitchbender_range = range
     assert_equal controller, @voice.pmd_controller
-    assert_equal range, @voice.pitchbend_range
+    assert_equal range, @voice.pitchbender_range
   end
 end

@@ -33,6 +33,8 @@
 		20BCA3661125CD1D009D5E09 /* FB01Algorithm5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA3651125CD1D009D5E09 /* FB01Algorithm5.xib */; };
 		20BCA42F11270280009D5E09 /* OperatorDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA42D11270280009D5E09 /* OperatorDetails.xib */; };
 		20BCA43711272D02009D5E09 /* fb01_operator_details.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA43611272D02009D5E09 /* fb01_operator_details.rb */; };
+		20BCA4741129A74E009D5E09 /* fb01_envelope_editor.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */; };
+		20BCA49C1129C1E3009D5E09 /* fb01_knee_button.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA49B1129C1E3009D5E09 /* fb01_knee_button.rb */; };
 		20E9475C11158E3800BA1A1E /* PYMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9475511158E0700BA1A1E /* PYMIDI.framework */; };
 		20E9475D11158E3800BA1A1E /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9474D11158DE200BA1A1E /* macruby-midi.framework */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
@@ -118,6 +120,8 @@
 		20BCA3651125CD1D009D5E09 /* FB01Algorithm5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FB01Algorithm5.xib; sourceTree = "<group>"; };
 		20BCA42E11270280009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/OperatorDetails.xib; sourceTree = "<group>"; };
 		20BCA43611272D02009D5E09 /* fb01_operator_details.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fb01_operator_details.rb; sourceTree = "<group>"; };
+		20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fb01_envelope_editor.rb; sourceTree = "<group>"; };
+		20BCA49B1129C1E3009D5E09 /* fb01_knee_button.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fb01_knee_button.rb; sourceTree = "<group>"; };
 		20E9474111158DE200BA1A1E /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		20E9475011158E0700BA1A1E /* pymidi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pymidi.xcodeproj; path = "../src/midi-lex/ext/pymidi/pymidi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				20BCA49B1129C1E3009D5E09 /* fb01_knee_button.rb */,
 				20BC9EAD111B572A009D5E09 /* fb01_voice.rb */,
 				201C5B671115951400EDA7BA /* lib */,
 				201C59F21115935000EDA7BA /* editor.rb */,
@@ -160,6 +165,7 @@
 				20BCA2CD1125A18E009D5E09 /* fb01_operator_button.rb */,
 				20BCA34B1125C7CA009D5E09 /* fb01_algorithm.rb */,
 				20BCA43611272D02009D5E09 /* fb01_operator_details.rb */,
+				20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -363,6 +369,8 @@
 				20BCA3661125CD1D009D5E09 /* FB01Algorithm5.xib in Resources */,
 				20BCA42F11270280009D5E09 /* OperatorDetails.xib in Resources */,
 				20BCA43711272D02009D5E09 /* fb01_operator_details.rb in Resources */,
+				20BCA4741129A74E009D5E09 /* fb01_envelope_editor.rb in Resources */,
+				20BCA49C1129C1E3009D5E09 /* fb01_knee_button.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,24 @@
 require 'test/unit'
-
 require 'configuration'
 
 class ConfigurationTest < Test::Unit::TestCase
   def setup
     @dump = Array.new(0xA0, 0)
     @conf = Configuration.new(nil, @dump)
+    @observed_subject = nil
+  end
+
+  def action_method(subject)
+    @observed_subject = subject
+  end
+
+  def test_observer
+    @conf.pmd = 2
+    assert_nil @observed_subject, "no callback before registration"
+    @conf.subscribe(self, :action_method)
+    pmd = 3
+    @conf.pmd = pmd
+    assert_equal pmd, @observed_subject.pmd
   end
 
   def test_lfo_speed

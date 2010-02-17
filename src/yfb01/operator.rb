@@ -1,7 +1,9 @@
 require 'memory'
+require 'observable'
 
 class Operator
   include Memory
+  include Observable
 
   @@MemoryLayout = {
     :tl => Memory[0, 127, 0x00, 0x7F],

@@ -54,7 +54,7 @@ class FB01Configuration < NSViewController
 
   def invalidate
     @name_field.setStringValue(config.name)
-    @lfo_waveform_selector.selectCellAtRow(config.lfo_waveform_internal, column:0)
+    @lfo_waveform_selector.selectCellAtRow(config.lfo_waveform_no, column:0)
     @kc_responder_selector.setSelected(self.kc_even, forSegment:0)
     @kc_responder_selector.setSelected(self.kc_odd, forSegment:1)
     @amd_slider.setFloatValue(config.amd)

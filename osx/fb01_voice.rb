@@ -1,3 +1,6 @@
+# -*- coding: iso-8859-1 -*-
+require 'voice'
+
 class FB01Voice < NSViewController
   attr_writer :parent_view
   attr_writer :editor
@@ -10,6 +13,7 @@ class FB01Voice < NSViewController
   attr_writer :algorithm
 
   def voice
+    return Voice.new(nil) unless @editor
     @editor.voice
   end
 
@@ -23,7 +27,11 @@ class FB01Voice < NSViewController
   end
 
   def awakeFromNib
-    @parent_view.addSubview(view)
+    @parent_view.addSubview(view) if not @parent_view.subviews.include? view
+  end
+
+  def notify(voice)
+    invalidate
   end
 
   def valueForKey(key)

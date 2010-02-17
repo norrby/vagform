@@ -1,15 +1,24 @@
 require 'memory'
 require 'operator'
+require 'named'
 require 'array_part'
+require 'observable'
+require 'pmd_controllers'
+require 'lfo_waveform'
 
 class Voice
   include Memory
+  include Observable
+  include Named
+  include PmdControllers
+  include LfoWaveform
+
   attr_writer :comm
   attr_reader :operators
 
   @@MemoryLayout = {
-    :lfo_speed => Memory.define(0, 255, 0x07, 0xFF),
-    :users_code => Memory.define(0, 255, 0x08, 0xFF),
+    :users_code => Memory.define(0, 255, 0x07, 0xFF),
+    :lfo_speed => Memory.define(0, 255, 0x08, 0xFF),
     :load_lfo => Memory.define(0, 1, 0x09, 0x80),
     :amd => Memory.define(0, 127, 0x09, 0x7F),
     :sync_lfo => Memory.define(0, 1, 0x0A, 0x80),
@@ -22,18 +31,20 @@ class Voice
     :algorithm => Memory.define(0, 7, 0x0C, 0x07),
     :pms => Memory.define(0, 7, 0x0D, 0x70),
     :ams => Memory.define(0, 3, 0x0D, 0x03),
-    :lfo_waveform => Memory.define(0, 3, 0x0E, 0x60),
+    :lfo_waveform_no => Memory.define(0, 3, 0x0E, 0x60),
     :transpose_internal => Memory.define(0, 255, 0x0F, 0xFF),
     :mono => Memory.define(0, 1, 0x3A, 0x80),
     :portamento_time => Memory.define(0, 127, 0x3A, 0x7F),
     :pmd_controller_no => Memory.define(0, 4, 0x3B, 0x70),
-    :pitchbender_range => Memory.define(0, 12, 0x3B, 0x07)
+    :pitchbender_range => Memory.define(0, 12, 0x3B, 0x0F)
   }
 
-  @@PmdControllers = ["Not assigned", "After touch", "Modulation
-  wheel", "Breath controller", "Foot controller"]
-
   Memory.accessors(@@MemoryLayout)
+
+  def self.null
+    return @null if @null
+    @null = Voice.new(nil, Instrument.null)
+  end
 
   def initialize(midi, instrument, backing_store = Array.new(0x80, 0))
     @parameters = @@MemoryLayout
@@ -48,6 +59,8 @@ class Voice
 
   def replace_memory(new_bulk)
     new_bulk.each_with_index {|value, idx| @data[idx] = value}
+    notify_observers
+    @operators.each {|operator| operator.notify_observers}
   end
     
   def send_to_fb01(pos, data)
@@ -57,36 +70,15 @@ class Voice
                  data & 0x0F, (data & 0xF0) >> 4])
   end
 
-  def name
-    @data[0..6].inject("") { |result, char| result << char }
-  end
-
-  def name=(name)
-    (0..6).to_a.each {|idx| set(idx, 0x7F, (name[idx] || " ").ord)}
-  end
-
-  def pmd_controller
-    @@PmdControllers[pmd_controller_no]
-  end
-
-  def pmd_controller=(controller_name)
-    if not @@PmdControllers.index(controller_name)
-      raise "There is no \"#{controller_name}\" controller." +
-        "Only #{@@PmdControllers.values}"
-    end
-    controller_num = @@PmdControllers.key(controller_name)
-  end
-
-  def pmd_controllers
-    @@PmdControllers
-  end
-
   def transpose
-    self.transpose_internal - 128
+    internal = self.transpose_internal
+    return internal if internal < 128
+    -256 + internal
   end
 
   def transpose=(transpose)
-    self.transpose_internal = transpose + 128
+    self.transpose_internal = transpose if transpose < 128
+    self.transpose_internal = 0xFF & transpose
   end
 
   def max_transpose

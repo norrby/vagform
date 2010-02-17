@@ -15,6 +15,7 @@ module Memory
   def store(pos, mask, value)
     shift = shift_steps(mask)
     @data[pos] = (@data[pos] & ~mask) | (value << shift)
+    store_hook if respond_to? :store_hook
   end
 
   def set(pos, mask, value)

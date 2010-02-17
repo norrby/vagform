@@ -6,13 +6,7 @@
 
 class FB01InstrumentVoice < NSViewController
   attr_writer :parent_view, :instruments
-  attr_accessor :instrument
   attr_writer :instrument_controller, :voice_controller
-
-  def new_edit(instrument)
-    @instrument = instrument
-    invalidate
-  end
 
   def instrument
     @instruments.selected_instrument
@@ -20,6 +14,8 @@ class FB01InstrumentVoice < NSViewController
 
   def voice
     instrument.voice
+  rescue
+    Voice.null
   end
 
   def reread_voice
