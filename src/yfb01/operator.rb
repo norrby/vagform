@@ -27,6 +27,10 @@ class Operator
 
   Memory.accessors(@@MemoryLayout)
 
+  def Operator.null
+    Operator.new(Array.new(0x08))
+  end
+
   def initialize(backing_store = Array.new(0x08))
     @parameters = @@MemoryLayout
     @data = backing_store
@@ -70,7 +74,7 @@ class Operator
   end
 
   def level_scaling_type=(value)
-    if value < 0 || value >3
+    if value < 0 || value > 3
       raise "keyboard level scaling type must be in the interval [1, 4]"
     end
     self.scaling_internal_bit0 = (value & 0x01)

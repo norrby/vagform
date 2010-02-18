@@ -3,7 +3,7 @@ require 'model_enabled'
 
 class FB01OperatorDetails < NSWindowController
   include ModelBindings
-#  include ModelEnabled
+  include ModelEnabled
   attr_writer :am_carrier_checkbox
   attr_writer :key_level_scaling_depth_slider
   attr_writer :key_level_scaling_type_slider
@@ -13,6 +13,7 @@ class FB01OperatorDetails < NSWindowController
   attr_writer :tl_slider
 
   def invalidate(op)
+    return unless @am_carrier_checkbox
     @am_carrier_checkbox.setIntValue(op.carrier)
     @key_level_scaling_depth_slider.setFloatValue(op.level_scaling_depth)
     @key_level_scaling_type_slider.setFloatValue(op.level_scaling_type)
@@ -24,16 +25,11 @@ class FB01OperatorDetails < NSWindowController
     @tl_slider.setFloatValue(op.total_level)
   end
 
-  def model
-    @op
-  end
-
-  def new_model(op)
-    @op = op
+  def null_model
+    Operator.null
   end
 
   def awakeFromNib
-    puts "awake"
   end
 
 end

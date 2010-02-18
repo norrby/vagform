@@ -336,9 +336,9 @@
 	};
 	20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {551, 2119}}";
-			sepNavSelRange = "{548, 0}";
-			sepNavVisRange = "{0, 607}";
+			sepNavIntBoundsRect = "{{0, 0}, {551, 2210}}";
+			sepNavSelRange = "{2978, 0}";
+			sepNavVisRange = "{0, 546}";
 		};
 	};
 	20BCA5FE112D9916009D5E09 /* PBXTextBookmark */ = {
@@ -399,6 +399,36 @@
 		rLoc = 548;
 		rType = 0;
 		vrLen = 607;
+		vrLoc = 0;
+	};
+	20BCA70A112DCA49009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */;
+		name = "fb01_envelope_editor.rb: 133";
+		rLen = 0;
+		rLoc = 2978;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 0;
+	};
+	20BCA716112DCB3A009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */;
+		name = "fb01_envelope_editor.rb: 134";
+		rLen = 0;
+		rLoc = 2989;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 0;
+	};
+	20BCA71E112DCBDA009D5E09 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 20BCA4731129A74E009D5E09 /* fb01_envelope_editor.rb */;
+		name = "fb01_envelope_editor.rb: 133";
+		rLen = 0;
+		rLoc = 2978;
+		rType = 0;
+		vrLen = 546;
 		vrLoc = 0;
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -542,6 +572,9 @@
 			20BCA601112D9916009D5E09 /* PBXTextBookmark */ = 20BCA601112D9916009D5E09 /* PBXTextBookmark */;
 			20BCA602112D9916009D5E09 /* PBXTextBookmark */ = 20BCA602112D9916009D5E09 /* PBXTextBookmark */;
 			20BCA603112D9916009D5E09 /* PBXTextBookmark */ = 20BCA603112D9916009D5E09 /* PBXTextBookmark */;
+			20BCA70A112DCA49009D5E09 /* PBXTextBookmark */ = 20BCA70A112DCA49009D5E09 /* PBXTextBookmark */;
+			20BCA716112DCB3A009D5E09 /* PBXTextBookmark */ = 20BCA716112DCB3A009D5E09 /* PBXTextBookmark */;
+			20BCA71E112DCBDA009D5E09 /* PBXTextBookmark */ = 20BCA71E112DCBDA009D5E09 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 20A745E611158D3B001BD66E /* Source Control */;
 		userBuildSettings = {

@@ -3,7 +3,7 @@ class FB01EnvelopeEditor < NSView
   attr_writer :provider
 
   def operator
-    @provider.operator
+    @provider.model
   end
 
   def x

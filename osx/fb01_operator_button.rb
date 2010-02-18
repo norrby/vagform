@@ -65,8 +65,7 @@ class FB01OperatorButton < NSButton
     if not @edit_window
       @edit_window = FB01OperatorDetails.alloc.initWithWindowNibName("OperatorDetails")
     end
-    puts "OK, but my algorithm is #{@algorithm}"
-    @edit_window.new_model(self.operator())
+    @edit_window.new_model(operator)
     @edit_window.showWindow(self)
   end
 
