@@ -1,7 +1,9 @@
 require 'model_bindings'
+require 'model_enabled'
 
 class FB01InstrumentLarge < NSViewController
   include ModelBindings
+  include ModelEnabled
   attr_writer :parent_view, :editor
   attr_writer :bank_selector, :voice_selector
   attr_writer :upper_key_limit_slider, :lower_key_limit_slider
@@ -32,18 +34,8 @@ class FB01InstrumentLarge < NSViewController
     @mono_checkbox.setState(current.mono)
   end
 
-  def new_model(new_instr)
-    set_enabled(view, true) if @instrument
-    @instrument.unsubscribe(self) if @instrument
-    new_instr.subscribe(self, :invalidate)
-    @instrument = new_instr
-    self.invalidate(new_instr)
-    return @instrument
-  end
-
-  def model
-    return @instrument if @instrument
-    new_model(Instrument.null)
+  def null_model
+    Instrument.null
   end
 
   def set_enabled(a_view, enabled)
@@ -60,17 +52,6 @@ class FB01InstrumentLarge < NSViewController
     set_enabled(view, false)
   end
 
-  def valueForKey(key)
-    return send key if respond_to? key
-    model.send key
-  end
-
-  def voice_banks
-    (model.min_voice_bank_no..model.max_voice_bank_no).to_a.collect do |b|
-      "Bank #{b + 1}"
-    end
-  end
-
   def set_voice_bank(sender)
     model.voice_bank_no = sender.indexOfSelectedItem
     @editor.reread_voice if @refetch_checkbox.intValue == 1
@@ -79,12 +60,6 @@ class FB01InstrumentLarge < NSViewController
   def set_voice(sender)
     model.voice_no = sender.indexOfSelectedItem
     @editor.reread_voice if @refetch_checkbox.intValue == 1
-  end
-
-  def voices
-    (model.min_voice_no..model.max_voice_no).to_a.collect do |v|
-      "Voice #{v + 1}"
-    end
   end
 
 end

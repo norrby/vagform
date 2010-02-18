@@ -1,9 +1,11 @@
 # -*- coding: iso-8859-1 -*-
 require 'voice'
 require 'model_bindings'
+require 'model_enabled'
 
 class FB01Voice < NSViewController
   include ModelBindings
+  include ModelEnabled
   attr_writer :parent_view
   attr_writer :editor
   attr_writer :lfo_speed_selector, :lfo_speed_label
@@ -34,30 +36,8 @@ class FB01Voice < NSViewController
     model.operators
   end
 
-  def empty_init?
-    not @voice
-  end
-
-  def new_model(new_voice)
-    set_enabled(view, true) unless empty_init?
-    @voice.unsubscribe(self) if @voice
-    new_voice.subscribe(self, :invalidate)
-    @voice = new_voice
-    self.invalidate(new_voice)
-  end
-
-  def set_enabled(a_view, enabled)
-    if a_view.is_a? NSControl
-      a_view.setEnabled(enabled)
-    else
-      a_view.subviews.each {|sub| set_enabled(sub, enabled)}
-    end
-  end
-
-  def model
-    return @voice if @voice
-    new_model(Voice.null)
-    @voice
+  def null_model
+    Voice.null
   end
 
   def voice_from_fb01(sender)

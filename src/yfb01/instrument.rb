@@ -163,6 +163,18 @@ class Instrument
     self.upper_key_limit = index
   end
 
+  def voices
+    (min_voice_no..max_voice_no).to_a.collect do |v|
+      "Voice #{v + 1}"
+    end
+  end
+
+  def voice_banks
+    (min_voice_bank_no..max_voice_bank_no).to_a.collect do |b|
+      "Bank #{b + 1}"
+    end
+  end
+
   def keys
     @@Keys
   end
