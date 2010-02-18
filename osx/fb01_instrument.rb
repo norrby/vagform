@@ -58,8 +58,8 @@ class FB01Instrument < NSViewController
   end
 
   def awakeFromNib
-    puts "instrument awakefromnib #{instrument_no if instrument}"
-    @view_parent.addSubview(view) unless @view_parent.subviews.include? view
+    return if @view_parent.subviews.include? view
+    @view_parent.addSubview(view)
     no_channels = instrument.max_midi_channel - instrument.min_midi_channel + 1
     @channel_selector.setSegmentCount(no_channels)
     (instrument.min_midi_channel..instrument.max_midi_channel).to_a.each_with_index do |ch, idx|

@@ -1,10 +1,7 @@
-# fb01_instrument_large.rb
-# FB-01_Editor
-#
-# Created by M Norrby on 2/7/10.
-# Copyright 2010 __MyCompanyName__. All rights reserved.
+require 'model_bindings'
 
 class FB01InstrumentLarge < NSViewController
+  include ModelBindings
   attr_writer :parent_view, :editor
   attr_writer :bank_selector, :voice_selector
   attr_writer :upper_key_limit_slider, :lower_key_limit_slider
@@ -14,6 +11,7 @@ class FB01InstrumentLarge < NSViewController
   attr_writer :portamento_slider, :portamento_label
   attr_writer :pmd_controller_selector
   attr_writer :lfo_checkbox, :mono_checkbox
+  attr_writer :refetch_checkbox
 
   def invalidate(current)
     @bank_selector.selectItemAtIndex(current.voice_bank_no)
@@ -34,7 +32,8 @@ class FB01InstrumentLarge < NSViewController
     @mono_checkbox.setState(current.mono)
   end
 
-  def new_instrument(new_instr)
+  def new_model(new_instr)
+    set_enabled(view, true) if @instrument
     @instrument.unsubscribe(self) if @instrument
     new_instr.subscribe(self, :invalidate)
     @instrument = new_instr
@@ -42,47 +41,50 @@ class FB01InstrumentLarge < NSViewController
     return @instrument
   end
 
-  def instrument
+  def model
     return @instrument if @instrument
-    new_instrument(Instrument.null)
+    new_model(Instrument.null)
+  end
+
+  def set_enabled(a_view, enabled)
+    if a_view.is_a? NSControl
+      a_view.setEnabled(enabled) 
+    else
+      a_view.subviews.each {|sub| set_enabled(sub, enabled)}
+    end
   end
 
   def awakeFromNib
-    puts "instrument editor large"
+    return if @parent_view.subviews.include? view
     @parent_view.addSubview(view)
+    set_enabled(view, false)
   end
 
   def valueForKey(key)
-#    puts "value fr key in instrument_large. instrument=#{instrument}"
     return send key if respond_to? key
-    instrument.send key
+    model.send key
   end
 
   def voice_banks
-    (instrument.min_voice_bank_no..instrument.max_voice_bank_no).to_a.collect do |b|
+    (model.min_voice_bank_no..model.max_voice_bank_no).to_a.collect do |b|
       "Bank #{b + 1}"
     end
   end
 
   def set_voice_bank(sender)
-    instrument.voice_bank_no = sender.indexOfSelectedItem
+    model.voice_bank_no = sender.indexOfSelectedItem
+    @editor.reread_voice if @refetch_checkbox.intValue == 1
+  end
+
+  def set_voice(sender)
+    model.voice_no = sender.indexOfSelectedItem
+    @editor.reread_voice if @refetch_checkbox.intValue == 1
   end
 
   def voices
-    (instrument.min_voice_no..instrument.max_voice_no).to_a.collect do |v|
+    (model.min_voice_no..model.max_voice_no).to_a.collect do |v|
       "Voice #{v + 1}"
     end
-  end
-
-  def set_voice_no(sender)
-    instrument.voice_no = sender.indexOfSelectedItem
-  end
-
-  def setValue(value, forKey:key)
-    value = value.to_i if value.class == Float
-    value = 1 if value.class == TrueClass
-    value = 0 if value.class == FalseClass
-    instrument.send key + "=", value
   end
 
 end

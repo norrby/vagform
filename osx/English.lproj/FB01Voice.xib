@@ -121,9 +121,10 @@
 											<object class="NSTabViewItem" id="856061380">
 												<string key="NSIdentifier">1</string>
 												<object class="NSView" key="NSView" id="14351309">
-													<nil key="NSNextResponder"/>
+													<reference key="NSNextResponder" ref="331933386"/>
 													<int key="NSvFlags">256</int>
 													<string key="NSFrame">{{10, 33}, {390, 182}}</string>
+													<reference key="NSSuperview" ref="331933386"/>
 												</object>
 												<string key="NSLabel">1</string>
 												<object class="NSColor" key="NSColor" id="1053549132">
@@ -196,10 +197,9 @@
 											<object class="NSTabViewItem" id="88555311">
 												<string key="NSIdentifier">Item 4</string>
 												<object class="NSView" key="NSView" id="574181384">
-													<reference key="NSNextResponder" ref="331933386"/>
+													<nil key="NSNextResponder"/>
 													<int key="NSvFlags">256</int>
 													<string key="NSFrame">{{10, 33}, {390, 182}}</string>
-													<reference key="NSSuperview" ref="331933386"/>
 												</object>
 												<string key="NSLabel">5</string>
 												<reference key="NSColor" ref="1053549132"/>
@@ -239,14 +239,14 @@
 												<reference key="NSTabView" ref="331933386"/>
 											</object>
 										</object>
-										<reference key="NSSelectedTabViewItem" ref="88555311"/>
+										<reference key="NSSelectedTabViewItem" ref="856061380"/>
 										<reference key="NSFont" ref="943950311"/>
 										<int key="NSTvFlags">0</int>
 										<bool key="NSAllowTruncatedLabels">YES</bool>
 										<bool key="NSDrawsBackground">YES</bool>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
-											<reference ref="574181384"/>
+											<reference ref="14351309"/>
 										</object>
 									</object>
 									<object class="NSButton" id="671208155">
@@ -1433,6 +1433,22 @@
 					</object>
 					<int key="connectionID">306</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">selectedIndex: algorithm</string>
+						<reference key="source" ref="331933386"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="331933386"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">selectedIndex: algorithm</string>
+							<string key="NSBinding">selectedIndex</string>
+							<string key="NSKeyPath">algorithm</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">310</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2090,7 +2106,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">308</int>
+			<int key="maxID">310</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -12,12 +12,6 @@ class FB01InstrumentVoice < NSViewController
     @instruments.selected_instrument
   end
 
-  def voice
-    instrument.voice
-  rescue
-    Voice.null
-  end
-
   def reread_voice
     instrument.read_voice_data_from_fb01
   end
@@ -27,8 +21,8 @@ class FB01InstrumentVoice < NSViewController
   end
 
   def invalidate
-    @instrument_controller.new_instrument(instrument)
-   # @voice_controller.new_voice(voice)
+    @instrument_controller.new_model(instrument)
+    @voice_controller.new_model(instrument.voice)
   end
 
   def awakeFromNib

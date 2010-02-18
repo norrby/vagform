@@ -20,7 +20,6 @@ class FB01Instruments < NSViewController
   end
 
   def select_instrument(controller)
-    puts "selecting instrument"
     controllers.each {|instr| instr.deselect_me unless instr.equal? controller}
     @voice_editor.new_instrument_selected
   end

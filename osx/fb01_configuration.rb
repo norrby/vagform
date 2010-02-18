@@ -1,4 +1,7 @@
+require 'model_bindings'
+
 class FB01Configuration < NSViewController
+  include ModelBindings
   attr_writer :editor, :view_parent
   attr_writer :lfo_waveform_selector, :name_field, :kc_responder_selector
   attr_writer :amd_dial, :amd_slider, :pmd_dial, :pmd_slider, :lfo_speed_slider
@@ -8,7 +11,7 @@ class FB01Configuration < NSViewController
     @editor.communicator
   end
 
-  def config
+  def model
     @editor.configuration
   end
 
@@ -18,14 +21,13 @@ class FB01Configuration < NSViewController
     @progress.setMaxValue 10.0
     @progress.setMinValue 0.0
     @progress.setDoubleValue 0.0
-    config.bulk_fetch do |max, min, current|
+    model.bulk_fetch do |max, min, current|
       @progress.setMaxValue max
       @progress.setMinValue min
       @progress.setDoubleValue current
       
     end
     @progress.stopAnimation(self)
-    invalidate
     @instruments.invalidate
   end
 
@@ -33,26 +35,23 @@ class FB01Configuration < NSViewController
     even = sender.isSelectedForSegment(0) ? 1 : 0
     odd = sender.isSelectedForSegment(1) ? 2 : 0
     kc = (odd + even)
-    if kc == 0
-      invalidate 
-    else
+    unless kc == 0
       kc = kc % 3
-      config.kc_reception_mode = kc
-      invalidate
+      model.kc_reception_mode = kc
     end
   end
 
   def kc_even
-    kc = config.kc_reception_mode
+    kc = model.kc_reception_mode
     kc == 0 || (kc & 0x01 > 0)
   end
 
   def kc_odd
-    kc = config.kc_reception_mode
+    kc = model.kc_reception_mode
     kc == 0 || (kc & 0x02 > 0)
   end
 
-  def invalidate
+  def invalidate(config)
     @name_field.setStringValue(config.name)
     @lfo_waveform_selector.selectCellAtRow(config.lfo_waveform_no, column:0)
     @kc_responder_selector.setSelected(self.kc_even, forSegment:0)
@@ -64,21 +63,9 @@ class FB01Configuration < NSViewController
     @lfo_speed_slider.setFloatValue(config.lfo_speed)
   end
 
-  def valueForKey(key)
-    config.send key
-  end
-
-  def setValue(value, forKey:key)
-    value = value.to_i if value.class == Float
-    value = 1 if value.class == TrueClass
-    value = 0 if value.class == FalseClass
-    config.send key + "=", value
-    invalidate
-  end
-
   def awakeFromNib
+    return if @view_parent.subviews.include? view
     @view_parent.addSubview(view)
-  rescue => e
-    puts "Error " + e.message
+    model.subscribe(self, :invalidate)
   end
 end

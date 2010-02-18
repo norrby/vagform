@@ -46,6 +46,7 @@ class Configuration
     dump = @comm.receive_dump(request, raw_response) 
     return unless dump
     @data = dump
+    notify_observers
     @instruments.each_with_index {|inst, n| inst.replace_memory(@data[0x20 + n * 0x10, 0x10])}
     @instruments.each_with_index do |inst, i|
       block.call(10, 1, 3 + i) if block

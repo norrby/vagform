@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="159"/>
+			<integer value="19"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -898,22 +898,6 @@
 					<int key="connectionID">27</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">set_voice_bank:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="318251800"/>
-					</object>
-					<int key="connectionID">28</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">set_voice_no:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="355894132"/>
-					</object>
-					<int key="connectionID">29</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">contentValues: voice_banks</string>
 						<reference key="source" ref="318251800"/>
@@ -1603,6 +1587,30 @@
 					</object>
 					<int key="connectionID">240</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">set_voice_bank:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="318251800"/>
+					</object>
+					<int key="connectionID">242</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">set_voice:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="355894132"/>
+					</object>
+					<int key="connectionID">243</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">refetch_checkbox</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="926063334"/>
+					</object>
+					<int key="connectionID">244</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1645,7 +1653,6 @@
 						<reference key="object" ref="1011126273"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="318251800"/>
 							<reference ref="355894132"/>
 							<reference ref="912419292"/>
 							<reference ref="364007819"/>
@@ -1657,9 +1664,10 @@
 							<reference ref="926063334"/>
 							<reference ref="680511039"/>
 							<reference ref="807059848"/>
-							<reference ref="505951370"/>
 							<reference ref="117553208"/>
 							<reference ref="502082401"/>
+							<reference ref="318251800"/>
+							<reference ref="505951370"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -2159,7 +2167,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{902, 748}, {561, 268}}</string>
+					<string>{{749, 706}, {561, 268}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{217, 442}, {480, 272}}</string>
@@ -2235,7 +2243,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">240</int>
+			<int key="maxID">244</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2247,8 +2255,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>set_voice:</string>
 							<string>set_voice_bank:</string>
-							<string>set_voice_no:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2274,6 +2282,7 @@
 							<string>pmd_controller_selector</string>
 							<string>portamento_label</string>
 							<string>portamento_slider</string>
+							<string>refetch_checkbox</string>
 							<string>transpose_slider</string>
 							<string>upper_key_limit_label</string>
 							<string>upper_key_limit_slider</string>
@@ -2281,6 +2290,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
