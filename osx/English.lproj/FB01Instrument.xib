@@ -338,7 +338,7 @@
 						<string key="label">minValue: min_notes</string>
 						<reference key="source" ref="362084792"/>
 						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector" id="836825792">
+						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="362084792"/>
 							<reference key="NSDestination" ref="1001"/>
 							<string key="NSLabel">minValue: min_notes</string>
@@ -349,23 +349,6 @@
 						</object>
 					</object>
 					<int key="connectionID">8</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: notes</string>
-						<reference key="source" ref="362084792"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="362084792"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: notes</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">notes</string>
-							<reference key="NSPreviousConnector" ref="836825792"/>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">10</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -480,6 +463,14 @@
 						<reference key="destination" ref="1008998940"/>
 					</object>
 					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">notes_checked:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="362084792"/>
+					</object>
+					<int key="connectionID">63</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -678,7 +669,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{470, 831}, {418, 78}}</string>
+					<string>{{583, 786}, {418, 78}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>{628, 654}</string>
@@ -719,7 +710,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">58</int>
+			<int key="maxID">63</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -732,10 +723,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>midi_channel_selected:</string>
+							<string>notes_checked:</string>
 							<string>select_instrument:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>

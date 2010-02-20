@@ -1,10 +1,7 @@
-# fb01_instrument.rb
-# FB-01_Editor
-#
-# Created by M Norrby on 2/2/10.
-# Copyright 2010 __MyCompanyName__. All rights reserved.
+require 'model_bindings'
 
 class FB01Instrument < NSViewController
+  include ModelBindings
   attr_writer :configuration, :view_parent
   attr_writer :notes_selector, :channel_selector, :output_level_indicator
   attr_writer :instrument_pointer, :title
@@ -14,12 +11,12 @@ class FB01Instrument < NSViewController
     @configuration.instrument(self)
   end
 
-  def instrument_no
-    instrument.no
+  def model
+    instrument
   end
 
-  def valueForKey(key)
-    instrument.send key
+  def instrument_no
+    instrument.no
   end
 
   def select_instrument(sender)
@@ -49,16 +46,21 @@ class FB01Instrument < NSViewController
     @channel_selector.setSelected(true, forSegment:(instrument.midi_channel - 1))
   end
 
-  def setValue(value, forKey:key)
-    value = value.to_i if value.class == Float
-    value = 1 if value.class == TrueClass
-    value = 0 if value.class == FalseClass
-    instrument.send key + "=", value
+  def midi_channel_selected(sender)
+    instrument.midi_channel = sender.indexOfSelectedItem.to_i + 1
     invalidate
   end
 
-  def midi_channel_selected(sender)
-    instrument.midi_channel = sender.indexOfSelectedItem.to_i + 1
+  def notes_checked(sender)
+    total = @configuration.total_notes
+    puts "total notes are: #{total}"
+    notes = sender.intValue
+    if total - model.notes + notes > model.max_notes
+      puts "setting notes to"
+      model.notes = model.max_notes - total + model.notes
+    else
+      model.notes = notes
+    end
     invalidate
   end
 
