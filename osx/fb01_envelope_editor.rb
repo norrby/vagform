@@ -93,19 +93,20 @@ class FB01EnvelopeEditor < NSView
   end
 
   def knee1_moved(sender)
-    puts "OK, moving knee 1 (#{sender.delta_x}, #{sender.delta_y})"
   end
+
   def knee2_moved(sender)
     operator.ar = operator.ar + sender.delta_x.to_i
-  rescue =>e
-    puts e
   end
+
   def knee3_moved(sender)
     puts "OK, moving knee 3"
   end
+
   def knee4_moved(sender)
     puts "OK, moving knee 4"
   end
+
   def knee5_moved(sender)
     puts "OK, moving knee 5"
   end

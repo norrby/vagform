@@ -2,10 +2,12 @@
 require 'voice'
 require 'model_bindings'
 require 'model_enabled'
+require 'observable'
 
 class FB01Voice < NSViewController
   include ModelBindings
   include ModelEnabled
+  include Observable
   attr_writer :parent_view
   attr_writer :editor
   attr_writer :lfo_speed_selector, :lfo_speed_label

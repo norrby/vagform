@@ -4,11 +4,14 @@ module ModelEnabled
   end
 
   def new_model(new_model)
-    set_enabled(view, true) unless empty_init?
+    if respond_to? :view
+      set_enabled(view, true) unless empty_init?
+    end
     @model.unsubscribe(self) if @model
     new_model.subscribe(self, :invalidate)
     @model = new_model
     self.invalidate(new_model)
+    notify_observers if self.respond_to? :notify_observers
   end
 
   def set_enabled(a_view, enabled)

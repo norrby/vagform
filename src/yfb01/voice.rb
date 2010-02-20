@@ -59,7 +59,9 @@ class Voice
 
   def replace_memory(new_bulk)
     new_bulk.each_with_index {|value, idx| @data[idx] = value}
+    puts "notifying in voice"
     notify_observers
+    puts "notifying in operators"
     @operators.each {|operator| operator.notify_observers}
   end
     

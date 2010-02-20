@@ -1,21 +1,24 @@
-
+require 'model_enabled'
 
 class FB01OperatorButton < NSButton
+  include ModelEnabled
   attr_writer :algorithm
 
   def awakeFromNib
     setButtonType(NSMomentaryPushInButton)
     setTitle("")
     setBezelStyle(NSThickerSquareBezelStyle)
-    operator.subscribe(self, :notify)
+    @algorithm.subscribe(self, :operators_changed)
   end
 
-  def notify(operator)
+  def operators_changed(algorithm)
+    puts "operators changed"
+    new_model(@algorithm.operator(self))
     setNeedsDisplay(true)
   end
 
-  def operator
-    @algorithm.operator(self)
+  def null_model
+    Operator.null
   end
 
   def x
@@ -29,27 +32,31 @@ class FB01OperatorButton < NSButton
   def margin
     NSPoint.new(frame.size.width * 0.1, frame.size.height * 0.1)
   end
+  
+  def invalidate(operator)
+    setNeedsDisplay(true)
+  end
 
   def ar
-    arx = x/4 * (1 - (0.0 + operator.ar)/operator.max_ar)
-    NSPoint.new(operator.ar, y)
+    arx = x/4 * (1 - (0.0 + model.ar)/model.max_ar)
+    NSPoint.new(model.ar, y)
   end
 
   def sl
-    slx = x/4 * (0.0 + operator.d1r)/operator.max_d1r + ar.x
-    sly = y * (1 - (0.0 + operator.sl)/operator.max_sl)
+    slx = x/4 * (0.0 + model.d1r)/model.max_d1r + ar.x
+    sly = y * (1 - (0.0 + model.sl)/model.max_sl)
     NSPoint.new(slx, sly)
   end
 
   def dr
-    dr_ratio = (1 - (0.0 + operator.d2r)/operator.max_d2r)
+    dr_ratio = (1 - (0.0 + model.d2r)/model.max_d2r)
     dry = sl.y/2 + (sl.y/2) * dr_ratio
     drx = sl.x + x/4 * dr_ratio
     NSPoint.new(drx, dry)
   end
 
   def rr
-    rr_ratio = (0.0 + operator.rr)/operator.max_rr
+    rr_ratio = (0.0 + model.rr)/model.max_rr
     rrx = x/4 * rr_ratio + dr.x
     rry = 0
     NSPoint.new(rrx, rry)
@@ -65,7 +72,7 @@ class FB01OperatorButton < NSButton
     if not @edit_window
       @edit_window = FB01OperatorDetails.alloc.initWithWindowNibName("OperatorDetails")
     end
-    @edit_window.new_model(operator)
+    @edit_window.new_model(model)
     @edit_window.showWindow(self)
   end
 
@@ -74,7 +81,7 @@ class FB01OperatorButton < NSButton
   end
 
   def adjust_tl(point)
-    NSPoint.new(point.x, point.y * (1 - (0.0 + operator.tl)/operator.max_tl))
+    NSPoint.new(point.x, point.y * (1 - (0.0 + model.tl)/model.max_tl))
   end
 
   def button_margin
@@ -126,6 +133,5 @@ class FB01OperatorButton < NSButton
     end
     NSColor.greenColor.set
     wave.stroke
-    self
   end
 end

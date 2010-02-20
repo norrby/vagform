@@ -13,6 +13,7 @@ module Memory
   end
 
   def store(pos, mask, value)
+    raise "cannot store non integer #{value} at #{pos}" unless value.is_a? Integer
     shift = shift_steps(mask)
     @data[pos] = (@data[pos] & ~mask) | (value << shift)
     store_hook if respond_to? :store_hook
@@ -37,7 +38,7 @@ module Memory
 
   def fetch(parameter)
     mask = mask(parameter)
-    (@data[pos(parameter)] & mask(parameter)) >> shift_steps(mask)
+    (@data[pos(parameter)] & mask) >> shift_steps(mask)
   end
 
   def self.accessors(defs)
@@ -65,9 +66,7 @@ module Memory
       end
 
       define_method "#{key}_to_s".to_sym do
-        puts "asking about string"
         (send key).to_s
-        "banjo"
       end
     end
   end

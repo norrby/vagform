@@ -27,11 +27,12 @@ class Operator
 
   Memory.accessors(@@MemoryLayout)
 
-  def Operator.null
-    Operator.new(Array.new(0x08))
+  def self.null
+    return @null if @null
+    @null = Operator.new
   end
 
-  def initialize(backing_store = Array.new(0x08))
+  def initialize(backing_store = Array.new(0x08, 0))
     @parameters = @@MemoryLayout
     @data = backing_store
   end
