@@ -19,7 +19,15 @@ class FB01Instruments < NSViewController
     Instrument.null
   end
 
-  def select_instrument(controller)
+  def any_instrument_selected?
+    controllers.detect {|instr| instr.chosen}
+  end
+
+  def assure_one_instrument_selected
+    @i1.select_me unless any_instrument_selected?
+  end
+
+  def selected_instrument_is(controller)
     controllers.each {|instr| instr.deselect_me unless instr.equal? controller}
     @voice_editor.new_instrument_selected
   end

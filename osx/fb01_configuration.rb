@@ -28,6 +28,7 @@ class FB01Configuration < NSViewController
       
     end
     @progress.stopAnimation(self)
+    @instruments.assure_one_instrument_selected
     @instruments.invalidate
   end
 

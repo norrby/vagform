@@ -26,9 +26,14 @@ class FB01Instrument < NSViewController
     if sender.state == 1
       sender.setState(0)
       return
-    end 
+    end
+    select_me
+  end
+
+  def select_me
+    @instrument_pointer.setState(0)
     @chosen = true
-    @configuration.select_instrument(self)
+    @configuration.selected_instrument_is(self)
     invalidate
   end
 
