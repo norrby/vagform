@@ -27,8 +27,8 @@ class FB01EnvelopeEditor < NSView
   end
 
   def ar
-    arx = x/4 * (1 - (0.0 + operator.ar)/operator.max_ar)
-    NSPoint.new(operator.ar, y)
+    arx = x/4 * (0.0 + operator.ar)/operator.max_ar
+    NSPoint.new(arx, y)
   end
 
   def sl
@@ -95,20 +95,78 @@ class FB01EnvelopeEditor < NSView
   def knee1_moved(sender)
   end
 
+  def moderate(ratio, old_value, min, max)
+    value = old_value + (ratio * max)
+    return min if value < min
+    return max if value > max
+    value.to_i
+  end
+
+  def mouse_to_ar(old_ar, xmove) 
+    ratio = xmove / (x/4)
+    moderate(ratio, old_ar, operator.min_ar, operator.max_ar)
+ end
+
+  def mouse_to_sl(old_sl, ymove)
+    ratio = ymove / y
+    moderate(ratio, old_sl, operator.min_sl, operator.max_sl)
+  end
+
+  def mouse_to_d1r(old_d1r, xmove)
+    ratio = xmove / (x/4)
+    moderate(ratio, old_d1r, operator.min_d1r, operator.max_d1r)
+  end
+
+  def mouse_to_d2r(old_d2r, xmove, ymove)
+    yratio = ymove / (sl.y/2)
+    xratio = -xmove / (x/4)
+    dr_ratio = (xratio + yratio)/2
+    moderate(dr_ratio, old_d2r, operator.min_d2r, operator.max_d2r)
+  end
+
+  def mouse_to_rr(old_rr, xmove)
+    ratio = xmove / (x/4)
+    moderate(ratio, old_rr, operator.min_rr, operator.max_rr)
+  end    
+
+  def mouse_to_tl(old_tl, ymove)
+    ratio = ymove / y
+    moderate(ratio, old_tl, operator.min_tl, operator.max_tl)
+  end
+
   def knee2_moved(sender)
-    operator.ar = operator.ar + sender.delta_x.to_i
+    @saved_ar = operator.ar if sender.total_x == 0
+    @saved_tl = operator.tl if sender.total_y == 0
+    operator.ar = mouse_to_ar(@saved_ar ||= operator.ar, sender.total_x)
+    operator.tl = mouse_to_tl(@saved_tl ||= operator.tl, sender.total_y)
   end
 
   def knee3_moved(sender)
-    puts "OK, moving knee 3"
+    @saved_sl = operator.sl if sender.total_y == 0
+    @saved_d1r = operator.d1r if sender.total_x == 0
+    operator.sl = mouse_to_sl(@saved_sl ||= operator.sl, sender.total_y)
+    operator.d1r = mouse_to_d1r(@saved_d1r ||= operator.d1r, sender.total_x)
   end
 
   def knee4_moved(sender)
-    puts "OK, moving knee 4"
+    @saved_d2r = operator.d2r if sender.total_y == 0 and sender.total_x == 0
+    operator.d2r = mouse_to_d2r(@saved_d2r ||= operator.d2r, sender.total_x, sender.total_y)
   end
 
   def knee5_moved(sender)
-    puts "OK, moving knee 5"
+    @saved_rr = operator.rr if sender.total_x == 0
+    operator.rr = mouse_to_rr(@saved_rr ||= operator.rr, sender.total_x)
+  end
+
+  def border
+    sl_point = sl
+    dr_point = dr
+    return NSPoint.new(sl_point.x, 0) if sl_point.x == dr_point.x
+    slope = (dr_point.y - sl_point.y)/(dr_point.x - sl_point.x)
+    new_y = dr_point.y + slope * (x - dr_point.x)
+    return NSPoint.new(x, new_y) if (new_y > 0) 
+    new_x = dr_point.x - dr_point.y/slope
+    return NSPoint.new(new_x, 0)
   end
 
   def drawRect(rect)
@@ -128,6 +186,13 @@ class FB01EnvelopeEditor < NSView
     @knee5.put_center_on(add_margin(adjust_tl(rr)))
     NSColor.greenColor.set
     wave.stroke
+    dash = NSBezierPath.bezierPath
+    dash.setLineWidth(3)
+    dash.moveToPoint(add_margin(adjust_tl(dr)))
+    dash.lineToPoint(add_margin(adjust_tl(border)))
+#    NSColor.blueColor.set
+    dash.setLineDash([5, 2], count:2, phase:0.0)
+    dash.stroke
     self
   end
 end

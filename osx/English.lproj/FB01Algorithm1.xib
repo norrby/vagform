@@ -389,6 +389,64 @@
 					</object>
 					<int key="connectionID">33</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">feedback_level_indicator</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="853973178"/>
+					</object>
+					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">maxValue: max_feedback</string>
+						<reference key="source" ref="853973178"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector" id="121113801">
+							<reference key="NSSource" ref="853973178"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">maxValue: max_feedback</string>
+							<string key="NSBinding">maxValue</string>
+							<string key="NSKeyPath">max_feedback</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">94</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">minValue: min_feedback</string>
+						<reference key="source" ref="853973178"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector" id="529882280">
+							<reference key="NSSource" ref="853973178"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">minValue: min_feedback</string>
+							<string key="NSBinding">minValue</string>
+							<string key="NSKeyPath">min_feedback</string>
+							<reference key="NSPreviousConnector" ref="121113801"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">95</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: feedback</string>
+						<reference key="source" ref="853973178"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="853973178"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: feedback</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">feedback</string>
+							<reference key="NSPreviousConnector" ref="529882280"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">96</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -676,7 +734,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">79</int>
+			<int key="maxID">96</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -688,6 +746,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>feedback_level_indicator</string>
 							<string>op1</string>
 							<string>op2</string>
 							<string>op3</string>
@@ -697,6 +756,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

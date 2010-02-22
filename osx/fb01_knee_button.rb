@@ -1,10 +1,12 @@
 class FB01KneeButton < NSButton
-  attr_reader :delta_x, :delta_y
+  attr_reader :delta_x, :delta_y, :total_x, :total_y
 
   def mouseDragged(event)
     super
     @delta_x = event.deltaX
     @delta_y = event.deltaY
+    @total_x += event.deltaX
+    @total_y += event.deltaY
     sendAction(self.action, to:self.target)
   end
 
@@ -17,9 +19,14 @@ class FB01KneeButton < NSButton
   end
 
   def mouseDown(event)
+    @total_x = 0
+    @total_y = 0
+    sendAction(self.action, to:self.target)
   end
 
   def awakeFromNib
+    @total_x = 0
+    @total_y = 0
     setContinuous(true)
     #    sendActionOn(NSLeftMouseDraggedMask)
   end

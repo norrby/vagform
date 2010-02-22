@@ -1,9 +1,13 @@
 require 'observable'
+require 'model_enabled'
+require 'model_bindings'
 
 class FB01Algorithm < NSViewController
   include Observable
+  include ModelEnabled
+  include ModelBindings
   attr_writer :op1, :op2, :op3, :op4
-  attr_writer :tab
+  attr_writer :tab, :feedback_level_indicator
   attr_writer :voice_controller
 
   def operators
@@ -22,8 +26,16 @@ class FB01Algorithm < NSViewController
     operators[operator_controllers.index(for_controller)]
   end
 
-  def voice_changed(voice)
-    puts "the voice changed"
+  def null_model
+    Voice.null
+  end
+
+  def invalidate(voice)
+    @feedback_level_indicator.setIntValue(voice.feedback)
+  end
+
+  def voice_changed(voice_controller)
+    new_model(voice_controller.model)
     notify_observers
   end
 
