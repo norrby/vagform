@@ -12,7 +12,6 @@ class FB01OperatorButton < NSButton
   end
 
   def operators_changed(algorithm)
-    puts "operators changed"
     new_model(@algorithm.operator(self))
     setNeedsDisplay(true)
   end

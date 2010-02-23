@@ -338,7 +338,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {551, 3887}}";
 			sepNavSelRange = "{5159, 0}";
-			sepNavVisRange = "{0, 546}";
+			sepNavVisRange = "{0, 598}";
 		};
 	};
 	20BCA5FE112D9916009D5E09 /* PBXTextBookmark */ = {

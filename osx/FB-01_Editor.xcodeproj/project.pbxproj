@@ -37,6 +37,11 @@
 		20BCA49C1129C1E3009D5E09 /* fb01_knee_button.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA49B1129C1E3009D5E09 /* fb01_knee_button.rb */; };
 		20BCA605112D9930009D5E09 /* model_bindings.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA604112D9930009D5E09 /* model_bindings.rb */; };
 		20BCA689112DBAFE009D5E09 /* model_enabled.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA688112DBAFE009D5E09 /* model_enabled.rb */; };
+		20BCA95C113442C5009D5E09 /* FB01Algorithm2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA95A113442C5009D5E09 /* FB01Algorithm2.xib */; };
+		20BCA97411344661009D5E09 /* FB01Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA97211344661009D5E09 /* FB01Algorithm4.xib */; };
+		20BCA97E113448C6009D5E09 /* FB01Algorithm6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA97C113448C6009D5E09 /* FB01Algorithm6.xib */; };
+		20BCA989113456C8009D5E09 /* FB01Algorithm7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA987113456C8009D5E09 /* FB01Algorithm7.xib */; };
+		20BCA999113458E6009D5E09 /* FB01Algorithm8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BCA997113458E6009D5E09 /* FB01Algorithm8.xib */; };
 		20E9475C11158E3800BA1A1E /* PYMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9475511158E0700BA1A1E /* PYMIDI.framework */; };
 		20E9475D11158E3800BA1A1E /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20E9474D11158DE200BA1A1E /* macruby-midi.framework */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
@@ -126,6 +131,11 @@
 		20BCA49B1129C1E3009D5E09 /* fb01_knee_button.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fb01_knee_button.rb; sourceTree = "<group>"; };
 		20BCA604112D9930009D5E09 /* model_bindings.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = model_bindings.rb; sourceTree = "<group>"; };
 		20BCA688112DBAFE009D5E09 /* model_enabled.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = model_enabled.rb; sourceTree = "<group>"; };
+		20BCA95B113442C5009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FB01Algorithm2.xib; sourceTree = "<group>"; };
+		20BCA97311344661009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FB01Algorithm4.xib; sourceTree = "<group>"; };
+		20BCA97D113448C6009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FB01Algorithm6.xib; sourceTree = "<group>"; };
+		20BCA988113456C8009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FB01Algorithm7.xib; sourceTree = "<group>"; };
+		20BCA998113458E6009D5E09 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/FB01Algorithm8.xib; sourceTree = "<group>"; };
 		20E9474111158DE200BA1A1E /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		20E9475011158E0700BA1A1E /* pymidi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pymidi.xcodeproj; path = "../src/midi-lex/ext/pymidi/pymidi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -240,6 +250,11 @@
 				20BCA3461125C752009D5E09 /* FB01Algorithm3.xib */,
 				20BCA3651125CD1D009D5E09 /* FB01Algorithm5.xib */,
 				20BCA42D11270280009D5E09 /* OperatorDetails.xib */,
+				20BCA95A113442C5009D5E09 /* FB01Algorithm2.xib */,
+				20BCA97211344661009D5E09 /* FB01Algorithm4.xib */,
+				20BCA97C113448C6009D5E09 /* FB01Algorithm6.xib */,
+				20BCA987113456C8009D5E09 /* FB01Algorithm7.xib */,
+				20BCA997113458E6009D5E09 /* FB01Algorithm8.xib */,
 			);
 			name = "FB-01_Editor";
 			sourceTree = "<group>";
@@ -379,6 +394,11 @@
 				20BCA49C1129C1E3009D5E09 /* fb01_knee_button.rb in Resources */,
 				20BCA605112D9930009D5E09 /* model_bindings.rb in Resources */,
 				20BCA689112DBAFE009D5E09 /* model_enabled.rb in Resources */,
+				20BCA95C113442C5009D5E09 /* FB01Algorithm2.xib in Resources */,
+				20BCA97411344661009D5E09 /* FB01Algorithm4.xib in Resources */,
+				20BCA97E113448C6009D5E09 /* FB01Algorithm6.xib in Resources */,
+				20BCA989113456C8009D5E09 /* FB01Algorithm7.xib in Resources */,
+				20BCA999113458E6009D5E09 /* FB01Algorithm8.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +499,46 @@
 				20BCA42E11270280009D5E09 /* English */,
 			);
 			name = OperatorDetails.xib;
+			sourceTree = "<group>";
+		};
+		20BCA95A113442C5009D5E09 /* FB01Algorithm2.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BCA95B113442C5009D5E09 /* English */,
+			);
+			name = FB01Algorithm2.xib;
+			sourceTree = "<group>";
+		};
+		20BCA97211344661009D5E09 /* FB01Algorithm4.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BCA97311344661009D5E09 /* English */,
+			);
+			name = FB01Algorithm4.xib;
+			sourceTree = "<group>";
+		};
+		20BCA97C113448C6009D5E09 /* FB01Algorithm6.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BCA97D113448C6009D5E09 /* English */,
+			);
+			name = FB01Algorithm6.xib;
+			sourceTree = "<group>";
+		};
+		20BCA987113456C8009D5E09 /* FB01Algorithm7.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BCA988113456C8009D5E09 /* English */,
+			);
+			name = FB01Algorithm7.xib;
+			sourceTree = "<group>";
+		};
+		20BCA997113458E6009D5E09 /* FB01Algorithm8.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BCA998113458E6009D5E09 /* English */,
+			);
+			name = FB01Algorithm8.xib;
 			sourceTree = "<group>";
 		};
 		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
