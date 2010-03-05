@@ -2,7 +2,7 @@ require 'model_enabled'
 
 class FB01OperatorButton < NSButton
   include ModelEnabled
-  attr_writer :algorithm
+  attr_writer :algorithm, :on_off_button
 
   def awakeFromNib
     setButtonType(NSMomentaryPushInButton)

@@ -836,16 +836,16 @@
 			<object class="NSViewController" id="807890021">
 				<string key="NSNibName">FB01Algorithm2</string>
 			</object>
-			<object class="NSViewController" id="517343030">
+			<object class="NSViewController" id="68449198">
 				<string key="NSNibName">FB01Algorithm4</string>
 			</object>
-			<object class="NSViewController" id="970166703">
+			<object class="NSViewController" id="460200433">
 				<string key="NSNibName">FB01Algorithm6</string>
 			</object>
-			<object class="NSViewController" id="507290495">
+			<object class="NSViewController" id="110983125">
 				<string key="NSNibName">FB01Algorithm7</string>
 			</object>
-			<object class="NSViewController" id="81636464">
+			<object class="NSViewController" id="957260419">
 				<string key="NSNibName">FB01Algorithm8</string>
 			</object>
 		</object>
@@ -1460,7 +1460,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tab</string>
-						<reference key="source" ref="517343030"/>
+						<reference key="source" ref="68449198"/>
 						<reference key="destination" ref="263367634"/>
 					</object>
 					<int key="connectionID">320</int>
@@ -1468,7 +1468,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">voice_controller</string>
-						<reference key="source" ref="517343030"/>
+						<reference key="source" ref="68449198"/>
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">321</int>
@@ -1476,7 +1476,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tab</string>
-						<reference key="source" ref="970166703"/>
+						<reference key="source" ref="460200433"/>
 						<reference key="destination" ref="488841889"/>
 					</object>
 					<int key="connectionID">325</int>
@@ -1484,7 +1484,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">voice_controller</string>
-						<reference key="source" ref="970166703"/>
+						<reference key="source" ref="460200433"/>
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">326</int>
@@ -1492,7 +1492,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">voice_controller</string>
-						<reference key="source" ref="507290495"/>
+						<reference key="source" ref="110983125"/>
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">329</int>
@@ -1500,7 +1500,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tab</string>
-						<reference key="source" ref="507290495"/>
+						<reference key="source" ref="110983125"/>
 						<reference key="destination" ref="623155126"/>
 					</object>
 					<int key="connectionID">330</int>
@@ -1508,7 +1508,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tab</string>
-						<reference key="source" ref="81636464"/>
+						<reference key="source" ref="957260419"/>
 						<reference key="destination" ref="571645011"/>
 					</object>
 					<int key="connectionID">334</int>
@@ -1516,7 +1516,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">voice_controller</string>
-						<reference key="source" ref="81636464"/>
+						<reference key="source" ref="957260419"/>
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">335</int>
@@ -2041,22 +2041,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">317</int>
-						<reference key="object" ref="517343030"/>
+						<reference key="object" ref="68449198"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">322</int>
-						<reference key="object" ref="970166703"/>
+						<reference key="object" ref="460200433"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">327</int>
-						<reference key="object" ref="507290495"/>
+						<reference key="object" ref="110983125"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">331</int>
-						<reference key="object" ref="81636464"/>
+						<reference key="object" ref="957260419"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -2127,7 +2127,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{713, 425}, {568, 395}}</string>
+					<string>{{923, 377}, {568, 395}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{217, 442}, {480, 272}}</string>
@@ -2204,7 +2204,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">335</int>
+			<int key="maxID">336</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2218,14 +2218,22 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>feedback_level_indicator</string>
 							<string>op1</string>
+							<string>op1_enable</string>
 							<string>op2</string>
+							<string>op2_enable</string>
 							<string>op3</string>
+							<string>op3_enable</string>
 							<string>op4</string>
+							<string>op4_enable</string>
 							<string>tab</string>
 							<string>voice_controller</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

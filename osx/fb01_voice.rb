@@ -34,6 +34,10 @@ class FB01Voice < NSViewController
     @algorithm.selectTabViewItemAtIndex(voice.algorithm)
   end
 
+  def didSelectTabViewItem(tabView)
+    puts tabView.class
+  end
+
   def operators
     model.operators
   end

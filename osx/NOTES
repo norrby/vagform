@@ -19,3 +19,23 @@ to the top level.
 - forgotten to select nib file in the object
 
 
+
+New design...
+-------------
+Because of me misunderstanding the KVC procedures of Cocoa,
+a new design is wanted...
+
+InstrumentsController (File's Owner)
+  |
+Instruments.xib - configuration.rb
+  |
+ NSArrayController.contentArray.bind to (InstrumentsController.configuration.instruments) 
+
+
+
+InstrumentController (File's Owner)
+  |
+Instrument.xib - InstrumentsController
+  |
+ NSButton.value.bind to (InstrumentsController.selected(self))
+

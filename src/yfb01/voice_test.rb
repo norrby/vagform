@@ -181,6 +181,32 @@ class VoiceTest < Test::Unit::TestCase
     assert_equal -1, @voice.transpose
   end
 
+  def test_enable_operators
+    @voice.op4_enable = 1
+    assert_equal 1, @voice.op4_enable
+    assert_equal 0, @voice.op3_enable
+    assert_equal 0, @voice.op2_enable
+    assert_equal 0, @voice.op1_enable
+    @voice.op3_enable = 1
+    assert_equal 1, @voice.op4_enable
+    assert_equal 1, @voice.op3_enable
+    assert_equal 0, @voice.op2_enable
+    assert_equal 0, @voice.op1_enable
+    @voice.op4_enable = 0
+    @voice.op1_enable = 1
+    assert_equal 0, @voice.op4_enable
+    assert_equal 1, @voice.op3_enable
+    assert_equal 0, @voice.op2_enable
+    assert_equal 1, @voice.op1_enable
+    @voice.op3_enable = 1
+    @voice.op2_enable = 1
+    @voice.op1_enable = 0
+    assert_equal 0, @voice.op4_enable
+    assert_equal 1, @voice.op3_enable
+    assert_equal 1, @voice.op2_enable
+    assert_equal 0, @voice.op1_enable
+  end
+
   def test_mono
     @dump[0x3A] = 0x00
     assert @voice.mono

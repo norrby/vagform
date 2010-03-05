@@ -7,6 +7,7 @@ class FB01Algorithm < NSViewController
   include ModelEnabled
   include ModelBindings
   attr_writer :op1, :op2, :op3, :op4
+  attr_writer :op1_enable, :op2_enable, :op3_enable, :op4_enable
   attr_writer :tab, :feedback_level_indicator
   attr_writer :voice_controller
 
@@ -32,6 +33,11 @@ class FB01Algorithm < NSViewController
 
   def invalidate(voice)
     @feedback_level_indicator.setIntValue(voice.feedback)
+#    puts "invalidating: #{voice.op1_enable} #{voice.op2_enable} #{voice.op3_enable} #{voice.op4_enable} #{voice.feedback}"
+#    @op1_enable.setIntValue(voice.op1_enable)
+#    @op2_enable.setIntValue(voice.op2_enable)
+ #   @op3_enable.setIntValue(voice.op3_enable)
+  #  @op4_enable.setIntValue(voice.op4_enable)
   end
 
   def voice_changed(voice_controller)

@@ -30,7 +30,6 @@ class FB01Connector < NSViewController
 
   def awakeFromNib
     @view_parent.addSubview(view)
-    #puts "populating channels"
     @channel_selector.setSegmentCount(channels.size)
     channels.each_with_index do |ch, idx|
       @channel_selector.setLabel(ch.to_s, forSegment:idx)

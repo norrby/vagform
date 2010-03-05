@@ -53,10 +53,8 @@ class FB01Instrument < NSViewController
 
   def notes_checked(sender)
     total = @configuration.total_notes
-    puts "total notes are: #{total}"
     notes = sender.intValue
     if total - model.notes + notes > model.max_notes
-      puts "setting notes to"
       model.notes = model.max_notes - total + model.notes
     else
       model.notes = notes

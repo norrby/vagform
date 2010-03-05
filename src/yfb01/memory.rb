@@ -15,6 +15,7 @@ module Memory
   def store(pos, mask, value)
     raise "cannot store non integer #{value} at #{pos}" unless value.is_a? Integer
     shift = shift_steps(mask)
+    before_store_hook if respond_to? :before_store_hook
     @data[pos] = (@data[pos] & ~mask) | (value << shift)
     store_hook if respond_to? :store_hook
   end
