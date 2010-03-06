@@ -14,10 +14,16 @@ require 'midi_communicator'
 require 'configuration'
 
 class Fb01Document < NSDocument
+  attr_reader :configuration
+  attr_writer :instruments_array
   @@communicator = MidiCommunicator.new(MidiLex::Sender.new(:mac_ruby),
                                         MidiLex::Receiver.new(:mac_ruby))
-  @@configuration = Configuration.new(@@communicator)
-  
+  def configuration
+    puts "retrieving configuration object from document"
+    return @configuration if @configuratin
+    @configuration = Configuration.new(@@communicator)
+  end
+
   # Name of nib containing document window
   def windowNibName
     'Fb01Document'
@@ -41,5 +47,6 @@ class Fb01Document < NSDocument
   end
 
   def awakeFromNib
+    puts "document awake"
   end
 end
