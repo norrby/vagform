@@ -33,10 +33,7 @@ class FB01Algorithm < NSViewController
   end
 
   def voice_changed(voice_controller)
-    willChangeValueForKey("voice_controller")
-    @voice_controller = nil
     @voice_controller = voice_controller
-    didChangeValueForKey("voice_controller")
     new_model(voice_controller.model)
     notify_observers
   end

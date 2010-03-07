@@ -7,26 +7,39 @@
 #
 
 framework 'macruby-midi'
-#framework 'PYMIDI'
+framework 'PYMIDI'
 
 require 'midi_lex'
 require 'midi_communicator'
 require 'configuration'
 
-class Fb01Document < NSDocument
-  attr_reader :configuration
-  attr_writer :instruments_array
+class Yfb01Document < NSDocument
   @@communicator = MidiCommunicator.new(MidiLex::Sender.new(:mac_ruby),
                                         MidiLex::Receiver.new(:mac_ruby))
+  @@communicator.open(@@communicator.devices[0]) if @@communicator.devices
+
+  def communicator
+    @@communicator
+  end
+
   def configuration
-    puts "retrieving configuration object from document"
-    return @configuration if @configuratin
-    @configuration = Configuration.new(@@communicator)
+    return @configuration if @configuration
+    new_conf = Configuration.new(@@communicator)
+    new_conf.name = "New conf"
+    @configuration = Yfb01ConfigurationController.new(new_conf)
+  end
+
+  def reset_config
+    new_conf = Configuration.new(@@communicator)
+    new_conf.name = "Sik-fejs"
+    willChangeValueForKey("configuration")
+    @configuration = Yfb01ConfigurationController.new(new_conf)
+    didChangeValueForKey("configuration")
   end
 
   # Name of nib containing document window
   def windowNibName
-    'Fb01Document'
+    'Yfb01Document'
   end
   
   # Document data representation for saving (return NSData)

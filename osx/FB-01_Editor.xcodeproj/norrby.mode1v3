@@ -272,7 +272,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -536,7 +536,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2098F7F01142A9F8007513A4</string>
+		<string>2098F7F11142A9F8007513A4</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>20A745E411158D3B001BD66E</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/norrby/Documents/src/yfb01/osx/FB-01_Editor.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -739,13 +743,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>2098F65711418181007513A4</string>
+				<string>2098F7E91142A9F8007513A4</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>2098F65811418181007513A4</string>
-				<string>2098F65911418181007513A4</string>
-				<string>2098F65A11418181007513A4</string>
-				<string>2098F65B11418181007513A4</string>
-				<string>2098F65C11418181007513A4</string>
+				<string>2098F7EA1142A9F8007513A4</string>
+				<string>2098F7EB1142A9F8007513A4</string>
+				<string>2098F7EC1142A9F8007513A4</string>
+				<string>2098F7ED1142A9F8007513A4</string>
+				<string>2098F7EE1142A9F8007513A4</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -909,7 +913,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>2098F65D11418181007513A4</string>
+				<string>2098F7EF1142A9F8007513A4</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -919,7 +923,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
