@@ -1,5 +1,5 @@
 # Provides LFO waveform support.
-# Needs a :lfo_waveform_internal to work
+# Needs a :lfo_waveform_no to work
 module LfoWaveform
   @@LfoWaveforms = ["Sawtooth", "Square", "Triangle", "Sample and Hold"]
 

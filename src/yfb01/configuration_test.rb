@@ -1,3 +1,4 @@
+# -*- coding: undecided -*-
 require 'test/unit'
 require 'configuration'
 
@@ -53,5 +54,37 @@ class ConfigurationTest < Test::Unit::TestCase
     wf = "Triangle"
     @conf.lfo_waveform = wf
     assert_equal wf, @conf.lfo_waveform
+  end
+
+  def test_kc_reception_mode
+    @conf.kc_reception_mode = 0x00
+    assert_equal true, @conf.kc_reception_odd 
+    assert_equal true, @conf.kc_reception_even
+  end
+
+  def test_kc_reception_odd
+    @conf.kc_reception_mode = 0x02
+    assert_equal true, @conf.kc_reception_odd 
+    assert_equal false, @conf.kc_reception_even
+  end
+
+  def test_kc_reception_even
+    @conf.kc_reception_mode = 0x01
+    assert_equal true, @conf.kc_reception_even
+    assert_equal false, @conf.kc_reception_odd 
+  end
+
+  def test_set_kc_reception_odd
+    @conf.kc_reception_odd = true
+    @conf.kc_reception_even = false
+    assert_equal true, @conf.kc_reception_odd 
+    assert_equal false, @conf.kc_reception_even
+  end
+
+  def test_set_kc_reception_even
+    @conf.kc_reception_odd = false
+    @conf.kc_reception_even = true
+    assert_equal false, @conf.kc_reception_odd 
+    assert_equal true, @conf.kc_reception_even
   end
 end

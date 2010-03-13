@@ -40,6 +40,32 @@ class Configuration
     ArrayPart.new(backing_store, base_addr, base_addr + 0x0F)
   end
 
+  def kc_reception_odd
+    return 1 if kc_reception_mode == 0 or kc_reception_mode == 2
+    0
+  end
+
+  def kc_reception_odd=(on)
+    if on == 1
+      self.kc_reception_mode = 0 if kc_reception_mode == 1
+    else
+      self.kc_reception_mode = 1 if kc_reception_mode == 0
+    end
+  end
+
+  def kc_reception_even=(on)
+    if on == 1
+      self.kc_reception_mode = 0 if kc_reception_mode == 2
+    else
+      self.kc_reception_mode = 2 if kc_reception_mode == 0
+    end
+  end
+
+  def kc_reception_even
+    return 1 if kc_reception_mode == 0 or kc_reception_mode == 1
+    0
+  end
+
   def bulk_fetch(&block)
     request = [0x43, 0x75, @comm.system_channel - 1, 0x20, 0x01, 0x00]
     raw_response = [0xF0, 0x43, 0x75, @comm.system_channel - 1, 0x00, 0x01, 0x00]
