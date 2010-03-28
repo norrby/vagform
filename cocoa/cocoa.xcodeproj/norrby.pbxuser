@@ -338,6 +338,13 @@
 		vrLen = 586;
 		vrLoc = 0;
 	};
+	20D784D5114B778000BBD942 /* yfb01_instrument_bay.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {643, 361}}";
+			sepNavSelRange = "{369, 0}";
+			sepNavVisRange = "{0, 369}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 2098F42B11416E0E007513A4 /* cocoa */;
