@@ -4,6 +4,7 @@ class Yfb01InstrumentSmallViewController < NSViewController
   attr_writer :instrument_controllers
   attr_writer :indicator
   attr_accessor :instr
+  attr_writer :box
 
   def select_me(sender)
     puts "selecting myself"
@@ -13,6 +14,7 @@ class Yfb01InstrumentSmallViewController < NSViewController
   def awakeFromNib 
     @instrument_controllers.addObserver(self, forKeyPath:"selection",
                                         options:0, context:nil)
+    @box.setTitle("#{@instr.name} notes and MIDI channel")
   end
 
   def instrument_controller=(ctrl)
@@ -27,7 +29,6 @@ class Yfb01InstrumentSmallViewController < NSViewController
 
   def observeValueForKeyPath(keyPath, ofObject:object,
                              change:change, context:context)
-    puts "keyPath: #{keyPath} changed"
     if @instrument_controllers.selectedObjects[0] == instrument_controller
       @instrument_controller = instrument_controller
       selected = 1

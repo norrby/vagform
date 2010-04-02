@@ -55,7 +55,7 @@
 						<object class="NSTextField" id="486118357">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{503, 371}, {96, 22}}</string>
+							<string key="NSFrame">{{568, 98}, {96, 22}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="766206828">
@@ -92,7 +92,7 @@
 						<object class="NSTextField" id="247038515">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{405, 376}, {38, 17}}</string>
+							<string key="NSFrame">{{656, 139}, {38, 17}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="675426419">
@@ -135,7 +135,7 @@
 						<object class="NSPopUpButton" id="284496704">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{604, 356}, {100, 26}}</string>
+							<string key="NSFrame">{{656, 68}, {100, 26}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPopUpButtonCell" key="NSCell" id="428394607">
@@ -214,7 +214,7 @@
 						<object class="NSPopUpButton" id="637873827">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{328, 293}, {190, 26}}</string>
+							<string key="NSFrame">{{556, 38}, {190, 26}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPopUpButtonCell" key="NSCell" id="153531348">
@@ -277,6 +277,13 @@
 								<int key="NSArrowPosition">2</int>
 							</object>
 						</object>
+						<object class="NSCustomView" id="377041086">
+							<reference key="NSNextResponder" ref="1006"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{261, 174}, {482, 234}}</string>
+							<reference key="NSSuperview" ref="1006"/>
+							<string key="NSClassName">NSView</string>
+						</object>
 					</object>
 					<string key="NSFrameSize">{763, 730}</string>
 					<reference key="NSSuperview"/>
@@ -320,6 +327,10 @@
 				<bool key="NSSelectsInsertedObjects">YES</bool>
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
+			</object>
+			<object class="NSViewController" id="330630839"/>
+			<object class="NSViewController" id="597326572">
+				<string key="NSNibName">Yfb01InstrumentLarge</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -544,6 +555,22 @@
 					</object>
 					<int key="connectionID">391</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">parent_view</string>
+						<reference key="source" ref="597326572"/>
+						<reference key="destination" ref="377041086"/>
+					</object>
+					<int key="connectionID">396</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">instruments</string>
+						<reference key="source" ref="597326572"/>
+						<reference key="destination" ref="555587242"/>
+					</object>
+					<int key="connectionID">397</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -588,11 +615,12 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="682930642"/>
 							<reference ref="819112886"/>
-							<reference ref="486118357"/>
-							<reference ref="247038515"/>
 							<reference ref="836560783"/>
 							<reference ref="637873827"/>
+							<reference ref="247038515"/>
+							<reference ref="486118357"/>
 							<reference ref="284496704"/>
+							<reference ref="377041086"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -754,6 +782,21 @@
 						<reference key="object" ref="390259088"/>
 						<reference key="parent" ref="895726341"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">392</int>
+						<reference key="object" ref="377041086"/>
+						<reference key="parent" ref="1006"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">393</int>
+						<reference key="object" ref="330630839"/>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">394</int>
+						<reference key="object" ref="597326572"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -797,15 +840,20 @@
 					<string>367.IBPluginDependency</string>
 					<string>368.IBPluginDependency</string>
 					<string>369.IBPluginDependency</string>
+					<string>392.IBPluginDependency</string>
+					<string>393.CustomClassName</string>
+					<string>393.IBPluginDependency</string>
+					<string>394.CustomClassName</string>
+					<string>394.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{838, 246}, {763, 730}}</string>
+					<string>{{478, 275}, {763, 730}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{838, 246}, {763, 730}}</string>
+					<string>{{478, 275}, {763, 730}}</string>
 					<integer value="0"/>
 					<string>{196, 240}</string>
 					<string>{{357, 418}, {480, 270}}</string>
@@ -837,6 +885,11 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>Yfb01InstrumentLargeViewController</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>Yfb01InstrumentLargeViewController</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -855,7 +908,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">391</int>
+			<int key="maxID">397</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -959,6 +1012,27 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Yamaha_FB-01/yfb01_instrument_bay.rb</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">Yfb01InstrumentLargeViewController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>instruments</string>
+							<string>parent_view</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Yamaha_FB-01/yfb01_instrument_large_view_controller.rb</string>
 					</object>
 				</object>
 			</object>

@@ -26,6 +26,8 @@
 		20D7854C11554A2600BBD942 /* Yfb01InstrumentPatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */; };
 		20D7854E11554A6700BBD942 /* Yfb01InstrumentSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */; };
 		20D7855911554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D7855811554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb */; };
+		20D786201161209000BBD942 /* Yfb01InstrumentLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */; };
+		20D786241161214100BBD942 /* yfb01_instrument_large_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D786231161214100BBD942 /* yfb01_instrument_large_view_controller.rb */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -100,6 +102,8 @@
 		20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Yfb01InstrumentPatch.xib; sourceTree = "<group>"; };
 		20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01InstrumentSmall.xib; path = "Yamaha_FB-01/Yfb01InstrumentSmall.xib"; sourceTree = "<group>"; };
 		20D7855811554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_instrument_small_view_controller.rb; path = "Yamaha_FB-01/yfb01_instrument_small_view_controller.rb"; sourceTree = "<group>"; };
+		20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01InstrumentLarge.xib; path = "Yamaha_FB-01/Yfb01InstrumentLarge.xib"; sourceTree = "<group>"; };
+		20D786231161214100BBD942 /* yfb01_instrument_large_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_instrument_large_view_controller.rb; path = "Yamaha_FB-01/yfb01_instrument_large_view_controller.rb"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -126,6 +130,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				20D786231161214100BBD942 /* yfb01_instrument_large_view_controller.rb */,
 				20D7855811554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb */,
 				20D7850D1154F08900BBD942 /* yfb01_instrument_controller.rb */,
 				2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */,
@@ -195,6 +200,7 @@
 				20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */,
 				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
 				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
+				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
 			);
 			name = cocoa;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 				20D7854C11554A2600BBD942 /* Yfb01InstrumentPatch.xib in Resources */,
 				20D7854E11554A6700BBD942 /* Yfb01InstrumentSmall.xib in Resources */,
 				20D7855911554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb in Resources */,
+				20D786201161209000BBD942 /* Yfb01InstrumentLarge.xib in Resources */,
+				20D786241161214100BBD942 /* yfb01_instrument_large_view_controller.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

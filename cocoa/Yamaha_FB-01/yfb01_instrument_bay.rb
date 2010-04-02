@@ -11,8 +11,7 @@ class Yfb01InstrumentBay < NSViewController
 
   def observeValueForKeyPath(keyPath, ofObject:object,
                              change:change, context:context)
-    @instrument_controllers.arrangedObjects.each_with_index do |instr, idx|
-      puts "replacing instrument_controller"
+    @instrument_controllers.arrangedObjects.reverse.each_with_index do |instr, idx|
       @small_views[idx].instrument_controller = instr
     end
   end
@@ -24,7 +23,7 @@ class Yfb01InstrumentBay < NSViewController
                                         options:0, context:nil)
     prev_view |= nil
     @small_views ||= []
-    @instrument_controllers.arrangedObjects.each do |instr|
+    @instrument_controllers.arrangedObjects.reverse_each do |instr|
       small = Yfb01InstrumentSmallViewController.alloc
       @small_views << small
       small.instrument_controller = instr

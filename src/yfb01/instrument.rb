@@ -163,6 +163,12 @@ class Instrument
     self.upper_key_limit = index
   end
 
+  def midi_channels
+    (min_midi_channel..max_midi_channel).to_a.collect do |c|
+      "Ch #{c}"
+    end
+  end
+
   def voices
     (min_voice_no..max_voice_no).to_a.collect do |v|
       "Voice #{v + 1}"
