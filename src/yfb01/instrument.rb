@@ -19,8 +19,8 @@ class Instrument
   @@MemoryLayout = {
     :notes => Memory.define(0, 8, 0x00, 0x0F),
     :midi_channel_internal => Memory.define(0, 15, 0x01, 0x0F),
-    :upper_key_limit => Memory.define(0, @@Keys.length - 1, 0x02, 0x7F),
-    :lower_key_limit => Memory.define(0, @@Keys.length - 1, 0x03, 0x7F),
+    :upper_key_limit_int => Memory.define(0, @@Keys.length - 1, 0x02, 0x7F),
+    :lower_key_limit_int => Memory.define(0, @@Keys.length - 1, 0x03, 0x7F),
     :voice_bank_no => Memory.define(0, 6, 0x04, 0x07),
     :voice_no => Memory.define(0, 47, 0x05, 0x7F),
     :detune => Memory.define(0, 127, 0x06, 0x7F),
@@ -135,22 +135,38 @@ class Instrument
     @@Keys.index(key)
   end
 
-  def upper_key_limit_checked
-    self.upper_key_limit
+  def max_lower_key_limit
+    self.max_lower_key_limit_int
   end
 
-  def upper_key_limit_checked=(upper_limit)
-    self.upper_key_limit = upper_limit
-    self.lower_key_limit = upper_limit if self.lower_key_limit > upper_key_limit
+  def min_lower_key_limit
+    self.min_lower_key_limit_int
   end
 
-  def lower_key_limit_checked
-    self.lower_key_limit
+  def max_upper_key_limit
+    self.max_upper_key_limit_int
   end
 
-  def lower_key_limit_checked=(lower_limit)
-    self.lower_key_limit = lower_limit
-    self.upper_key_limit = lower_limit if self.upper_key_limit < lower_key_limit
+  def min_upper_key_limit
+    self.min_upper_key_limit_int
+  end
+
+  def upper_key_limit
+    self.upper_key_limit_int
+  end
+
+  def upper_key_limit=(limit)
+    self.upper_key_limit_int = limit
+    self.lower_key_limit_int = limit if lower_key_limit >= limit
+  end
+
+  def lower_key_limit
+    self.lower_key_limit_int
+  end
+
+  def lower_key_limit=(limit)
+    self.lower_key_limit_int = limit
+    self.upper_key_limit_int = limit if upper_key_limit <= limit
   end
 
   def upper_key_limit_name
