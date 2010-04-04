@@ -9,10 +9,45 @@
 	};
 	1A55BB891026466A0069E1DF /* yfb01_document.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {643, 715}}";
+			sepNavIntBoundsRect = "{{0, 0}, {642, 858}}";
 			sepNavSelRange = "{707, 0}";
-			sepNavVisRange = "{591, 751}";
+			sepNavVisRange = "{549, 641}";
 			sepNavWindowFrame = "{{582, 299}, {750, 558}}";
+		};
+	};
+	201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 266}}";
+			sepNavSelRange = "{335, 0}";
+			sepNavVisRange = "{0, 335}";
+		};
+	};
+	201ED9B211664BCF00591A26 /* yfb01_voice_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 266}}";
+			sepNavSelRange = "{177, 0}";
+			sepNavVisRange = "{0, 185}";
+		};
+	};
+	201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 266}}";
+			sepNavSelRange = "{211, 0}";
+			sepNavVisRange = "{0, 211}";
+		};
+	};
+	201ED9D11166567500591A26 /* yfb01_operator_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 266}}";
+			sepNavSelRange = "{174, 0}";
+			sepNavVisRange = "{0, 174}";
+		};
+	};
+	201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 2691}}";
+			sepNavSelRange = "{3616, 0}";
+			sepNavVisRange = "{0, 687}";
 		};
 	};
 	2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */ = {
@@ -175,6 +210,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {643, 361}}";
 			sepNavSelRange = "{369, 0}";
 			sepNavVisRange = "{0, 369}";
+		};
+	};
+	20D7855811554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {601, 520}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 635}";
 		};
 	};
 	20D78673116272B900BBD942 /* PBXTextBookmark */ = {

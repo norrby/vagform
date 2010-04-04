@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		1A55BB88102646550069E1DF /* Yfb01Document.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB86102646550069E1DF /* Yfb01Document.nib */; };
 		1A55BB8A1026466A0069E1DF /* yfb01_document.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB891026466A0069E1DF /* yfb01_document.rb */; };
+		201ED9921166458200591A26 /* Yfb01Voice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9911166458200591A26 /* Yfb01Voice.xib */; };
+		201ED995116645C100591A26 /* yfb01_voice_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */; };
+		201ED9B311664BCF00591A26 /* yfb01_voice_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9B211664BCF00591A26 /* yfb01_voice_controller.rb */; };
+		201ED9C611664FAC00591A26 /* Yfb01Algorithm1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */; };
+		201ED9CA116650F100591A26 /* yfb01_algorithm_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */; };
+		201ED9D21166567500591A26 /* yfb01_operator_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9D11166567500591A26 /* yfb01_operator_controller.rb */; };
+		201ED9E2116659ED00591A26 /* yfb01_operator_button.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */; };
+		201EDA3811666EA800591A26 /* Yfb01Algorithm2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */; };
+		201EDA3E116677C700591A26 /* Yfb01Algorithm3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */; };
+		201EDA6F11667D2F00591A26 /* Yfb01Algorithm5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */; };
+		201EDA7611685A9900591A26 /* Yfb01Algorithm6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */; };
+		201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */; };
+		201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */; };
+		201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */; };
 		2047FC7B1143E8F5006FFC22 /* yfb01_configuration_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */; };
 		2047FCB91143F1DB006FFC22 /* yfb01_configuration_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */; };
 		2098F539114174A9007513A4 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F520114174A9007513A4 /* lib */; };
@@ -86,6 +100,20 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1A55BB87102646550069E1DF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Yfb01Document.nib; sourceTree = "<group>"; };
 		1A55BB891026466A0069E1DF /* yfb01_document.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = yfb01_document.rb; sourceTree = "<group>"; };
+		201ED9911166458200591A26 /* Yfb01Voice.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Voice.xib; path = "Yamaha_FB-01/Yfb01Voice.xib"; sourceTree = "<group>"; };
+		201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_voice_view_controller.rb; path = "Yamaha_FB-01/yfb01_voice_view_controller.rb"; sourceTree = "<group>"; };
+		201ED9B211664BCF00591A26 /* yfb01_voice_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_voice_controller.rb; path = "Yamaha_FB-01/yfb01_voice_controller.rb"; sourceTree = "<group>"; };
+		201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm1.xib; path = "Yamaha_FB-01/Yfb01Algorithm1.xib"; sourceTree = "<group>"; };
+		201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_algorithm_view_controller.rb; path = "Yamaha_FB-01/yfb01_algorithm_view_controller.rb"; sourceTree = "<group>"; };
+		201ED9D11166567500591A26 /* yfb01_operator_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_operator_controller.rb; path = "Yamaha_FB-01/yfb01_operator_controller.rb"; sourceTree = "<group>"; };
+		201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_operator_button.rb; path = "Yamaha_FB-01/yfb01_operator_button.rb"; sourceTree = "<group>"; };
+		201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm2.xib; path = "Yamaha_FB-01/Yfb01Algorithm2.xib"; sourceTree = "<group>"; };
+		201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm3.xib; path = "Yamaha_FB-01/Yfb01Algorithm3.xib"; sourceTree = "<group>"; };
+		201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm5.xib; path = "Yamaha_FB-01/Yfb01Algorithm5.xib"; sourceTree = "<group>"; };
+		201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm6.xib; path = "Yamaha_FB-01/Yfb01Algorithm6.xib"; sourceTree = "<group>"; };
+		201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm4.xib; path = "Yamaha_FB-01/Yfb01Algorithm4.xib"; sourceTree = "<group>"; };
+		201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm7.xib; path = "Yamaha_FB-01/Yfb01Algorithm7.xib"; sourceTree = "<group>"; };
+		201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm8.xib; path = "Yamaha_FB-01/Yfb01Algorithm8.xib"; sourceTree = "<group>"; };
 		2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_controller.rb"; sourceTree = "<group>"; };
 		2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_view_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_view_controller.rb"; sourceTree = "<group>"; };
 		2098F47F11417326007513A4 /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -140,6 +168,11 @@
 				2098F87111439FB8007513A4 /* Yfb01Configuration.xib */,
 				2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */,
 				20D784D5114B778000BBD942 /* yfb01_instrument_bay.rb */,
+				201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */,
+				201ED9B211664BCF00591A26 /* yfb01_voice_controller.rb */,
+				201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */,
+				201ED9D11166567500591A26 /* yfb01_operator_controller.rb */,
+				201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -201,6 +234,15 @@
 				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
 				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
 				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
+				201ED9911166458200591A26 /* Yfb01Voice.xib */,
+				201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */,
+				201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */,
+				201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */,
+				201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */,
+				201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */,
+				201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */,
+				201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */,
+				201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */,
 			);
 			name = cocoa;
 			sourceTree = "<group>";
@@ -331,6 +373,20 @@
 				20D7855911554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb in Resources */,
 				20D786201161209000BBD942 /* Yfb01InstrumentLarge.xib in Resources */,
 				20D786241161214100BBD942 /* yfb01_instrument_large_view_controller.rb in Resources */,
+				201ED9921166458200591A26 /* Yfb01Voice.xib in Resources */,
+				201ED995116645C100591A26 /* yfb01_voice_view_controller.rb in Resources */,
+				201ED9B311664BCF00591A26 /* yfb01_voice_controller.rb in Resources */,
+				201ED9C611664FAC00591A26 /* Yfb01Algorithm1.xib in Resources */,
+				201ED9CA116650F100591A26 /* yfb01_algorithm_view_controller.rb in Resources */,
+				201ED9D21166567500591A26 /* yfb01_operator_controller.rb in Resources */,
+				201ED9E2116659ED00591A26 /* yfb01_operator_button.rb in Resources */,
+				201EDA3811666EA800591A26 /* Yfb01Algorithm2.xib in Resources */,
+				201EDA3E116677C700591A26 /* Yfb01Algorithm3.xib in Resources */,
+				201EDA6F11667D2F00591A26 /* Yfb01Algorithm5.xib in Resources */,
+				201EDA7611685A9900591A26 /* Yfb01Algorithm6.xib in Resources */,
+				201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */,
+				201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */,
+				201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
