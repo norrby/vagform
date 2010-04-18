@@ -23,10 +23,10 @@ class Voice
     :amd => Memory.define(0, 127, 0x09, 0x7F),
     :sync_lfo => Memory.define(0, 1, 0x0A, 0x80),
     :pmd => Memory.define(0, 127, 0x0A, 0x7F),
-    :op4_enable => Memory.define(0, 1, 0x0B, 0x40),
-    :op3_enable => Memory.define(0, 1, 0x0B, 0x20),
-    :op2_enable => Memory.define(0, 1, 0x0B, 0x10),
-    :op1_enable => Memory.define(0, 1, 0x0B, 0x08),
+    :op3_enable => Memory.define(0, 1, 0x0B, 0x40),
+    :op2_enable => Memory.define(0, 1, 0x0B, 0x20),
+    :op1_enable => Memory.define(0, 1, 0x0B, 0x10),
+    :op0_enable => Memory.define(0, 1, 0x0B, 0x08),
     :feedback => Memory.define(0, 6, 0x0C, 0x38),
     :algorithm => Memory.define(0, 7, 0x0C, 0x07),
     :pms => Memory.define(0, 7, 0x0D, 0x70),
@@ -51,17 +51,15 @@ class Voice
     @comm = midi
     @instrument = instrument
     @data = backing_store
-    @operators = [Operator.new(ArrayPart.new(backing_store, 0x10, 0x17)),
-                  Operator.new(ArrayPart.new(backing_store, 0x18, 0x1F)),
-                  Operator.new(ArrayPart.new(backing_store, 0x20, 0x27)),
-                  Operator.new(ArrayPart.new(backing_store, 0x28, 0x2F))]
+    @operators = [Operator.new(midi, ArrayPart.new(backing_store, 0x10, 0x17), 0x00, instrument),
+                  Operator.new(midi, ArrayPart.new(backing_store, 0x18, 0x1F), 0x08, instrument),
+                  Operator.new(midi, ArrayPart.new(backing_store, 0x20, 0x27), 0x10, instrument),
+                  Operator.new(midi, ArrayPart.new(backing_store, 0x28, 0x2F), 0x18, instrument)]
   end
 
   def replace_memory(new_bulk)
     new_bulk.each_with_index {|value, idx| @data[idx] = value}
-    puts "notifying in voice"
     notify_observers
-    puts "notifying in operators"
     @operators.each {|operator| operator.notify_observers}
   end
     

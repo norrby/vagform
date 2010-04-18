@@ -6,13 +6,14 @@
 
 class Yfb01InstrumentBay < NSViewController
   attr_writer :parent_view
-  attr_accessor :document
+#  attr_accessor :document
   attr_accessor :instrument_controllers
 
   def observeValueForKeyPath(keyPath, ofObject:object,
                              change:change, context:context)
-    @instrument_controllers.arrangedObjects.reverse.each_with_index do |instr, idx|
-      @small_views[idx].instrument_controller = instr
+    max_idx = @instrument_controllers.arrangedObjects.length - 1
+    @instrument_controllers.arrangedObjects.each_with_index do |instr, idx|
+      @small_views[max_idx - idx].instrument_controller = instr
     end
   end
 

@@ -17,24 +17,22 @@ class Yfb01Document < NSDocument
   @@communicator = MidiCommunicator.new(MidiLex::Sender.new(:mac_ruby),
                                         MidiLex::Receiver.new(:mac_ruby))
   @@communicator.open(@@communicator.devices[0]) if @@communicator.devices
+  attr_accessor :configuration
 
   def communicator
     @@communicator
   end
 
-  def configuration
-    return @configuration if @configuration
-    new_conf = Configuration.new(@@communicator)
-    new_conf.name = "New conf"
-    @configuration = Yfb01ConfigurationController.new(new_conf)
-  end
-
   def reset_config
     new_conf = Configuration.new(@@communicator)
-    new_conf.name = "Sik-fejs"
+    new_conf.bulk_fetch
+    puts "fetched bulk"
+    puts "reset config"
     willChangeValueForKey("configuration")
     @configuration = Yfb01ConfigurationController.new(new_conf)
+    puts "send did reset config"
     didChangeValueForKey("configuration")
+    puts "did reset config"
   end
 
   # Name of nib containing document window
@@ -59,7 +57,22 @@ class Yfb01Document < NSDocument
     fileURL ? super : super.sub(/^[[:upper:]]/) {|s| s.downcase}
   end
 
+  def initWithType(name, error:error)
+    puts "initWithType: #{name}"
+    super if @configuration
+    midi = if @@communicator.devices.size == 0
+             nil
+           else
+             @@communicator
+           end
+
+    new_conf = Configuration.new(midi)
+    new_conf.name = "Empty conf"
+    @configuration = Yfb01ConfigurationController.new(new_conf)
+    super
+  end
+
   def awakeFromNib
-    puts "document awake"
+    puts "document awoke from NIB"
   end
 end

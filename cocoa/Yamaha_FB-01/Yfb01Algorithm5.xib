@@ -627,6 +627,16 @@
 					<string>op2_enable</string>
 					<string>op4_enable</string>
 					<string>op3_enable</string>
+					<string>op0_controller</string>
+					<string>op0_enable</string>
+				</object>
+				<bool key="NSEditable">YES</bool>
+				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
+			</object>
+			<object class="NSObjectController" id="407530206">
+				<object class="NSMutableArray" key="NSDeclaredKeys">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>name</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
@@ -648,14 +658,6 @@
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 			</object>
 			<object class="NSObjectController" id="981042887">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>name</string>
-				</object>
-				<bool key="NSEditable">YES</bool>
-				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
-			</object>
-			<object class="NSObjectController" id="407530206">
 				<object class="NSMutableArray" key="NSDeclaredKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>name</string>
@@ -741,22 +743,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">contentObject: selection.op4_controller</string>
-						<reference key="source" ref="407530206"/>
-						<reference key="destination" ref="1030414710"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="407530206"/>
-							<reference key="NSDestination" ref="1030414710"/>
-							<string key="NSLabel">contentObject: selection.op4_controller</string>
-							<string key="NSBinding">contentObject</string>
-							<string key="NSKeyPath">selection.op4_controller</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">45</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">contentObject: voice_controller</string>
 						<reference key="source" ref="460482136"/>
 						<reference key="destination" ref="1001"/>
@@ -773,38 +759,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: selection.op4_enable</string>
-						<reference key="source" ref="1047469340"/>
-						<reference key="destination" ref="1030414710"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="1047469340"/>
-							<reference key="NSDestination" ref="1030414710"/>
-							<string key="NSLabel">value: selection.op4_enable</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">selection.op4_enable</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">49</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: selection.op3_enable</string>
-						<reference key="source" ref="317593714"/>
-						<reference key="destination" ref="1030414710"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="317593714"/>
-							<reference key="NSDestination" ref="1030414710"/>
-							<string key="NSLabel">value: selection.op3_enable</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">selection.op3_enable</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">51</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: selection.op2_enable</string>
 						<reference key="source" ref="255779165"/>
 						<reference key="destination" ref="1030414710"/>
@@ -818,22 +772,6 @@
 						</object>
 					</object>
 					<int key="connectionID">53</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: selection.op1_enable</string>
-						<reference key="source" ref="500229144"/>
-						<reference key="destination" ref="1030414710"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="500229144"/>
-							<reference key="NSDestination" ref="1030414710"/>
-							<string key="NSLabel">value: selection.op1_enable</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">selection.op1_enable</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">55</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -888,34 +826,130 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">operator_controller_container</string>
-						<reference key="source" ref="244639918"/>
-						<reference key="destination" ref="407530206"/>
-					</object>
-					<int key="connectionID">62</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">operator_controller_container</string>
-						<reference key="source" ref="476550468"/>
-						<reference key="destination" ref="981042887"/>
-					</object>
-					<int key="connectionID">63</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">operator_controller_container</string>
 						<reference key="source" ref="225772061"/>
 						<reference key="destination" ref="124677275"/>
 					</object>
 					<int key="connectionID">64</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">edit_op2:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="225772061"/>
+					</object>
+					<int key="connectionID">81</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentObject: selection.op0_controller</string>
+						<reference key="source" ref="407530206"/>
+						<reference key="destination" ref="1030414710"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="407530206"/>
+							<reference key="NSDestination" ref="1030414710"/>
+							<string key="NSLabel">contentObject: selection.op0_controller</string>
+							<string key="NSBinding">contentObject</string>
+							<string key="NSKeyPath">selection.op0_controller</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">82</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">operator_controller_container</string>
+						<reference key="source" ref="244639918"/>
+						<reference key="destination" ref="407530206"/>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">operator_controller_container</string>
+						<reference key="source" ref="476550468"/>
+						<reference key="destination" ref="112525198"/>
+					</object>
+					<int key="connectionID">84</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">operator_controller_container</string>
 						<reference key="source" ref="427438620"/>
-						<reference key="destination" ref="112525198"/>
+						<reference key="destination" ref="981042887"/>
 					</object>
-					<int key="connectionID">65</int>
+					<int key="connectionID">85</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: selection.op0_enable</string>
+						<reference key="source" ref="1047469340"/>
+						<reference key="destination" ref="1030414710"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1047469340"/>
+							<reference key="NSDestination" ref="1030414710"/>
+							<string key="NSLabel">value: selection.op0_enable</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">selection.op0_enable</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">86</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: selection.op1_enable</string>
+						<reference key="source" ref="317593714"/>
+						<reference key="destination" ref="1030414710"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="317593714"/>
+							<reference key="NSDestination" ref="1030414710"/>
+							<string key="NSLabel">value: selection.op1_enable</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">selection.op1_enable</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">87</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: selection.op3_enable</string>
+						<reference key="source" ref="500229144"/>
+						<reference key="destination" ref="1030414710"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="500229144"/>
+							<reference key="NSDestination" ref="1030414710"/>
+							<string key="NSLabel">value: selection.op3_enable</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">selection.op3_enable</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">88</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">edit_op0:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="244639918"/>
+					</object>
+					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">edit_op1:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="476550468"/>
+					</object>
+					<int key="connectionID">90</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">edit_op3:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="427438620"/>
+					</object>
+					<int key="connectionID">91</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -954,16 +988,13 @@
 							<reference ref="925107408"/>
 							<reference ref="445159673"/>
 							<reference ref="244639918"/>
-							<reference ref="476550468"/>
 							<reference ref="225772061"/>
-							<reference ref="427438620"/>
 							<reference ref="54542590"/>
 							<reference ref="907706851"/>
 							<reference ref="756702367"/>
 							<reference ref="628185999"/>
 							<reference ref="186983342"/>
 							<reference ref="42747187"/>
-							<reference ref="1047469340"/>
 							<reference ref="317593714"/>
 							<reference ref="255779165"/>
 							<reference ref="500229144"/>
@@ -972,6 +1003,9 @@
 							<reference ref="303024282"/>
 							<reference ref="247481131"/>
 							<reference ref="944447377"/>
+							<reference ref="476550468"/>
+							<reference ref="427438620"/>
+							<reference ref="1047469340"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1229,7 +1263,7 @@
 						<int key="objectID">40</int>
 						<reference key="object" ref="407530206"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Op4</string>
+						<string key="objectName">Op0</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">66</int>
@@ -1336,7 +1370,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{989, 535}, {476, 280}}</string>
+					<string>{{690, 210}, {476, 280}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{217, 442}, {480, 272}}</string>
@@ -1407,7 +1441,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">74</int>
+			<int key="maxID">91</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1416,8 +1450,23 @@
 					<string key="className">Yfb01AlgorithmViewController</string>
 					<string key="superclassName">NSViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">press:</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>edit_op0:</string>
+							<string>edit_op1:</string>
+							<string>edit_op2:</string>
+							<string>edit_op3:</string>
+							<string>press:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1425,9 +1474,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>parent_view</string>
 							<string>voice_controller</string>
+							<string>voice_view_controller</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>

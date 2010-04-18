@@ -6,6 +6,21 @@
 	objectVersion = 44;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		20924B55117B49090001E4CD /* standalone */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 20924B58117B49280001E4CD /* Build configuration list for PBXAggregateTarget "standalone" */;
+			buildPhases = (
+				20924B54117B49090001E4CD /* ShellScript */,
+			);
+			dependencies = (
+				20924B5A117B492F0001E4CD /* PBXTargetDependency */,
+			);
+			name = standalone;
+			productName = standalone;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1A55BB88102646550069E1DF /* Yfb01Document.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB86102646550069E1DF /* Yfb01Document.nib */; };
 		1A55BB8A1026466A0069E1DF /* yfb01_document.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB891026466A0069E1DF /* yfb01_document.rb */; };
@@ -23,6 +38,10 @@
 		201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */; };
 		201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */; };
 		201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */; };
+		201EDAE411687FD000591A26 /* Yfb01Operator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAE311687FD000591A26 /* Yfb01Operator.xib */; };
+		201EDAEA1168843600591A26 /* yfb01_envelope_view.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAE91168843600591A26 /* yfb01_envelope_view.rb */; };
+		201EDAEF1168863100591A26 /* yfb01_operator_window_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAEE1168863100591A26 /* yfb01_operator_window_controller.rb */; };
+		201EDB581168EE9700591A26 /* yfb01_envelope_knee.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDB571168EE9700591A26 /* yfb01_envelope_knee.rb */; };
 		2047FC7B1143E8F5006FFC22 /* yfb01_configuration_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */; };
 		2047FCB91143F1DB006FFC22 /* yfb01_configuration_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */; };
 		2098F539114174A9007513A4 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F520114174A9007513A4 /* lib */; };
@@ -50,6 +69,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		20924B59117B492F0001E4CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* cocoa */;
+			remoteInfo = cocoa;
+		};
 		2098F48A11417327007513A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2098F47F11417326007513A4 /* macruby-midi.xcodeproj */;
@@ -114,6 +140,10 @@
 		201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm4.xib; path = "Yamaha_FB-01/Yfb01Algorithm4.xib"; sourceTree = "<group>"; };
 		201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm7.xib; path = "Yamaha_FB-01/Yfb01Algorithm7.xib"; sourceTree = "<group>"; };
 		201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Algorithm8.xib; path = "Yamaha_FB-01/Yfb01Algorithm8.xib"; sourceTree = "<group>"; };
+		201EDAE311687FD000591A26 /* Yfb01Operator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Yfb01Operator.xib; path = "Yamaha_FB-01/Yfb01Operator.xib"; sourceTree = "<group>"; };
+		201EDAE91168843600591A26 /* yfb01_envelope_view.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_envelope_view.rb; path = "Yamaha_FB-01/yfb01_envelope_view.rb"; sourceTree = "<group>"; };
+		201EDAEE1168863100591A26 /* yfb01_operator_window_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_operator_window_controller.rb; path = "Yamaha_FB-01/yfb01_operator_window_controller.rb"; sourceTree = "<group>"; };
+		201EDB571168EE9700591A26 /* yfb01_envelope_knee.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_envelope_knee.rb; path = "Yamaha_FB-01/yfb01_envelope_knee.rb"; sourceTree = "<group>"; };
 		2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_controller.rb"; sourceTree = "<group>"; };
 		2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_view_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_view_controller.rb"; sourceTree = "<group>"; };
 		2098F47F11417326007513A4 /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -173,6 +203,9 @@
 				201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */,
 				201ED9D11166567500591A26 /* yfb01_operator_controller.rb */,
 				201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */,
+				201EDAE91168843600591A26 /* yfb01_envelope_view.rb */,
+				201EDAEE1168863100591A26 /* yfb01_operator_window_controller.rb */,
+				201EDB571168EE9700591A26 /* yfb01_envelope_knee.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -206,6 +239,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		20924B7F117B4CEC0001E4CD /* Yamaha_FB-01 */ = {
+			isa = PBXGroup;
+			children = (
+				20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */,
+				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
+				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
+				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
+				201ED9911166458200591A26 /* Yfb01Voice.xib */,
+				201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */,
+				201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */,
+				201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */,
+				201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */,
+				201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */,
+				201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */,
+				201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */,
+				201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */,
+				201EDAE311687FD000591A26 /* Yfb01Operator.xib */,
+			);
+			name = "Yamaha_FB-01";
+			sourceTree = "<group>";
+		};
 		2098F48011417326007513A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,19 +284,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */,
-				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
-				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
-				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
-				201ED9911166458200591A26 /* Yfb01Voice.xib */,
-				201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */,
-				201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */,
-				201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */,
-				201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */,
-				201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */,
-				201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */,
-				201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */,
-				201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */,
+				20924B7F117B4CEC0001E4CD /* Yamaha_FB-01 */,
 			);
 			name = cocoa;
 			sourceTree = "<group>";
@@ -326,6 +368,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* cocoa */,
+				20924B55117B49090001E4CD /* standalone */,
 			);
 		};
 /* End PBXProject section */
@@ -387,10 +430,30 @@
 				201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */,
 				201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */,
 				201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */,
+				201EDAE411687FD000591A26 /* Yfb01Operator.xib in Resources */,
+				201EDAEA1168843600591A26 /* yfb01_envelope_view.rb in Resources */,
+				201EDAEF1168863100591A26 /* yfb01_operator_window_controller.rb in Resources */,
+				201EDB581168EE9700591A26 /* yfb01_envelope_knee.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20924B54117B49090001E4CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -404,6 +467,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		20924B5A117B492F0001E4CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* cocoa */;
+			targetProxy = 20924B59117B492F0001E4CD /* PBXContainerItemProxy */;
+		};
 		2098F5FC11417BB1007513A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PYMIDI;
@@ -444,6 +512,27 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		20924B56117B490A0001E4CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = standalone;
+			};
+			name = Debug;
+		};
+		20924B57117B490A0001E4CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = standalone;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20924B58117B49280001E4CD /* Build configuration list for PBXAggregateTarget "standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20924B56117B490A0001E4CD /* Debug */,
+				20924B57117B490A0001E4CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "cocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
