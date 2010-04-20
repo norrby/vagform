@@ -25,7 +25,6 @@ class Yfb01AlgorithmViewController < NSViewController
   end
 
   def press(sender)
-    puts sender.ar
   end
 
 end

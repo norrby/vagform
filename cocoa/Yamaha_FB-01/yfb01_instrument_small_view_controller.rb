@@ -7,7 +7,6 @@ class Yfb01InstrumentSmallViewController < NSViewController
   attr_writer :box
 
   def select_me(sender)
-    puts "selecting myself"
     @instrument_controllers.setSelectedObjects([instrument_controller])
   end
 

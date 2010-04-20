@@ -1,3 +1,4 @@
+# -*- coding: iso-8859-1 -*-
 #
 # rb_main.rb
 # cocoa
@@ -10,8 +11,18 @@
 # do that here too.
 framework 'Cocoa'
 
+#Synths = ["Yamaha_FB-01"]
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'yfb01')
+#Synths.each do |synth|
+#  $LOAD_PATH << File.join(File.dirname(__FILE__), synth)
+#end
+
+mac_paths = $LOAD_PATH.select { |path| path =~ %r{/Library/Frameworks/MacRuby} }
+mac_paths.each do |path|
+  fw_path = NSBundle.mainBundle.privateFrameworksPath.fileSystemRepresentation
+  $LOAD_PATH.unshift path.sub(%r{/Library/Frameworks}, fw_path)
+end
 
 # Loading all the Ruby project files.
 main = File.basename(__FILE__, File.extname(__FILE__))

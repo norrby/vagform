@@ -12,6 +12,13 @@ framework 'PYMIDI'
 require 'midi_lex'
 require 'midi_communicator'
 require 'configuration'
+require 'Yamaha_FB-01/yfb01_configuration_controller'
+
+dir_path = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
+synth_path = File.join(dir_path, "Yamaha_FB-01")
+Dir.glob(File.join(synth_path, '*.{rb,rbo}')).map { |x| File.basename(x, File.extname(x)) }.uniq.each do |path|
+  require(File.join(synth_path, path))
+end
 
 class Yfb01Document < NSDocument
   @@communicator = MidiCommunicator.new(MidiLex::Sender.new(:mac_ruby),
@@ -26,13 +33,9 @@ class Yfb01Document < NSDocument
   def reset_config
     new_conf = Configuration.new(@@communicator)
     new_conf.bulk_fetch
-    puts "fetched bulk"
-    puts "reset config"
     willChangeValueForKey("configuration")
     @configuration = Yfb01ConfigurationController.new(new_conf)
-    puts "send did reset config"
     didChangeValueForKey("configuration")
-    puts "did reset config"
   end
 
   # Name of nib containing document window
@@ -58,7 +61,6 @@ class Yfb01Document < NSDocument
   end
 
   def initWithType(name, error:error)
-    puts "initWithType: #{name}"
     super if @configuration
     midi = if @@communicator.devices.size == 0
              nil
@@ -73,6 +75,5 @@ class Yfb01Document < NSDocument
   end
 
   def awakeFromNib
-    puts "document awoke from NIB"
   end
 end

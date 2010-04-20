@@ -7,10 +7,8 @@ class Yfb01OperatorWindowController < NSWindowController
   end
 
   def windowDidLoad
-    puts "operator editor did load"
   end
 
   def awakeFromNib
-    puts "Window awake"
   end
 end

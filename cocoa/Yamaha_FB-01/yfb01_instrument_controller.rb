@@ -1,4 +1,5 @@
 require 'Yamaha_FB-01/yfb01_memory_controller'
+require 'Yamaha_FB-01/yfb01_voice_controller'
 
 class Yfb01InstrumentController
   include Yfb01MemoryController
@@ -19,7 +20,6 @@ class Yfb01InstrumentController
   }
 
   def initialize(model, no)
-    puts "initializing model with instance of #{model.class}"
     @model = model
     @name = "Instrument #{no}"
     @voice_controller = Yfb01VoiceController.new(model.voice)

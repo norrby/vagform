@@ -7,60 +7,46 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		20924B55117B49090001E4CD /* standalone */ = {
+		2054EF1E117B5A8B00316149 /* Standalone */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 20924B58117B49280001E4CD /* Build configuration list for PBXAggregateTarget "standalone" */;
+			buildConfigurationList = 2054EF21117B5AA900316149 /* Build configuration list for PBXAggregateTarget "Standalone" */;
 			buildPhases = (
-				20924B54117B49090001E4CD /* ShellScript */,
+				2054EF1D117B5A8B00316149 /* ShellScript */,
 			);
 			dependencies = (
-				20924B5A117B492F0001E4CD /* PBXTargetDependency */,
+				2054EF23117B5AE400316149 /* PBXTargetDependency */,
 			);
-			name = standalone;
-			productName = standalone;
+			name = Standalone;
+			productName = Standalone;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		1A55BB88102646550069E1DF /* Yfb01Document.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB86102646550069E1DF /* Yfb01Document.nib */; };
-		1A55BB8A1026466A0069E1DF /* yfb01_document.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB891026466A0069E1DF /* yfb01_document.rb */; };
-		201ED9921166458200591A26 /* Yfb01Voice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9911166458200591A26 /* Yfb01Voice.xib */; };
-		201ED995116645C100591A26 /* yfb01_voice_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */; };
-		201ED9B311664BCF00591A26 /* yfb01_voice_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9B211664BCF00591A26 /* yfb01_voice_controller.rb */; };
-		201ED9C611664FAC00591A26 /* Yfb01Algorithm1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */; };
-		201ED9CA116650F100591A26 /* yfb01_algorithm_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9C9116650F100591A26 /* yfb01_algorithm_view_controller.rb */; };
-		201ED9D21166567500591A26 /* yfb01_operator_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9D11166567500591A26 /* yfb01_operator_controller.rb */; };
-		201ED9E2116659ED00591A26 /* yfb01_operator_button.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9E1116659ED00591A26 /* yfb01_operator_button.rb */; };
-		201EDA3811666EA800591A26 /* Yfb01Algorithm2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */; };
-		201EDA3E116677C700591A26 /* Yfb01Algorithm3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */; };
-		201EDA6F11667D2F00591A26 /* Yfb01Algorithm5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */; };
-		201EDA7611685A9900591A26 /* Yfb01Algorithm6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */; };
-		201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */; };
-		201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */; };
-		201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */; };
-		201EDAE411687FD000591A26 /* Yfb01Operator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAE311687FD000591A26 /* Yfb01Operator.xib */; };
-		201EDAEA1168843600591A26 /* yfb01_envelope_view.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAE91168843600591A26 /* yfb01_envelope_view.rb */; };
-		201EDAEF1168863100591A26 /* yfb01_operator_window_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAEE1168863100591A26 /* yfb01_operator_window_controller.rb */; };
-		201EDB581168EE9700591A26 /* yfb01_envelope_knee.rb in Resources */ = {isa = PBXBuildFile; fileRef = 201EDB571168EE9700591A26 /* yfb01_envelope_knee.rb */; };
-		2047FC7B1143E8F5006FFC22 /* yfb01_configuration_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */; };
-		2047FCB91143F1DB006FFC22 /* yfb01_configuration_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */; };
+		2054EED6117B508000316149 /* Yfb01IntrumentBay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */; };
+		2054EED7117B508000316149 /* Yfb01InstrumentPatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */; };
+		2054EED8117B508000316149 /* Yfb01InstrumentSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */; };
+		2054EED9117B508000316149 /* Yfb01InstrumentLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */; };
+		2054EEDA117B508000316149 /* Yfb01Voice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9911166458200591A26 /* Yfb01Voice.xib */; };
+		2054EEDB117B508000316149 /* Yfb01Algorithm1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */; };
+		2054EEDC117B508000316149 /* Yfb01Algorithm2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */; };
+		2054EEDD117B508000316149 /* Yfb01Algorithm3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */; };
+		2054EEDE117B508000316149 /* Yfb01Algorithm5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */; };
+		2054EEDF117B508000316149 /* Yfb01Algorithm6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */; };
+		2054EEE0117B508000316149 /* Yfb01Algorithm4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */; };
+		2054EEE1117B508000316149 /* Yfb01Algorithm7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */; };
+		2054EEE2117B508000316149 /* Yfb01Algorithm8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */; };
+		2054EEE3117B508000316149 /* Yfb01Operator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EDAE311687FD000591A26 /* Yfb01Operator.xib */; };
+		2054EEFD117B521B00316149 /* yfb01_instrument_large_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D786231161214100BBD942 /* yfb01_instrument_large_view_controller.rb */; };
+		2054EF0F117B524B00316149 /* Yfb01Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F87111439FB8007513A4 /* Yfb01Configuration.xib */; };
+		2054EF12117B526A00316149 /* Yfb01DocumentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F8531142C4B9007513A4 /* Yfb01DocumentController.xib */; };
+		2054EF8A117CD0C000316149 /* Yamaha_FB-01 in Resources */ = {isa = PBXBuildFile; fileRef = 2054EF56117CD0C000316149 /* Yamaha_FB-01 */; };
+		2054EFA8117CD7F900316149 /* yfb01_document.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1A55BB891026466A0069E1DF /* yfb01_document.rb */; };
 		2098F539114174A9007513A4 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F520114174A9007513A4 /* lib */; };
 		2098F554114175F0007513A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2098F5CC114179D3007513A4 /* yfb01 in Resources */ = {isa = PBXBuildFile; fileRef = 2098F598114179D3007513A4 /* yfb01 */; };
 		2098F60F11417C1C007513A4 /* PYMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2098F49311417338007513A4 /* PYMIDI.framework */; };
 		2098F61011417C27007513A4 /* macruby-midi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2098F48B11417327007513A4 /* macruby-midi.framework */; };
-		2098F83C1142C1F4007513A4 /* yfb01_memory_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2098F8391142C1F4007513A4 /* yfb01_memory_controller.rb */; };
-		2098F83E1142C1F4007513A4 /* yfb01_document_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2098F83B1142C1F4007513A4 /* yfb01_document_controller.rb */; };
-		2098F8541142C4B9007513A4 /* Yfb01DocumentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F8531142C4B9007513A4 /* Yfb01DocumentController.xib */; };
-		2098F87211439FB8007513A4 /* Yfb01Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2098F87111439FB8007513A4 /* Yfb01Configuration.xib */; };
-		20D784D3114B774400BBD942 /* Yfb01IntrumentBay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */; };
-		20D784D6114B778000BBD942 /* yfb01_instrument_bay.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D784D5114B778000BBD942 /* yfb01_instrument_bay.rb */; };
-		20D7850E1154F08900BBD942 /* yfb01_instrument_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D7850D1154F08900BBD942 /* yfb01_instrument_controller.rb */; };
-		20D7854C11554A2600BBD942 /* Yfb01InstrumentPatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */; };
-		20D7854E11554A6700BBD942 /* Yfb01InstrumentSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */; };
-		20D7855911554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D7855811554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb */; };
-		20D786201161209000BBD942 /* Yfb01InstrumentLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */; };
-		20D786241161214100BBD942 /* yfb01_instrument_large_view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 20D786231161214100BBD942 /* yfb01_instrument_large_view_controller.rb */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -69,11 +55,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		20924B59117B492F0001E4CD /* PBXContainerItemProxy */ = {
+		2054EF22117B5AE400316149 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* cocoa */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = cocoa;
 		};
 		2098F48A11417327007513A4 /* PBXContainerItemProxy */ = {
@@ -146,6 +132,7 @@
 		201EDB571168EE9700591A26 /* yfb01_envelope_knee.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_envelope_knee.rb; path = "Yamaha_FB-01/yfb01_envelope_knee.rb"; sourceTree = "<group>"; };
 		2047FC7A1143E8F5006FFC22 /* yfb01_configuration_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_controller.rb"; sourceTree = "<group>"; };
 		2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = yfb01_configuration_view_controller.rb; path = "Yamaha_FB-01/yfb01_configuration_view_controller.rb"; sourceTree = "<group>"; };
+		2054EF56117CD0C000316149 /* Yamaha_FB-01 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Yamaha_FB-01"; sourceTree = "<group>"; };
 		2098F47F11417326007513A4 /* macruby-midi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macruby-midi.xcodeproj"; path = "../src/midi-lex/ext/midi_lex/macruby-midi/macruby-midi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		2098F48E11417338007513A4 /* pymidi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pymidi.xcodeproj; path = "../src/midi-lex/ext/pymidi/pymidi.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		2098F520114174A9007513A4 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = "../src/midi-lex/lib"; sourceTree = SOURCE_ROOT; };
@@ -195,7 +182,6 @@
 				2098F8391142C1F4007513A4 /* yfb01_memory_controller.rb */,
 				2098F83B1142C1F4007513A4 /* yfb01_document_controller.rb */,
 				1A55BB891026466A0069E1DF /* yfb01_document.rb */,
-				2098F87111439FB8007513A4 /* Yfb01Configuration.xib */,
 				2047FCB81143F1DB006FFC22 /* yfb01_configuration_view_controller.rb */,
 				20D784D5114B778000BBD942 /* yfb01_instrument_bay.rb */,
 				201ED994116645C100591A26 /* yfb01_voice_view_controller.rb */,
@@ -239,27 +225,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20924B7F117B4CEC0001E4CD /* Yamaha_FB-01 */ = {
-			isa = PBXGroup;
-			children = (
-				20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */,
-				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
-				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
-				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
-				201ED9911166458200591A26 /* Yfb01Voice.xib */,
-				201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */,
-				201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */,
-				201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */,
-				201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */,
-				201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */,
-				201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */,
-				201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */,
-				201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */,
-				201EDAE311687FD000591A26 /* Yfb01Operator.xib */,
-			);
-			name = "Yamaha_FB-01";
-			sourceTree = "<group>";
-		};
 		2098F48011417326007513A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,12 +244,27 @@
 		29B97314FDCFA39411CA2CEA /* cocoa */ = {
 			isa = PBXGroup;
 			children = (
+				2054EF56117CD0C000316149 /* Yamaha_FB-01 */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				20924B7F117B4CEC0001E4CD /* Yamaha_FB-01 */,
+				20D784D2114B774400BBD942 /* Yfb01IntrumentBay.xib */,
+				2098F87111439FB8007513A4 /* Yfb01Configuration.xib */,
+				20D7854B11554A2600BBD942 /* Yfb01InstrumentPatch.xib */,
+				20D7854D11554A6700BBD942 /* Yfb01InstrumentSmall.xib */,
+				20D7861F1161209000BBD942 /* Yfb01InstrumentLarge.xib */,
+				201ED9911166458200591A26 /* Yfb01Voice.xib */,
+				201ED9C511664FAC00591A26 /* Yfb01Algorithm1.xib */,
+				201EDA3711666EA800591A26 /* Yfb01Algorithm2.xib */,
+				201EDA3D116677C700591A26 /* Yfb01Algorithm3.xib */,
+				201EDA6E11667D2F00591A26 /* Yfb01Algorithm5.xib */,
+				201EDA7511685A9900591A26 /* Yfb01Algorithm6.xib */,
+				201EDA84116860C700591A26 /* Yfb01Algorithm4.xib */,
+				201EDAA8116867E100591A26 /* Yfb01Algorithm7.xib */,
+				201EDAB9116869E900591A26 /* Yfb01Algorithm8.xib */,
+				201EDAE311687FD000591A26 /* Yfb01Operator.xib */,
 			);
 			name = cocoa;
 			sourceTree = "<group>";
@@ -368,7 +348,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* cocoa */,
-				20924B55117B49090001E4CD /* standalone */,
+				2054EF1E117B5A8B00316149 /* Standalone */,
 			);
 		};
 /* End PBXProject section */
@@ -395,52 +375,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2054EFA8117CD7F900316149 /* yfb01_document.rb in Resources */,
+				2054EF0F117B524B00316149 /* Yfb01Configuration.xib in Resources */,
+				2054EF12117B526A00316149 /* Yfb01DocumentController.xib in Resources */,
+				2054EEFD117B521B00316149 /* yfb01_instrument_large_view_controller.rb in Resources */,
+				2054EED6117B508000316149 /* Yfb01IntrumentBay.xib in Resources */,
+				2054EED7117B508000316149 /* Yfb01InstrumentPatch.xib in Resources */,
+				2054EED8117B508000316149 /* Yfb01InstrumentSmall.xib in Resources */,
+				2054EED9117B508000316149 /* Yfb01InstrumentLarge.xib in Resources */,
+				2054EEDA117B508000316149 /* Yfb01Voice.xib in Resources */,
+				2054EEDB117B508000316149 /* Yfb01Algorithm1.xib in Resources */,
+				2054EEDC117B508000316149 /* Yfb01Algorithm2.xib in Resources */,
+				2054EEDD117B508000316149 /* Yfb01Algorithm3.xib in Resources */,
+				2054EEDE117B508000316149 /* Yfb01Algorithm5.xib in Resources */,
+				2054EEDF117B508000316149 /* Yfb01Algorithm6.xib in Resources */,
+				2054EEE0117B508000316149 /* Yfb01Algorithm4.xib in Resources */,
+				2054EEE1117B508000316149 /* Yfb01Algorithm7.xib in Resources */,
+				2054EEE2117B508000316149 /* Yfb01Algorithm8.xib in Resources */,
+				2054EEE3117B508000316149 /* Yfb01Operator.xib in Resources */,
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
 				1A55BB88102646550069E1DF /* Yfb01Document.nib in Resources */,
-				1A55BB8A1026466A0069E1DF /* yfb01_document.rb in Resources */,
 				2098F539114174A9007513A4 /* lib in Resources */,
 				2098F5CC114179D3007513A4 /* yfb01 in Resources */,
-				2098F83C1142C1F4007513A4 /* yfb01_memory_controller.rb in Resources */,
-				2098F83E1142C1F4007513A4 /* yfb01_document_controller.rb in Resources */,
-				2098F8541142C4B9007513A4 /* Yfb01DocumentController.xib in Resources */,
-				2098F87211439FB8007513A4 /* Yfb01Configuration.xib in Resources */,
-				2047FC7B1143E8F5006FFC22 /* yfb01_configuration_controller.rb in Resources */,
-				2047FCB91143F1DB006FFC22 /* yfb01_configuration_view_controller.rb in Resources */,
-				20D784D3114B774400BBD942 /* Yfb01IntrumentBay.xib in Resources */,
-				20D784D6114B778000BBD942 /* yfb01_instrument_bay.rb in Resources */,
-				20D7850E1154F08900BBD942 /* yfb01_instrument_controller.rb in Resources */,
-				20D7854C11554A2600BBD942 /* Yfb01InstrumentPatch.xib in Resources */,
-				20D7854E11554A6700BBD942 /* Yfb01InstrumentSmall.xib in Resources */,
-				20D7855911554B3B00BBD942 /* yfb01_instrument_small_view_controller.rb in Resources */,
-				20D786201161209000BBD942 /* Yfb01InstrumentLarge.xib in Resources */,
-				20D786241161214100BBD942 /* yfb01_instrument_large_view_controller.rb in Resources */,
-				201ED9921166458200591A26 /* Yfb01Voice.xib in Resources */,
-				201ED995116645C100591A26 /* yfb01_voice_view_controller.rb in Resources */,
-				201ED9B311664BCF00591A26 /* yfb01_voice_controller.rb in Resources */,
-				201ED9C611664FAC00591A26 /* Yfb01Algorithm1.xib in Resources */,
-				201ED9CA116650F100591A26 /* yfb01_algorithm_view_controller.rb in Resources */,
-				201ED9D21166567500591A26 /* yfb01_operator_controller.rb in Resources */,
-				201ED9E2116659ED00591A26 /* yfb01_operator_button.rb in Resources */,
-				201EDA3811666EA800591A26 /* Yfb01Algorithm2.xib in Resources */,
-				201EDA3E116677C700591A26 /* Yfb01Algorithm3.xib in Resources */,
-				201EDA6F11667D2F00591A26 /* Yfb01Algorithm5.xib in Resources */,
-				201EDA7611685A9900591A26 /* Yfb01Algorithm6.xib in Resources */,
-				201EDA85116860C700591A26 /* Yfb01Algorithm4.xib in Resources */,
-				201EDAA9116867E100591A26 /* Yfb01Algorithm7.xib in Resources */,
-				201EDABA116869E900591A26 /* Yfb01Algorithm8.xib in Resources */,
-				201EDAE411687FD000591A26 /* Yfb01Operator.xib in Resources */,
-				201EDAEA1168843600591A26 /* yfb01_envelope_view.rb in Resources */,
-				201EDAEF1168863100591A26 /* yfb01_operator_window_controller.rb in Resources */,
-				201EDB581168EE9700591A26 /* yfb01_envelope_knee.rb in Resources */,
+				2054EF8A117CD0C000316149 /* Yamaha_FB-01 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20924B54117B49090001E4CD /* ShellScript */ = {
+		2054EF1D117B5A8B00316149 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
+			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\nLIBS=\"macruby-midi\"\nfor libname in $LIBS; do lib=`find . -name $libname -type f`; otool -L $lib | awk '/MacRuby/ {print $1}' | sed s,^/Library/,, | xargs -I{} install_name_tool -change /Library/'{}' @executable_path/../{} $lib; done\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -467,10 +433,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20924B5A117B492F0001E4CD /* PBXTargetDependency */ = {
+		2054EF23117B5AE400316149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* cocoa */;
-			targetProxy = 20924B59117B492F0001E4CD /* PBXContainerItemProxy */;
+			targetProxy = 2054EF22117B5AE400316149 /* PBXContainerItemProxy */;
 		};
 		2098F5FC11417BB1007513A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -512,23 +478,23 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		20924B56117B490A0001E4CD /* Debug */ = {
+		2054EF1F117B5A8B00316149 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = standalone;
+				PRODUCT_NAME = Standalone;
 			};
 			name = Debug;
 		};
-		20924B57117B490A0001E4CD /* Release */ = {
+		2054EF20117B5A8B00316149 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				PRODUCT_NAME = standalone;
+				PRODUCT_NAME = Standalone;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -590,11 +556,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20924B58117B49280001E4CD /* Build configuration list for PBXAggregateTarget "standalone" */ = {
+		2054EF21117B5AA900316149 /* Build configuration list for PBXAggregateTarget "Standalone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20924B56117B490A0001E4CD /* Debug */,
-				20924B57117B490A0001E4CD /* Release */,
+				2054EF1F117B5A8B00316149 /* Debug */,
+				2054EF20117B5A8B00316149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

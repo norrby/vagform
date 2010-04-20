@@ -21,7 +21,6 @@ class Yfb01DocumentController < NSViewController
   end
 
   def awakeFromNib
-    puts "document controller awake"
     @parent_view.addSubview(view) if view
   end
 end

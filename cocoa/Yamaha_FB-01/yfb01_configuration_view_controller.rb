@@ -17,7 +17,6 @@ class Yfb01ConfigurationViewController < NSViewController
   end
 
   def awakeFromNib
-    puts "conf view controller awoke"
     @parent_view.addSubview(view) if view
   end
 

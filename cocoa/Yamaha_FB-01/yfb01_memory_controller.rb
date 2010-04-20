@@ -10,7 +10,6 @@ module Yfb01MemoryController
     value = value.to_i if value.is_a? Float
     value = 1 if value.is_a? TrueClass
     value = 0 if value.is_a? FalseClass
-#    puts "#{self.class} sets  #{key}=#{value} in class #{model.class} (#{model}) from class"
     willChangeValueForKey(key)
     will_change_affected(key)
     if respond_to? (key + "=")
@@ -33,7 +32,6 @@ module Yfb01MemoryController
   end
 
   def valueForKey(key)
-#    puts "#{self.class} gets value of #{key} from class #{model.class} (#{model})"
     if respond_to? key
       send key
     else

@@ -1,4 +1,4 @@
-require 'yfb01_memory_controller'
+require 'Yamaha_FB-01/yfb01_memory_controller'
 
 class Yfb01OperatorController
   include Yfb01MemoryController

@@ -18,7 +18,6 @@ class Yfb01InstrumentBay < NSViewController
   end
 
   def awakeFromNib
-    puts "instrument bay awoke"
     return unless @instrument_controllers
     @instrument_controllers.addObserver(self, forKeyPath:"arrangedObjects",
                                         options:0, context:nil)
