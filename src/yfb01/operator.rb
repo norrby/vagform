@@ -47,7 +47,6 @@ class Operator
     channel_index = @comm.system_channel - 1
     instrument_index = @instrument.no - 1
     operator_no = {0x0=>4, 0x8=>3, 0x10=>2, 0x18=>1}[@offset]
-    puts "operator #{operator_no} changed"
     @comm.sysex([0x43, 0x75, channel_index, 0x18 + instrument_index,
                  pos + 0x40 + 0x10 + @offset, data & 0x0F, (data & 0xF0) >> 4])
   end

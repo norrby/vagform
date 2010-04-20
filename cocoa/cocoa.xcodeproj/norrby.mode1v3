@@ -268,12 +268,13 @@
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
+								<string>1CC0EA4004350EF90044410B</string>
 								<string>1CC0EA4004350EF90041110B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 								</array>
 							</array>
@@ -297,7 +298,7 @@
 							<real>369</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>253 267 1313 716 0 0 1920 1058 </string>
+						<string>256 310 1313 716 0 0 1920 1058 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -325,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2027790D117E12BD0085FF88</string>
+										<string>20277975117E263A0085FF88</string>
 										<key>history</key>
 										<array>
 											<string>2098F8151142BD48007513A4</string>
@@ -363,7 +364,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {922, 383}}</string>
 								<key>RubberWindowFrame</key>
-								<string>253 267 1313 716 0 0 1920 1058 </string>
+								<string>256 310 1313 716 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -383,7 +384,7 @@
 								<key>Frame</key>
 								<string>{{0, 388}, {922, 287}}</string>
 								<key>RubberWindowFrame</key>
-								<string>253 267 1313 716 0 0 1920 1058 </string>
+								<string>256 310 1313 716 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -547,11 +548,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>20277976117E263A0085FF88</string>
+		<string>20277977117E263A0085FF88</string>
+		<string>20277978117E263A0085FF88</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2098F43D11416E1D007513A4</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/norrby/Documents/src/yfb01/cocoa/cocoa.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>253 267 1313 716 0 0 1920 1058 </string>
+	<string>256 310 1313 716 0 0 1920 1058 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -750,13 +756,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>2054EEF0117B508C00316149</string>
+				<string>2027794D117E21A00085FF88</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>2054EEF1117B508C00316149</string>
-				<string>2054EEF2117B508C00316149</string>
-				<string>2054EEF3117B508C00316149</string>
-				<string>2054EEF4117B508C00316149</string>
-				<string>2054EEF5117B508C00316149</string>
+				<string>2027794E117E21A00085FF88</string>
+				<string>2027794F117E21A00085FF88</string>
+				<string>20277950117E21A00085FF88</string>
+				<string>20277951117E21A00085FF88</string>
+				<string>20277952117E21A00085FF88</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -920,7 +926,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>2054EEF6117B508C00316149</string>
+				<string>20277960117E23F20085FF88</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

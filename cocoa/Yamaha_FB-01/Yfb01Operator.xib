@@ -1306,9 +1306,9 @@
 							<reference ref="120136195"/>
 							<reference ref="832631924"/>
 							<reference ref="134305560"/>
-							<reference ref="227502730"/>
 							<reference ref="10746094"/>
 							<reference ref="976034564"/>
+							<reference ref="227502730"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -1857,9 +1857,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{546, 530}, {821, 490}}</string>
+					<string>{{446, 473}, {821, 490}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{546, 530}, {821, 490}}</string>
+					<string>{{446, 473}, {821, 490}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>

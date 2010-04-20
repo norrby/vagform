@@ -1,4 +1,4 @@
-class Yfb01EnvelopeView < NSView
+class Yfb01EnvelopeViewController < NSViewController
   attr_writer :knee1, :knee2, :knee3, :knee4, :knee5
   attr_writer :parent_view
   attr_accessor :operator_editor
@@ -162,9 +162,11 @@ class Yfb01EnvelopeView < NSView
   end
 
   def awakeFromNib
-    return unless @parent_view
-    @parent_view.addSubview(view)
+    puts "envelope_view_controller awoke"
+#    return unless @parent_view
+#    @parent_view.addSubview(view)
     ["tl", "ar", "d1r", "d2r", "sl", "rr"].each do |prop|
+      puts "registering for #{prop}"
       @operator_editor.operator_controller.addObserver(self, forKeyPath:"selection.#{prop}", options:0, context:nil)
     end
   end
