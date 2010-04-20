@@ -266,6 +266,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>20D03CC9117E2B8900101D55</string>
+								<string>20D03D79117E2F2400101D55</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 								<string>1CC0EA4004350EF90044410B</string>
@@ -275,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 								</array>
 							</array>
@@ -327,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20D03D69117E2CCD00101D55</string>
+										<string>20D03D7D117E2F4E00101D55</string>
 										<key>history</key>
 										<array>
 											<string>2098F8151142BD48007513A4</string>
@@ -549,7 +551,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20D03D6A117E2CCD00101D55</string>
 		<string>20D03D53117E2BA000101D55</string>
 		<string>20D03D54117E2BA000101D55</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -586,16 +587,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1044, 336}}</string>
+								<string>{{0, 0}, {1359, 390}}</string>
 								<key>RubberWindowFrame</key>
-								<string>524 242 1044 618 0 0 1920 1058 </string>
+								<string>152 262 1359 672 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>336pt</string>
+							<string>390pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -610,9 +613,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 341}, {1044, 236}}</string>
+								<string>{{0, 395}, {1359, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>524 242 1044 618 0 0 1920 1058 </string>
+								<string>152 262 1359 672 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -621,7 +624,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>577pt</string>
+					<string>631pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -644,7 +647,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>524 242 1044 618 0 0 1920 1058 </string>
+			<string>152 262 1359 672 0 0 1920 1058 </string>
 			<key>WindowToolGUID</key>
 			<string>2098F43D11416E1D007513A4</string>
 			<key>WindowToolIsVisible</key>
