@@ -156,7 +156,7 @@
 		4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Vagform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vagform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 			children = (
 				2098F48E11417338007513A4 /* pymidi.xcodeproj */,
 				2098F47F11417326007513A4 /* macruby-midi.xcodeproj */,
-				8D1107320486CEB800E47090 /* cocoa.app */,
+				8D1107320486CEB800E47090 /* Vagform.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			name = Vagform;
 			productInstallPath = "$(HOME)/Applications";
 			productName = cocoa;
-			productReference = 8D1107320486CEB800E47090 /* cocoa.app */;
+			productReference = 8D1107320486CEB800E47090 /* Vagform.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -510,7 +510,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = cocoa;
+				PRODUCT_NAME = Vagform;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -524,7 +524,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = cocoa;
+				PRODUCT_NAME = Vagform;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
