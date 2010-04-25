@@ -265,9 +265,8 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
+								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>20D03CC9117E2B8900101D55</string>
-								<string>20D03D79117E2F2400101D55</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 								<string>1CC0EA4004350EF90044410B</string>
@@ -278,7 +277,7 @@
 							<array>
 								<array>
 									<integer>3</integer>
-									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -329,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>20D03D7D117E2F4E00101D55</string>
+										<string>201429C01184B23900550476</string>
 										<key>history</key>
 										<array>
 											<string>2098F8151142BD48007513A4</string>
@@ -352,8 +351,7 @@
 											<string>2054EF53117CD09C00316149</string>
 											<string>2054EF93117CD50B00316149</string>
 											<string>2054EFA4117CD67200316149</string>
-											<string>2054EFBB117E126500316149</string>
-											<string>202779AD117E2B7C0085FF88</string>
+											<string>20D03D7D117E2F4E00101D55</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -365,14 +363,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {922, 374}}</string>
+								<string>{{0, 0}, {922, 365}}</string>
 								<key>RubberWindowFrame</key>
 								<string>436 342 1313 716 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>374pt</string>
+							<string>365pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -385,14 +383,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 379}, {922, 296}}</string>
+								<string>{{0, 370}, {922, 305}}</string>
 								<key>RubberWindowFrame</key>
 								<string>436 342 1313 716 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>296pt</string>
+							<string>305pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -411,9 +409,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>20D03D48117E2BA000101D55</string>
+				<string>201429BD1184AFF700550476</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>20D03D49117E2BA000101D55</string>
+				<string>201429BE1184AFF700550476</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -551,12 +549,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>20D03D53117E2BA000101D55</string>
-		<string>20D03D54117E2BA000101D55</string>
+		<string>201429C81184B23900550476</string>
+		<string>201429C91184B23900550476</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2098F43D11416E1D007513A4</string>
-		<string>/Users/norrby/Documents/src/yfb01/cocoa/cocoa.xcodeproj</string>
+		<string>/Users/norrby/Documents/src/vagform/cocoa/cocoa.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>436 342 1313 716 0 0 1920 1058 </string>
@@ -597,8 +595,6 @@
 							<string>390pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -638,7 +634,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2098F43D11416E1D007513A4</string>
-				<string>20D03D4A117E2BA000101D55</string>
+				<string>201429BF1184AFF700550476</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -760,13 +756,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>20D03D4B117E2BA000101D55</string>
+				<string>201429C11184B23900550476</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>20D03D4C117E2BA000101D55</string>
-				<string>20D03D4D117E2BA000101D55</string>
-				<string>20D03D4E117E2BA000101D55</string>
-				<string>20D03D4F117E2BA000101D55</string>
-				<string>20D03D50117E2BA000101D55</string>
+				<string>201429C21184B23900550476</string>
+				<string>201429C31184B23900550476</string>
+				<string>201429C41184B23900550476</string>
+				<string>201429C51184B23900550476</string>
+				<string>201429C61184B23900550476</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -928,7 +924,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>20D03D51117E2BA000101D55</string>
+				<string>201429C71184B23900550476</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
